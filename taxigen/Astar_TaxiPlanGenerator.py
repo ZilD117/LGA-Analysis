@@ -54,7 +54,7 @@ def aStar(graph, start, goal, nodePositions):
         currentNode = path[-1]
 
         if currentNode == goal:
-            return path, currentCost
+            return path, currentCost*0.621371
 
         for neighbor, weight in graph[currentNode]:
             tentativeGCost = currentCost + weight
@@ -81,11 +81,12 @@ if __name__ == "__main__":
         "TPE", "YYZ"
     ]
 
-    defFiles = [f"Airport Layouts/{airport}_Nodes_Def.csv" for airport in airports]
-    linkFiles = [f"Airport Layouts/{airport}_Nodes_Links.csv" for airport in airports]
+    defFiles = [os.getcwd() + f"/taxigen/Airport Layouts/{airport}_Nodes_Def.csv" for airport in airports]
+    linkFiles = [os.getcwd() + f"/taxigen/Airport Layouts/{airport}_Nodes_Links.csv" for airport in airports]
 
     graphs, nodePositions = loadData(defFiles, linkFiles)
 
+    # three major inputs learned from LLM
     airport = 'KATL'
     startNode = 'Gate_A_009'
     goalNode = 'Rwy_01_001'
@@ -96,6 +97,6 @@ if __name__ == "__main__":
     shortestPath, totalDistance = aStar(graph, startNode, goalNode, positions)
 
     if shortestPath:
-        print(f"Shortest Path: {shortestPath}, Distance: {totalDistance:.2f} km")
+        print(f"Shortest Path: {shortestPath}, Distance: {totalDistance:.2f} mile")
     else:
         print("No path found.")

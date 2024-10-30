@@ -60,7 +60,7 @@ def aStarMultiple(graph, start, goal, nodePositions, k=5):
                           nodePositions[currentPath[i + 1]][0], nodePositions[currentPath[i + 1]][1])
                 for i in range(len(currentPath) - 1)
             )
-            kPaths.append((currentPath, totalDistance))
+            kPaths.append((currentPath, totalDistance*0.621371))
             continue
 
         for neighbor, weight in graph[currentNode]:
@@ -91,8 +91,8 @@ if __name__ == "__main__":
         "TPE", "YYZ"
     ]
 
-    defFiles = [f"Airport Layouts/{airport}_Nodes_Def.csv" for airport in airports]
-    linkFiles = [f"Airport Layouts/{airport}_Nodes_Links.csv" for airport in airports]
+    defFiles = [os.getcwd() + f"/taxigen/Airport Layouts/{airport}_Nodes_Def.csv" for airport in airports]
+    linkFiles = [os.getcwd() + f"/taxigen/Airport Layouts/{airport}_Nodes_Links.csv" for airport in airports]
 
     graphs, nodePositions = loadData(defFiles, linkFiles)
 
@@ -107,4 +107,4 @@ if __name__ == "__main__":
     kShortestPaths = aStarMultiple(graph, startNode, goalNode, positions, k=k)
 
     for i, (path, distance) in enumerate(kShortestPaths, start=1):
-        print(f"Path {i}: {path}, Distance: {distance:.2f} km")
+        print(f"Path {i}: {path}, Distance: {distance:.2f} mile")

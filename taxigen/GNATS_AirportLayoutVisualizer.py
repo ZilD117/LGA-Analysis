@@ -1,9 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-airport = 'KBOS'
-filePath = 'Airport Layouts/' + airport + '_Nodes_Links.csv'
-linksDf = pd.read_csv(filePath)
 
 def plotAirportGraph(linksDf):
     nodes = pd.concat([
@@ -13,7 +11,7 @@ def plotAirportGraph(linksDf):
 
     nodePositions = {row['id']: (row['lat'], row['lon']) for _, row in nodes.iterrows()}
 
-    plt.figure(figsize=(12, 12))
+    plt.figure(figsize=(40, 40))
 
     for _, row in linksDf.iterrows():
         n1Pos = (row['n1.lat'], row['n1.lon'])
@@ -27,7 +25,13 @@ def plotAirportGraph(linksDf):
     plt.xlabel('Longitude')
     plt.ylabel('Latitude')
     plt.title(str(airport) + ' Layout')
-    plt.grid(True)
-    plt.show()
+    plt.grid(False)
+    plt.savefig(os.getcwd() + f'/taxigen/figs/{airport}.png', dpi=400)
 
-plotAirportGraph(linksDf)
+
+if __name__ == "__main__":
+    airport = 'KATL'
+
+    filePath = os.getcwd() + '/taxigen/Airport Layouts/' + airport + '_Nodes_Links.csv'
+    linksDf = pd.read_csv(filePath)
+    plotAirportGraph(linksDf)
