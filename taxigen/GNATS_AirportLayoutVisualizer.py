@@ -30,7 +30,7 @@ def plotAirportGraph(linksDf):
 
 
 if __name__ == "__main__":
-    airport = 'KATL'
+    airport = 'KSFO'
 
     filePath = os.getcwd() + '/taxigen/Airport Layouts/' + airport + '_Nodes_Links.csv'
     linksDf = pd.read_csv(filePath)
