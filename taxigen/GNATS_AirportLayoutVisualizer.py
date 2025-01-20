@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-
+3
 def plotAirportGraph(linksDf):
     nodes = pd.concat([
         linksDf[['n1.id', 'n1.lat', 'n1.lon']].rename(columns={'n1.id': 'id', 'n1.lat': 'lat', 'n1.lon': 'lon'}),
@@ -30,7 +30,7 @@ def plotAirportGraph(linksDf):
 
 
 if __name__ == "__main__":
-    airport = 'KSFO'
+    airport = 'HND'
 
     filePath = os.getcwd() + '/taxigen/Airport Layouts/' + airport + '_Nodes_Links.csv'
     linksDf = pd.read_csv(filePath)

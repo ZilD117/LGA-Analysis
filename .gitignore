@@ -5,3 +5,5 @@ __pycache__/
 # Ignore virtual environment folder
 venv/
 
+*.mp3
+*.txt
