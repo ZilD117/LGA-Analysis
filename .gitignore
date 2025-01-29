@@ -7,3 +7,5 @@ venv/
 
 *.mp3
 *.txt
+
+tok2vec/
