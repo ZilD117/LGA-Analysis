@@ -1,0 +1,5 @@
+[61, 67]    1:38 Stay with me and I'm going to take you just continue on echo A.
+[14, 17]    4:42 We're at 2 R.
+[43, 46]    17:43:12 Japan Air 516, continue approach, 34R.
+[71, 74]    N/A Tokyo Tower, Delta 276 with you on C, proceeding to holding point, 34R.
+[69, 83]    17:45:40 Japan Air 179, Tokyo Tower, good evening, number 3, taxi to holding point C1.

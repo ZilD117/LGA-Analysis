@@ -1,0 +1,533 @@
+Departing Non-Towered Field (KLNA)
+
+***tunes to AWOS frequency***
+
+AWOS: “Palm Beach County Park, Lantana. Automated Weather Observation. 0138 Zulu. Weather: Wind 100 @ 5. Visibility missing. Clear below 12,000. Temperature 28 Celsius. Dewpoint 22. Altimeter 29.99. Remarks: Density Altitude 1,500. Present weather identification not available.”
+
+***tunes to KLNA CTAF Frequency***
+
+N211HP: “Lantana traffic. 211 Hotel Papa turning left base runway 10. Lantana.”
+
+N211HP: “Lantana traffic. 211 Hotel Papa turning final runway 10. Lantana.”
+
+***crosses intersecting runway from taxiway***
+
+N518FT: “Lantana Traffic. Cessna 518 Foxtrot Tango crossing runway 4. Lantana.”
+
+N518FT: “Lantana Traffic. Cessna 518 Foxtrot Tango clear of runway 4. Lantana.”
+
+***about to taxi for departure***
+
+N518FT: “Lantana Traffic. Cessna 518 Foxtrot Tango taking off runway 10, departing straight out to the shoreline. Lantana.”
+
+***departs aircraft pattern to the south and west***
+
+
+Arriving at Non-Towered Field (KPHK)
+
+***tunes to ATIS for nearby airport***
+
+AWOS: “Airglades Airport. Automatic weather observation. 0135 Zulu. Weather: wind 250 at 6. Visibility 10. 6,500 scattered. Temperature 25 Celsius. Dew Point 23. Altimeter 29.97. Density Altitude 1,200.”
+
+***tunes to KLNA CTAF Frequency***
+
+N518FT: “Pahokee Traffic. Cessna 518 Foxtrot Tango is 5 miles east, on a 45 degree entry to the downwind runway 18. Pahokee.”
+
+N518FT: “Pahokee Traffic. Cessna 518 Foxtrot Tango is entering downwind runway 18. Pahokee.”
+
+N518FT: “Pahokee Traffic. Cessna 518 Foxtrot Tango on base runway 18. Pahokee.”
+
+N518FT: “Pahokee Traffic. Cessna 518 Foxtrot Tango on final runway 18. Touch and go. Pahokee.”
+
+
+Departing a Class Delta Airport (KSAC)
+
+***tunes to ATIS frequency***
+
+ATIS: “Sacramento Executive Airport, ATIS information Uniform. 1653 Zulu. Wind calm. Visibility 10. Sky condition: clear. Temperature 9 Dewpoint 6. Altimeter 30.32. Arriving and Departing runways 20, 30. Visual approaches in use. Read back all runway assignments and hold short instructions. Advise on initial contact you have information Uniform.” 
+
+***tunes to Executive Ground***
+
+N518FT: “Executive Ground. Skyhawk 518 Foxtrot Tango is at Executive Jet Center. Request taxi for VFR departure to the southeast with information Uniform.” 
+
+Ground: “November 518 Foxtrot Tango. Executive Ground. Thank You. Runway 20. Taxi via Mike, Delta. Cross runway 12 on Mike.” 
+
+N518FT: “Runway 20 via Mike, Delta. Cross runway 12 on Mike, 518 Foxtrot Tango.”
+
+***taxis to runway 20 hold short and tunes to Executive Tower***
+
+N518FT: “Executive Tower. Skyhawk 518 Foxtrot Tango holding short of runway 20 ready for VFR departure to the southeast.” 
+
+Tower: “November 518 Foxtrot Tango. Exec Tower. Southeast departure is approved. Runway 20 cleared for takeoff.”
+
+N518FT: “Southeast departure approved. Runway 20 cleared for takeoff, 518 Foxtrot Tango.”    
+
+***departs southeast. Leaves tower frequency when clear of Delta airspace***
+
+
+Arriving at a Class Delta Airport (KCIC)
+
+***tunes to ATIS frequency***
+
+ATIS: “Chico Municipal Airport information Foxtrot 1753 Zulu. Observation: winds 140 at 10. Visibility better than 5 miles. Sky clear below 12,000. Temperature 07. Dew point 02. Altimeter 29.92. Visual approaches in use, landing and departing runway 13 left. All aircraft read back hold short instructions and IFR altitude assignments. Advise on initial contact you have information Foxtrot.”    
+
+***tunes to Chico Tower frequency***
+
+N518FT: “Chico Tower, Skyhawk 518FT is 10 miles southeast descending through 5,000 inbound to land with information Foxtrot. 
+
+Tower: “Cessna 518FT Chico Tower, enter a left downwind runway 13 left.”
+
+518FT: “Enter a left downwind runway 13 left. Skyhawk 518FT.”
+
+***upon entering downwind 13 left***
+
+Tower: “Cessna 518FT the winds 140 at 10. Runway 13 left cleared to land.”
+
+518FT: “Runway 13 left cleared to land.”
+
+***after landing and rolling out on runway***
+
+Tower: “Cessna 518FT left on Foxtrot contact ground on 121.9.”
+
+518FT: “Left on Foxtrot. Contact ground on 121.9”
+
+***tunes to Chico Ground***
+
+518FT: “Chico ground, Skyhawk 518FT off runway 13 left at Foxtrot, taxi to Northgate.”
+
+Ground: “Cessna 518FT. Chico ground. Taxi to North gate via foxtrot, alpha, echo.”
+
+518FT: “Taxi to Northgate via foxtrot, alpha, echo. Cessna 518FT.”
+
+
+Requesting Flight Following while En Route
+
+***during departure leg of planned route KKIC-PXN-KFCH***
+
+***tunes to Oakland Center frequency, found on page for departure airport in chart supplement***
+
+N518FT: “Oakland Center. Skyhawk 518 Foxtrot Tango. Climbing through three thousand five hundred approximately three five miles southeast of the Panoche VORTAC. Request flight following to Chandler Executive, Foxtrot Charlie Hotel, at seven thousand five hundred feet.”
+
+Oakland Center: “November 518 Foxtrot Tango. Oakland Center. Squawk 5474.”
+
+***sets code into transponder***
+
+Oakland Center: “November 518 Foxtrot Tango you’re radar contact thirty southwest of Panoche. What altitude would you like to go to FCH at?”
+
+N518FT: “We’ll be at seven thousand five hundred to Chandler, Skyhawk 518 Foxtrot Tango.”
+
+N518FT: “Center. Cessna 518 Foxtrot Tango. We’re going to be flying direct to the Panoche VORTAC and then direct destination in order to avoid the MOAs to the East.”
+
+Oakland Center: “November 8 Foxtrot Tango, roger. Thanks.”
+
+Oakland Center: “November 518 Foxtrot Tango. Traffic Eleven o’clock, five miles, southeast bound, altitude indicates 4,500, climbing VFR type unknown.”
+
+N518FT: “Looking for traffic, Skyhawk 518 Foxtrot Tango.”
+
+***spots traffic***
+
+N518FT: “Skyhawk 518 Foxtrot Tango has traffic in sight, will maintain visual separation.”
+
+Oakland Center: “November 8 Foxtrot Tango roger, thanks. He shows at five thousand five hundred I have him climbing.”
+
+Oakland Center: “November 8 Foxtrot Tango. Contact NorCal approach 121.3.”
+
+N518FT: “Contact NorCal Approach 121.3, Skyhawk 518 Foxtrot Tango.”
+
+***tunes to NorCal Approach***
+
+N518FT: “NorCal Approach. Skyhawk 518 Foxtrot Tango is level at seven thousand five hundred direct to Panoche VORTAC.”
+
+NorCal Approach: “November 518 Foxtrot Tango. NorCal Approach. The Monterey Altimeter is 30.19.”
+
+N518FT: “30.19. Skyhawk 518 Foxtrot Tango.”
+
+NorCal Approach: “November 518 Foxtrot Tango. Contact NorCal 120.95.”
+
+N518FT: “Contact NorCal 120.95, Skyhawk 518 Foxtrot Tango.”
+
+***tunes to new NorCal Approach frequency***
+
+N518FT: “NorCal approach. Skyhawk 518 Foxtrot Tango level at seven thousand five hundred direct Panoche VORTAC.”
+
+NorCal Approach: “November 518 Foxtrot Tango. NorCal. The Modesto altimeter 30.15.”
+
+N518FT: “30.15, Skyhawk 518 Foxtrot Tango.”
+
+***tunes to destination AWOS and listens to automated report***
+
+NorCal Approach: “November 518 Foxtrot Tango. Contact Fresno Approach 119.6.”
+
+N518FT: “Contact Fresno approach 119.6 Cessna 518 Foxtrot Tango.”
+
+***tunes to Fresno Approach***
+
+N518FT: “Fresno Approach. Cessna 518 Foxtrot Tango is level at seven thousand five hundred feet. Inbound to Chandler Executive.”
+
+Fresno Approach: “November 518 Foxtrot Tango. Fresno Approach. The Chandler altimeter 30.16.”
+
+***approaches destination airport***
+
+Fresno Approach: “November 8 Foxtrot Tango. No traffic between you and Chandler. Change to advisory frequency approved and just keep your squawk code for me you’ll be landing underneath the Charlie airspace.”
+
+N518FT: “We’ll stay on this code and change over to advisory, Skyhawk 518 Foxtrot Tango.”
+
+
+Requesting a Diversion while on Flight Following
+
+***on frequency with Seattle Center during flight following***
+
+N518FT: “Seattle Center, Skyhawk 518 Foxtrot Tango is diverting to The Dalles airport. Delta Lima Sierra. Remaining at eight thousand five hundred for now.”
+
+Seattle Center: “518 Foxtrot Tango. Roger. I’ll show The Dalles as your destination.”
+
+***tunes to AWOS at The Dalles and listens to broadcast***
+
+N518FT: “Skyhawk 518 Foxtrot Tango is in the descent to The Dalles. We have the field in sight. Cancel flight following.”
+
+Seattle Center:“Skyhawk 518 Foxtrot Tango. Radar services terminated. Squawk and maintain VFR. Frequency change is approved.”
+
+N518FT: “Squawk VFR, frequency change approved. 518 Foxtrot Tango.”
+
+***sets 1200 into transponder and tunes to The Dalles CTAF***
+
+
+Departing a Class Charlie Airport (KSBA)
+
+***tunes to ATIS frequency***
+
+ATIS: Santa Barbara Municipal Airport. ATIS Information Lima. 1653 Zulu. Wind 140 at 6. Visibility 7. Sky condition: clear. Temperature 14. Dew point 11. Altimeter 30.03. Arriving and Departing Runway 7, 15 Left 15 Right. Visual approaches in use. VFR departures contact clearance delivery. Advise on course heading, altitude, and if flight following is requested. Readback all runway assignments and hold short instructions. Advise on initial contact you have information Lima. 
+
+***tunes to SBA Clearance frequency***
+
+N518FT: “Santa Barbara Clearance. Cessna 518 Foxtrot Tango is a Cessna 152. Request VFR departure to Burbank at 5,500. No flight following requested.”
+
+Santa Barbara Clearance: “518 Foxtrot Tango. Santa Barbara Clearance. On departure fly runway heading. Maintain VFR at or below 1,500. Departure frequency 120.55. Squawk 1734.”
+
+N518FT: “Maintain runway heading on departure at or below 1,500. Departure frequency 120.55. Squawk 1734.” 
+
+SBA Clearance: “8 Foxtrot Tango. Readback correct.”
+
+***sets code in transponder, tunes to SBA Ground frequency***
+
+N518FT: “Santa Barbara Ground. Cessna 518 Foxtrot Tango is at the GA ramp. Request taxi for VFR departure with Lima.”
+
+SBA Ground: “November 518 Foxtrot Tango. Santa Barbara ground. Runway 15 Left taxi via Charlie.”
+
+N518FT: “Runway 15 left via Charlie. Cessna 518 Foxtrot Tango.”
+
+***taxis short of runway 15 left, tunes to SBA Tower***
+
+N518FT: “Santa Barbara Tower. Cessna 518 Foxtrot Tango. Short of 15 Left ready for departure.”
+
+SBA Tower: “Cessna 518 Foxtrot Tango. Santa Barabara Tower. Runway 15 left. Cleared for takeoff.”
+
+N518FT: “Runway 15 left. Cleared for takeoff. Cessna 518 Foxtrot Tango.”
+
+SBA Tower: “November 518 Foxtrot Tango contact departure. See you later.”
+
+N518FT: “Over to departure Cessna 518 Foxtrot Tango.”
+
+***tunes to departure frequency assigned by Clearance***
+
+N518FT: “Santa Barbara Departure. Cessna 518 Foxtrot Tango is climbing 700 for 1,500 runway heading.”
+
+SBA Departure: “November 518 Foxtrot Tango. Cancel altitude restriction. Resume own navigation.”
+
+N518FT: “Climbing 5,500 turning eastbound. Cessna 518 Foxtrot Tango.”
+
+***departs Charlie airspace***
+
+SBA Departure: “November 518 Foxtrot Tango. Radar services terminated. Squawk VFR. Frequency change approved.”
+
+N518FT: “Squawk VFR. Frequency change approved. Cessna 518 Foxtrot Tango.”
+
+***sets 1200 into transponder***
+
+
+Arriving at a Class Charlie Airport (KBUR)
+
+***tunes to Burbank ATIS frequency***
+
+ATIS: “Burbank-Glendale-Pasadena Airport ATIS. Information November. 1653 Zulu. Wind variable at 5. Visibility 10. Sky condition clear. Temperature 19. Dewpoint 11. Altimeter 30.01. Arriving and departure runways 8, 15. Visual approaches in use. Land and hold short operations in effect for non turbo jet aircraft landing runway 15. 4,250 feet available. VFR Departures contact clearance delivery. Advise on course heading, altitude, and if flight following is requested. Readback all runway assignments and hold short instructions. Advise on initial contact you have information November.”
+
+***tunes to SoCal Approach frequency found on chart***
+
+N518FT: “SoCal Approach. Cessna 518 Foxtrot Tango is a Cessna 152 20 miles west of Burbank. Inbound to land at Burbank with November.”
+
+SoCal Approach: “November 518 Foxtrot Tango. SoCal Approach. Squawk 5723 ident.”
+
+***sets code into transponder and keys ident button***
+
+SoCal Approach: “November 8 Foxtrot Tango. Radar contact. 15 miles west of Van Nuys. Burbank altimeter 30.01. Make straight in runway 8. Overfly Van Nuys airport at 3,000.”
+
+N518FT: “Make straight in runway 8. Overfly Van Nuys at 3,000. 8 Foxtrot Tango.”
+
+***on final for runway 8***
+
+SoCal Approach: “November 8 Foxtrot Tango contact Burbank tower 118.7.”
+
+N518FT: “Tower on 118.7. 8 Foxtrot Tango.”
+
+***tunes to Burbank Tower frequency***
+
+N518FT: “Burbank tower. Cessna 518 Foxtrot Tango 2 mile final runway 8.”
+
+Burbank Tower: “November 518 Foxtrot Tango. Burbank Tower. Runway 8 cleared to land.”
+
+N518FT: “Runway 8 cleared to land. Cessna 518 Foxtrot Tango.”
+
+Southwest 237: “Burbank Tower. Southwest 237 holding short runway 15. Ready.”
+
+Burbank Tower: “Southwest 237. Burbank Tower. Runway 15 line up and wait. Traffic on a mile final for the crossing runway.”
+
+Southwest 237: “Runway 15 line up and wait. Southwest 237.”
+
+***lands and exits runway***
+
+Burbank Tower: “Southwest 237. Runway 15 cleared for takeoff.”
+
+Southwest 237: “Runway 15 cleared for takeoff. Southwest 237.”
+
+N518FT: “Cessna 518 Foxtrot Tango is off runway 8 on delta 8. Taxi to Atlantic. 
+
+Burbank Tower: “November 8 Foxtrot Tango. Roger. Thank you. Straight ahead remain this frequency. Have a good day.”
+
+N518FT: “Taxi straight ahead, remain this frequency. Cessna 8 Foxtrot Tango.”
+
+
+Transitioning a Terminal Radar Service Area
+
+***tunes to SoCal Approach frequency found along the side of the sectional chart***
+
+N518FT: “SoCal Approach. Cessna 518 Foxtrot Tango VFR request.”
+
+SoCal Approach: “November 518 Foxtrot Tango. SoCal.”
+
+N518FT: “Cessna 518 Foxtrot Tango is a Cessna 152. 6,500. Approximately 25 miles southeast of Palm Springs International. Going to transition the TRSA at 6,500. Inbound to Yucca Valley.”
+
+SoCal Approach: “November 518 Foxtrot Tango. Squawk 3654.”      
+
+***sets code into transponder***
+
+SoCal Approach: “November 518 Foxtrot Tango you’re radar contact 16 miles southeast of the Thermal VOR. The Palm Springs altimeter 29.95.”      
+
+N518FT: “29.95. 518 Foxtrot Tango.”
+
+SoCal Approach: “November 518 Foxtrot Tango. Contact SoCal Approach 126.7.”
+
+N518FT: “126.7. 518 Foxtrot Tango.”
+
+***tunes to new SoCal Approach frequency***
+
+N518FT: “SoCal Approach. Cessna 518 Foxtrot Tango 6,500 feet.”
+
+SoCal Approach: “November 518 Foxtrot Tango. SoCal Approach. The Palm Springs altimeter 29.95.”
+
+N518FT: “29.95. 518 Foxtrot Tango.”
+
+N518FT: “Cessna 518 Foxtrot Tango is starting a VFR climb to 8,500.”
+
+SoCal Approach: “Roger.”
+
+SoCal Approach: “November 518 Foxtrot Tango. Squawk VFR. Frequency change approved.”
+
+***departs TRSA airspace***
+
+N518FT: “Squawk VFR. Frequency change approved. Cessna 518 Foxtrot Tango.”
+
+***sets 1200 into transponder***
+
+
+Requesting Special VFR Clearance (KMRY)
+
+***tunes to ATIS frequency***
+
+N518FT: “Monterey Peninsula Airport. ATIS information Juliet. 1354 Zulu. Wind 230 at 5. Visibility 8. Ceiling 700 broken. Temperature 11, dewpoint 9. Altimeter 30.10. Arriving runway 10 right. Departing runway 10 left, 10 right. ILS runway 10 right approach in use. VFR departures contact clearance delivery. Advise on course heading, altitude, and if flight following is requested. Readback all runway assignments and hold short instructions. Advise on initial contact you have information Juliet.”
+
+***airport is IFR, tunes to NorCal Approach frequency listed on sectional chart***
+
+N518FT: “Norcal Approach. Cessna 518 Foxtrot Tango is a Cessna 152. 7 miles south of Monterey with information Juliet.”
+
+Norcal Approach: “November 518 Foxtrot Tango. Norcal Approach. Roger. Say intentions.”
+
+N518FT: “Cessna 518 Foxtrot Tango would like to request a special VFR into Monterey. We are not IFR equipped.”
+
+Norcal Approach: “November 518 Foxtrot Tango. Roger. Squawk 5664.”
+
+***sets code into transponder***
+
+Norcal Approach: “November 518 Foxtrot Tango. Radar contact 8 miles south of Monterey Airport. Cleared to enter Monterey Class Charlie surface area. Maintain special VFR conditions.”
+
+N518FT: “Maintain special VFR. 518 Foxtrot Tango.”
+
+N518FT: “Norcal. 518 Foxtrot Tango has field in sight.”
+
+Norcal Approach: “November 8 Foxtrot Tango. Contact Monterey Tower.”
+
+N518FT: “Contact Tower 518 Foxtrot Tango.”
+
+***tunes to Monterey Tower***
+
+N518FT: “Monterey Tower. Cessna 518 Foxtrot Tango is 7 to the south. Special VFR inbound to land. 
+
+Tower: “November 518 Foxtrot Tango. Monterey Tower. Enter left base, correction, enter right base runway 10 right. Runway 10 right cleared to land.”
+
+N518FT: “Enter right base 10 right. Runway 10 right cleared to land.”
+
+
+Requesting Bravo Clearance via VFR Transition Route (Gypsum 1 into KVGT)
+
+***tunes to North Las Vegas ATIS frequency***
+
+ATIS: “North Las Vegas Airport ATIS. Information November. 1428 Zulu. Wind variable at 4. Visibility 10. Sky condition clear. Temperature 24. Dewpoint -10. Altimeter 30.09. Arriving and departure runways 12 left, 12 rigt. Visual approaches in use. Readback all runway assignments and hold short instructions. Advise on initial contact you have information Tango.”
+
+***tunes to Nellis Approach frequency found on VFR Flyway Chart***
+
+N518FT: “Nellis Approach. Cirrus 518 Foxtrot Tango with a VFR request.”
+
+Nellis Approach: “518 Foxtrot Tango. Nellis Approach. Go ahead.”
+
+N518FT: “Cirrus 518 Foxtrot Tango is an SR22. Inbound to North Las Vegas. Would like to do the Gypsum One VFR Transition route at 6,500 feet.”
+
+Nellis Approach: “November 8 Foxtrot Tango. Squawk 2462.”
+
+***sets code into transponder***
+
+Nellis Approach: “518 Foxtrot Tango. Radar contact 10 miles east of Nellis. Cleared through Vegas Bravo airspace via the Gypsum One arrival. And the North Las Vegas altimeter 30.09.”
+
+N518FT: “Cirrus 518 Foxtrot Tango. Cleared to the Las Vegas Bravo via the Gypsum One arrival. And we have information Tango.”
+
+Nellis Approach: “November 518 Foxtrot Tango. You can begin a VFR descent. Contact North Las Vegas Tower.”
+
+N518FT: “Starting the descent. Contact North Las Vegas Tower. 518 Foxtrot Tango.”
+
+***tunes to KVGT Tower***
+
+N518FT: “North Las Vegas Tower. Cirrus 518 Foxtrot Tango is 6 miles east inbound to land with information Tango.”
+
+KVGT Tower: “November 518 Foxtrot Tango. North Las Vegas Tower. Enter left downwind runway 12 right report midfield downwind.”
+
+N518FT: “Enter left downwind 12 right. Report midfield downwind. 518 Foxtrot Tango.”
+
+N518FT: “Tower. Cirrus 518 Foxtrot Tango is coming up on midfield downwind 12 right.”
+
+KVGT Tower: “November 518 Foxtrot Tango. Runway 12 right. Cleared to land. Wind 110 at 10.”
+
+N518FT: “Runway 12 right, cleared to land. Cirrus 518 Foxtrot Tango.”
+
+
+Departing a Class Bravo Airport (KLAX)
+
+***tunes to ATIS frequency***
+
+LAX ATIS: “Los Angeles International Airport. ATIS information Alpha. 2153 Zulu. Wind 250 at 13. Visibility 10. Few clouds at 1,200. Few clouds at 25,000. Temperature 18. Dewpoint 12. Altimeter 30.00. Arriving runways 24 right, 25 left. Departing runways 24 left, 25 right. ILS runway 24 right and 25 left approach in use or vector for visual approach will be provided. Simultaneous visual approaches to all runways are in progress. Simultaneous instrument departures in progress. VFR departures contact clearance delivery. Advise on course heading, altitude and if flight following is requested. Readback all runway assignments and hold short instructions. Advise on initial contact you have information Alpha.”
+
+***tunes to LAX Clearance Delivery frequency***
+
+N518FT: “Los Angeles Clearance. Cirrus 518 Foxtrot Tango is an SR22 slant Golf. Request VFR flight following to Las Vegas International at 11,500 feet.”
+
+LAX CD: “November 518 Foxtrot Tango. Los Angeles Clearance. Cleared out of Los Angeles class Bravo airspace. On departure fly runway heading. Make a right turn to follow the shoreline northbound, then exit the Bravo airspace. Maintain VFR at 2,500. Departure frequency 125.2. Squawk 5631.”
+
+N518FT: “Cleared out of the LA class Bravo. On departure fly runway heading. Turn right up the shoreline. Maintain 2,500. Departure is on 125.2. Squawk 5631. Cirrus 518 Foxtrot Tango.”
+
+LAX CD: “November 518 Foxtrot Tango. Readback correct.”
+
+***sets code into transponder, tunes to LAX Ground frequency***
+
+N518FT: “Los Angeles Ground. Cirrus 518 Foxtrot Tango is at Atlantic. Request taxi for VFR departure with Alpha.”
+
+LA GND: “November 518 Foxtrot Tango. Los Angeles Ground. Runway 25 Left. Taxi via Alpha, Foxtrot.”
+
+N518FT: “Runway 25 Left via Alpha, Foxtrot. Cirrus 518 Foxtrot Tango.”
+
+***taxis short of 25 left, tunes to LAX Tower frequency***
+
+N518FT: “Los Angeles Tower. Cirrus 518 Foxtrot Tango. Short of 25 Left. Ready for departure.”
+
+LAX TWR: “November 518 Foxtrot Tango. Los Angeles Tower. Runway 25 Left. Cleared for Takeoff.”
+
+N518FT: “Runway 25 Left. Cleared for Takeoff. 518 Foxtrot Tango.”
+
+LAX TWR: “November 518 Foxtrot Tango. You’re radar contact and now leaving Bravo airspace. Contact departure.”
+
+N518FT: “Over to departure. 518 Foxtrot Tango.”
+
+***tunes to departure frequency assigned by Clearance Delivery***
+
+N518FT: “SoCal Departure. Cirrus 518 Foxtrot Tango 2,500.”
+
+SoCal Departure: “November 8 Foxtrot Tango. Cancel altitude restriction.”
+
+N518FT: “Cancel altitude restriction. 8 Foxtrot Tango.”
+
+SoCal Approach: “8 Foxtrot Tango. Contact SoCal Approach. 135.4.”
+
+N518FT: “135.4. 8 Foxtrot Tango.”
+
+***tunes to new SoCal Approach frequency***
+
+N518FT: “SoCal Approach. Cirrus 518 Foxtrot Tango at 11,500.”
+
+SoCal Approach: “518 Foxtrot Tango. SoCal Approach. Ontario altimeter. 29.94.”
+
+N518FT: “29.94. 518 Foxtrot Tango.”
+
+
+Arriving at a Class Bravo Airport (KLAS)
+
+***tunes to Las Vegas ATIS frequency***
+
+LAS ATIS: “Harry Reid International Airport. ATIS information Oscar. 2356 Zulu. Wind variable at 5. Visibility 10. Few clouds at 25,000. Temperature 33. Dewpoint -7. Altimeter 29.81. Arriving runways 19 left, 19 right, 26 left. Departing runways 19 left, 19 right, 26 right. Visual approaches in use. VFR departures contact clearance delivery. Advise on course heading, altitude and if flight following is requested. Readback all runway assignments and hold short instructions. Advise on initial contact you have information Oscar.”
+
+***tunes to Las Vegas Approach frequency found on TAC chart***
+
+N518FT: “Las Vegas Approach. Cirrus 518 Foxtrot Tango is an SR22 slant Golf. 35 miles southwest of Las Vegas. Inbound full stop landing at Harry Reid with Oscar.”
+
+LAS Approach: “518 Foxtrot Tango. Las Vegas Approach. Squawk 3371 and ident.”
+
+***sets code into transponder and keys ident button***
+
+LAS Approach: “8 Foxtrot Tango. Radar contact 33 miles southwest of Las Vegas. Fly heading 090. You can expect a bravo clearance over Henderson Airport.”
+
+N518FT: “090 and we’ll expect the clearance over Henderson.”
+
+LAS Approach: “8 Foxtrot Tango. Cleared into bravo airspace. Fly heading 010. Maintain VFR at 7,500.”
+
+N518FT: “Cleared into the bravo. Fly heading 010 and maintain VFR at 7,500. 8 Foxtrot Tango.”
+
+LAS Approach: “8 Foxtrot Tango. Cleared for own navigation. Turn left for a base entry runway 19 Right.”
+
+N518FT: “Turn left for base 19 Right. 8 Foxtrot Tango.”
+
+LAS Approach: “8 Foxtrot Tango. You can basically turn on in, turn around there.”
+
+N518FT: “We’ll make straight in for 19 Right. 8 Foxtrot Tango.”
+
+LAS Approach: “8 Foxtrot Tango. Contact Las Vegas tower on a five mile final 118.75.”
+
+N518FT: “Contact tower on a five mile final. 8 Foxtrot Tango.”
+
+***tunes to Las Vegas Tower frequency***
+
+N518FT: “Las Vegas Tower. Cirrus 518 Foxtrot Tango on a five mile final runway 19 Right.”
+
+LAS Tower: “Cirrus 518 Foxtrot Tango. Las Vegas Tower. Wind variable at 5. Runway 19 Right cleared to land.”
+
+N518FT: “Runway 19 Right. Cleared to Land. 518 Foxtrot Tango.”
+
+DAL591: “Las Vegas Tower. Delta 591. We’re ready to go at the end here.”
+
+LAS Tower: “Delta 591. Las Vegas Tower. Runway 26 Right. Line up and wait.”
+
+DAL591: “Runway 26 Right. Line up and wait. Delta 591.”
+
+***lands and taxis off runway***
+
+LAS Tower: “Delta 591. Runway 26 Right. Cleared for takeoff. Wind variable at 5.”
+
+DAL591: “Cleared for takeoff 26 Right. Delta 591.”
+
+LAS Tower: “Cirrus 518 Foxtrot Tango. Taxi to parking via November and Hotel. Monitor Ground.”
+
+N518FT: “Parking via November, Hotel. Monitor Ground.”

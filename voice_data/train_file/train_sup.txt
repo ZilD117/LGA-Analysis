@@ -1,0 +1,39 @@
+Experimental five-five-lima, continue via Alpha, hold short of Echo
+Roger
+Experimental five-five-lima, read back hold short instructions
+Roger, will hold short of echo
+Fedex three-seventy-two heavy, cross runway seven at Oscar
+Runway (number) taxi via (route as necessary).
+Runway (number) taxi via (route as necessary)(hold short instructions as necessary).
+Runway Three Six Left, taxi via Alpha, hold short of Charlie.
+Runway Three Six Left, taxi via Alpha, hold short of Charlie.
+Runway Three Six Left, taxi via  Alpha, hold short of Runway Two Seven Right.
+Runway Three Six Left, taxi via Charlie, cross Runway Two Seven Left at Charlie, hold short of Runway Two Seven Right.
+Runway Three Six Left, taxi via Alpha, Charlie, cross Runway One Zero.
+Cross Runway One Six Left at Charlie, hold short of Runway One Six Right.
+Follow (traffic), cross Runway Two Seven Right at Delta.
+Follow (traffic), cross Runway Two Seven Right at Delta, hold short Runway Two Seven Left.
+Experimental Five-Five-Lima, continue via Bravo, hold short of Runway One-Six Right.
+Continue via Bravo, hold short of One-Six Right, Experimental Five-Five-Lima.
+United Forty-Two, cross Runway Two-Seven Left at Delta, then taxi via Echo to the ramp.
+Cross Runway Two-Seven Left at Delta, then via Echo to the ramp, United Forty-Two.
+FedEx Seven-Six-Six Heavy, taxi to Runway Two-Eight via Alpha, Hotel. Hold short of Runway One-Two.
+Taxi to Runway Two-Eight via Alpha, Hotel, hold short of One-Two, FedEx Seven-Six-Six Heavy.
+Cessna Three-Two-Five-Alpha, cross Runway One-Six Right at Bravo, hold short of Runway One-Six Left.
+Cross One-Six Right at Bravo, hold short of One-Six Left, Cessna Three-Two-Five-Alpha.
+American Twenty-Seven, Runway Three-Four Left, taxi via Charlie, Foxtrot. Hold short of Delta.
+Runway Three-Four Left, taxi via Charlie, Foxtrot, hold short of Delta, American Twenty-Seven.
+Experimental Eight-Four-Romeo, monitor tower on one-one-eight-point-seven, caution wake turbulence from the departing Heavy.
+One-one-eight-point-seven, caution wake turbulence, Experimental Eight-Four-Romeo.
+JetBlue Nine-Eleven, after the company Airbus passes left to right, follow the traffic, cross Runway Two-Two at Echo.
+After the Airbus, follow traffic, cross Runway Two-Two at Echo, JetBlue Nine-Eleven.
+Southwest Two-Forty, Runway Two-Seven, line up and wait.
+Runway Two-Seven, line up and wait, Southwest Two-Forty.
+Delta One-Eleven, give way to the Learjet exiting the ramp, then proceed via Bravo to Runway Three-Three.
+Give way to the Learjet, then Bravo to Three-Three, Delta One-Eleven.
+SkyWest Thirty-Two-Ten, cross Runway One-Eight at Golf, hold short of Juliet.
+Cross Runway One-Eight at Golf, hold short of Juliet, SkyWest Thirty-Two-Ten.
+Alaska Six-Five, taxi to Runway Two-Six via Mike, Sierra, hold short of Runway Three-Four.
+Taxi to Two-Six via Mike, Sierra, hold short of Three-Four, Alaska Six-Five.
+UPS Five-Eleven Heavy, expect intersection departure Runway One-Three at Alpha One, taxi via Bravo, cross Runway Four at Bravo.
+Expect intersection departure One-Three at Alpha One, taxi via Bravo, cross Runway Four at Bravo, UPS Five-Eleven Heavy.

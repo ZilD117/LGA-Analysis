@@ -1,0 +1,81 @@
+Narrator: You are on a visual approach to Runway Two Eight Left.
+Pilot: Tower, November One Two Three is with you on a visual approach to Runway Two Eight Left.
+Tower: November One Two Three, Runway Two Eight Left cleared to land, wind 2-7-0 at 8.
+Pilot: November One Two Three cleared to land Runway Two Eight Left, copy the wind.
+Narrator: As you approach the airport ensure you are lined up with the correct surface.
+Tower: November One Two Three, go-around, you appear to be aligned with the wrong runway.
+Pilot: November One Two Three, go-round.
+
+Tower: November One Two Three, go-around, you appear to be aligned with the taxiway.
+Pilot: November One Two Three, go-round.
+
+Tower: November One Two Three, turn left at Romeo Two, contact ground control on 121.9.
+Pilot: November One Two Three will turn left at Romeo Two, contact ground control.
+Tower: November One Two Three, you exited at the wrong taxiway. Possible pilot deviation. Contact Tower at 555.555.1234 after you
+get to the ramp.
+Narrator: You were instructed to exit Romeo Two. By acknowledging that instruction yet not exiting Romeo Two, this is a possible
+pilot deviation.
+Tower: November One Two Three you missed Taxiway Romeo Two, expedite to taxiway Romeo One, traffic on short final.
+Pilot: November One Two Three, expedite to Taxiway Romeo One.
+Tower: November Three Four Six, go-around, traffic on the runway.
+Pilot: November Three Four Six, going around.
+Tower: November One Two Three, possible pilot deviation; advise you contact tower at 555.555.1234.
+Narrator: That is correct. You have chosen Taxiway Romeo Two.
+Narrator: After clearing the runway, where should you stop before contacting ground control?
+
+Pilot: Ground, November One Two Three, clear of Runway Two Eight Left
+Ground: November One Two Three, Ground, taxi via Romeo and Foxtrot, hold short of Runway Three Two.
+Pilot: Taxi via Romeo, Foxtrot, hold short of Runway Three Two, November One Two Three.
+Narrator: Which pavement should you select to continue on Foxtrot?
+Ground: November One Two Three, you turned the wrong way on Taxiway Foxtrot. Hold short of Runway Two Eight Right.
+Pilot: Ground, November One Three will hold short of Runway Two Eight Right.
+
+Ground: November One Two Three, stop. You turned onto the wrong taxiway. Hold short of Runway Three Two.
+Pilot: Ground, November One Three, stopping.
+Narrator: Correct. You have followed the airport diagram correctly.
+Pilot: Ground, November One Two Three is holding short of Runway Three Two at Foxtrot.
+Tower: November One Two Three roger.
+Ground: November One Two Three Stop! You were not cleared to cross the runway. Possible pilot deviation. Advise you contact
+tower at 555.555.1234 after you get to the ramp.
+Narrator: The term roger is not a clearance to do something, but only an acknowledgment. You must receive a specific clearance to
+cross a runway from the controller.
+Narrator: Correct – the term roger is not an approval to do something. It is only an acknowledgement.
+Ground: November One Two Three, cross Runway Three Two taxi via Echo to the ramp.
+Pilot: Cross Runway Three Two, taxi via Echo to the ramp, November One Two Three.
+Narrator: Incorrect. Locate the correct taxiway using the signage.
+Narrator: Correct. You’re done now ready to move on to the ramp!
+
+
+TIME FREO.
+003055 121.8
+003057 125.3
+FROM
+TOWER :
+TOWER :
+41LL :
+TOWER :
+DATA
+41 LIMA LIMA GROUND
+41 LIMA LIMA GROUND
+GO AHEAD WITH MY CLEARANCE WERE ALL SET.
+003115 125.3 JOLLY 14 HAVE YOU IN SIGHT CLEARED TO LAND AT
+THE MILITARY MALTESE-WIND CALM.
+003130 125.3 TOWER : OK JOLLY 14 UNDERSTAND GOING TO THE NORTH
+DZ-CLEARED FOR LOW APPROACH AND UNDERSTAND
+YOUR GOING WHERE THE PARALLEL DROP WAS?
+003 138 125.3 JOLLY 14 : THAT’S AFFIRMATIVE SIR WHERE GOING TO PICK UP THE
+JUMPERS.
+003 144 125.3 TOWER :
+003232 125.3 JOLLY 14 :
+JOLLY 14 ROGER.
+TOWER JOLLY 14 WE’VE GOT A PLANE - LOOKS HERE
+LIKE A PLANE GOJNG IN THE WATER SOUTH OF THE FIELD.
+003242 125.3 JOLLY 14 : TOWER JOLLY 14 WE’VE GOT A PLANE - LOOKS HERE
+LIKE A PLANE GOING IN THE WATER SOUTH OF THE FIELD.
+003249 125.3 JOLLY 14 : WE’D LIKE TO MAKE A LEFT TURN PROCEED SOUTH OF THE
+FIELD TO INVESTIGATE.
+003250 125.3 TOWER : JOLLY 14 THAT IS APPROVED-WE DID SEE SOMETHING IN
+THAT AREA JUST AS YOU SAID THAT. 
+
+
+

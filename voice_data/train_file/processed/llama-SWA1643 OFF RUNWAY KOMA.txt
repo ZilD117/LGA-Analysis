@@ -1,0 +1,48 @@
+Please correct the punctuation in the following text by replacing misplaced commas with periods if necessary
+Especially during the case where the content is finished for one person and switching to another one
+Please also try to remove those lines with a single words, or something like Thank you, Yes, Roger, etc
+Please only keep one repeated line
+Ensure that each sentence ends with a period correctly
+Text: Southwest 1643 did you come over yet? Yeah we're with you now, Southwest 1643 Southwest 1643, overall better than 6000, William 06 here at 9, gust 18, runway 14, right, clear to land, you can take it all the way to the end Thank you, all the way to the end, 14, right Flight break and action looks good, report about 737, about 8 minutes ago Southwest 1643, right at the end, contact ground point 9, how was braking? Contact ground at the end, 1
+9, and braking was good 1643, roger Flight break, 2360, overall better than 6000, wind 06 011, turn right heading 180, runway 14, right, clear to take off Reckon 2360 Married 2360, can't stand for clearance, hold short, 1,4, right Out 7, roger Married 2360, I'm going to take it to runway 14, left, I'm going to have to, but Southwest, he went off the end of the runway down there Roger, 2360 Married 2360, you can continue on to 1,4, right and just exit at hotel, make a left on the hotel, and then hold short, 1,4, left And, uh, hold short, 1,4, left, right, 2360 Off 7, roger Okay, left on the hotel, I'm going to go to the hotel, and then turn left on the hotel, and then turn left on the hotel Okay, we'll turn left on the hotel, uh, and then turn left on the hotel, and then turn left on the hotel, uh
+Our operation is in San Francisco as well, so once you're holding short of a, or make a left on hotel, just hold short of the Sierra taxiway Okay left on hotel Turn left on Kilo instead of hotel, hotel has not been treated with the Sierra, so turn left at Kilo Okay we'll turn left on Kilo, hold short of Sierra We could just continue up and hold short of one floor right, or do you want us to hold here Delta 69? Delta 69, we could just hold short right there, I'm not sure how long this is Alright Delta 69, we're gonna go ahead and shut down the water Delta 69, you want it? Obviously the crash fire guys just called out as well for the Southwest Rescue 12 Omaha Ground, they're at the departure end of Ground rest, one floor left, cross one eight on Alpha If you vehicle's on frequency, you can cross one way one eight Copy, we'll cross one eight on Alpha, rest of one Southwest 1643 Omaha Ground This is a Sky 3614, one of the landers that we had touched down He rolled off the end of the departure and did it through the ice So he just got stuck in the snow down there, so the entire airport is shut down right now through the ice He had the icing, just kind of came upon us really quick, then it just went off the end after he landed And was turning off for going to the taxiway, so right now the entire airport is closed through the ice Yeah, I mean they were calling the braking action good too, I don't know if he just hit a spot that just wasn't that clear or not, I don't know what happened I'm not exactly sure what operations plan is doing, he's out there driving one floor left right now, so they might, they might not, I'm not positive exactly what they want to do I'm not positive, exactly what they want to do Doc, we have no good braking action, one floor left, no good braking action Not good, no good For two-year Romeo, we're at TAC Air wondering what braking action is for taxiways and runway TAC Air, number 28 And right now VGI airport is closed Split off the end, I'll keep you updated when it opens back up
+
+Corrected Text: Southwest 1643, did you come over yet? Yeah, we're with you now
+Overall, better than 6000, William 06 here at 9, gust 18, runway 14, right, clear to land
+You can take it all the way to the end
+Flight break and action looks good
+Report about 737, about 8 minutes ago
+Southwest 1643, right at the end, contact ground point 9, how was braking? Contact ground at the end, 1
+9, and braking was good
+1643, roger
+Flight break, 2360, overall better than 6000, wind 06 011, turn right heading 180, runway 14, right, clear to take off
+Reckon 2360, Married 2360, can't stand for clearance, hold short, 1,4, right
+Out 7, roger
+Married 2360, I'm going to take it to runway 14, left, I'm going to have to, but Southwest, he went off the end of the runway down there
+Roger, 2360 Married 2363, you can continue on to 1,4, right and just exit at hotel, make a left on the hotel, and then hold short, 1,4, left
+And, uh, hold short, 1,4, left, right, 2360
+Off 7, roger
+Okay, left on the hotel, I'm going to go to the hotel, and then turn left on the hotel, and then turn left on the hotel
+Our operation is in San Francisco as well, so once you're holding short of a, or make a left on hotel, just hold short of the Sierra taxiway
+Okay, left on hotel
+Turn left on Kilo instead of hotel, hotel has not been treated with the Sierra, so turn left at Kilo
+Okay, we'll turn left on Kilo, hold short of Sierra
+We could just continue up and hold short of one floor right, or do you want us to hold here? Delta 69, we could just hold short right there, I'm not sure how long this is
+Alright, Delta 69, we're gonna go ahead and shut down the water
+Delta 69, you want it? Obviously the crash fire guys just called out as well for the Southwest Rescue 12 Omaha Ground, they're at the departure end of Ground rest, one floor left, cross one eight on Alpha
+If you vehicle's on frequency, you can cross one way one eight
+Copy, we'll cross one eight on Alpha, rest of one Southwest 1643
+Omaha Ground, this is a Sky 3614, one of the landers that we had touched down
+He rolled off the end of the departure and did it through the ice
+So he just got stuck in the snow down there, so the entire airport is shut down right now through the ice
+He had the icing, just kind of came upon us really quick, then it just went off the end after he landed
+And was turning off for going to the taxiway, so right now the entire airport is closed through the ice
+Yeah, I mean they were calling the braking action good too, I don't know if he just hit a spot that just wasn't that clear or not, I don't know what happened
+I'm not exactly sure what operations plan is doing, he's out there driving one floor left right now, so they might, they might not, I'm not positive exactly what they want to do
+I'm not positive, exactly what they want to do
+Doc, we have no good braking action, one floor left, no good braking action
+Not good, no good
+For two-year Romeo, we're at TAC Air wondering what braking action is for taxiways and runway
+TAC Air, number 28
+And right now VGI airport is closed
+Split off the end, I'll keep you updated when it opens back up

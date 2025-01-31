@@ -1,0 +1,19 @@
+N/A Tokyo Tower, Japan Air 516, spot 18.
+17:43:02 Japan Air 516, Tokyo Tower, good evening, runway 34R, continue approach, wind 320 at 7, we have departure.
+17:43:12 Japan Air 516, continue approach, 34R.
+N/A Tokyo Tower, Delta 276 with you on C, proceeding to holding point, 34R.
+17:43:26 Delta 276, Tokyo Tower, good evening, taxi to holding point C1.
+N/A Holding point C1, Delta 276.
+17:44:56 Japan Air 516, runway 34R, cleared to land, wind 310 at 8.
+17:45:01 Cleared to land, runway 34R, Japan Air 516.
+N/A Tower, JA722A, C.
+17:45:11 JA722A, Tokyo Tower, good evening, number 1, taxi to holding point C5.
+17:45:19 Taxi to holding point C5, JA722A, number 1. Thank you.
+N/A Tokyo Tower, Japan Air 179, taxi to holding point C1.
+17:45:40 Japan Air 179, Tokyo Tower, good evening, number 3, taxi to holding point C1.
+N/A Taxi to holding point C1, we are ready, Japan Air 179.
+N/A Tokyo Tower, Japan Air 166, spot 21.
+17:45:56 Japan Air 166, Tokyo Tower, good evening, number 2, runway 34R, continue approach, wind 320 at 8, we have departure, reduce speed to 160 knots.
+N/A Reduce 160 knots, runway 34R, continue approach, Japan Air 166, good evening.
+17:47:23 Japan Air 166, reduce minimum approach speed.
+17:47:27 Japan Air 166.

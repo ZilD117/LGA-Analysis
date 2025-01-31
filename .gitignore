@@ -6,7 +6,7 @@ __pycache__/
 venv/
 
 *.mp3
-*.txt
+# *.txt
 
 tok2vec/
 tok2vec_rules/
