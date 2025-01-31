@@ -9,3 +9,7 @@ venv/
 *.txt
 
 tok2vec/
+tok2vec_rules/
+
+transformer/
+transformer_rules/
