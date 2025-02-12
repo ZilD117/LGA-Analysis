@@ -1,16 +1,16 @@
 0:08 And Delta 295 heavy taxi with Romeo.
-0:14 Delta 295 heavy Atlanta ground runway 8 right taxi golf short of foxtrot.
-0:20 Taxi via golf short of foxtrot delta 295.
+0:14 Delta 295 heavy Atlanta ground runway 8R taxi golf short of foxtrot.
+0:20 Taxi via golf short of foxtrot Delta 295.
 0:33 Delta 295 heavy continue via a left turn on foxtrot hold short of ramp 5.
 0:36 Alright, make a left on Foxtrot short of ramp 5 Delta 295 thank you.
 0:44 Delta 295 heavy ramp 5 give way to that opposite direction 717 inbound and then join Echo.
 0:50 OK, give way to the Boeing 717 and then join Echo in front of Frontier, Delta 295.
-0:57 Endeavor 5526 Atlanta grounds runway 8 right taxi via echo.
-1:01 Headright echo endeavor 5526
+0:57 Endeavor 5526 Atlanta grounds runway 8R taxi via echo.
+1:01 Head right echo Endeavor 5526
 1:03 Delta 295 heavy at fox 3 follow the RJ joining Echo monitor tower 119.1.
 1:09 Alright, at fox 3 follow the rj monitor 193 delta 295 thank you.
 1:14 Endeavor 5526 this heavy Airbus will wait for you monitor tower 119.1.
-1:19 119.1 endeavor 5526.
+1:19 119.1 Endeavor 5526.
 1:25 ground Delta 295.
 1:27 Delta 295 heavy, go ahead.
 1:29 Now we're gonna need to stop somewhere if we stop here just short of Fox 3 and work out a problem now is that okay with you.
@@ -18,10 +18,3 @@
 1:45 OK, we're gonna stay with you and we're gonna continue holding short of Victor, Delta 295.
 1:54 Endeavor 5526, line up and wait.
 2:03 2227, following the 737 on a one mile final runway left cleared to land, wind 07014.
-2:15 United noticed that the tail on the RJ is missing so endeavor 5526 hold your position and do require immediate assistance
-2:36 Delta 295 heavy hold short for Victor, advise me when you're ready.
-2:39 Alright, we just hit something on the taxiway. Could you tell us what, what it was?
-2:46 Frontier 1403 Sierra current monitor the tower on 119.1.
-2:49 191 Sierra, frontier 1403.
-2:53 Ground, Delta 295.
-3:00 The whole tail of that CRJ is off.
