@@ -98,10 +98,8 @@ $$
 The total travel time for the $k$-th aircraft, $\Gamma_k$, is the $n$-fold convolution of each individual link distribution as:
 
 $$
-\begin{aligned}
 f_{\Gamma_k}(t_k)
-&= [f_{\tau_{k,1}}(\tau_{k,1}) \circledast f_{\tau_{k,2}}(\tau_{k,2}) \circledast \cdots \circledast f_{\tau_{k,n}}(\tau_{k,n})](t_k)
-\end{aligned}
+= [f_{\tau_{k,1}}(\tau_{k,1}) \circledast f_{\tau_{k,2}}(\tau_{k,2}) \circledast \cdots \circledast f_{\tau_{k,n}}(\tau_{k,n})](t_k)
 $$
 
 where $\circledast$ is the distribution convolution symbol.
@@ -169,9 +167,7 @@ $$
 Substituting the Fenton–Wilkinson approximated PDFs:
 
 $$
-\begin{aligned}
     f_\digamma(\digamma = 0) &= \int_0^\infty \frac{1}{t\,\sigma_1^*\sqrt{2\pi}}\exp\![-\,\frac{(\ln t - \mu_1^*)^2}{2\,\sigma_1^{*2}}] \cdot \frac{1}{t\,\sigma_2^*\sqrt{2\pi}}\exp\![-\,\frac{(\ln t - \mu_2^*)^2}{2\,\sigma_2^{*2}}] dt
-\end{aligned}
 $$
 
 
