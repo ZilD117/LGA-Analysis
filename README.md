@@ -112,21 +112,6 @@ $$
 X_k^* \sim \mathrm{Lognormal}(\mu_k^*, \sigma_k^{*2}).
 $$
 
-Thus,
-
-$
-f_{\Gamma_k}(t_k) \approx
-\frac{1}{t_k\,\sigma_k^*\sqrt{2\pi}}
-\exp\![-\frac{(\ln t_k - \mu_k^*)^2}{2\,\sigma_k^{*2}}],
-$
-
-and the associated cumulative density function (CDF) is
-
-$$
-F_{\Gamma_k}(t_k) \approx
-\Phi (\frac{\ln t_k - \mu_k^*}{\sigma_k^*}),
-$$
-
 where
 
 $$
@@ -164,11 +149,6 @@ $$
 f_\digamma(\digamma = 0) = \int_0^\infty f_{\Gamma_1}(t)\, f_{\Gamma_2}(t)\, dt.
 $$
 
-Substituting the Fenton–Wilkinson approximated PDFs:
-
-$$
-    f_\digamma(\digamma = 0) &= \int_0^\infty \frac{1}{t\,\sigma_1^*\sqrt{2\pi}}\exp\![-\,\frac{(\ln t - \mu_1^*)^2}{2\,\sigma_1^{*2}}] \cdot \frac{1}{t\,\sigma_2^*\sqrt{2\pi}}\exp\![-\,\frac{(\ln t - \mu_2^*)^2}{2\,\sigma_2^{*2}}] dt
-$$
 
 
 ### Case Study I: 2024 Henada Airport Runway Incursion
