@@ -100,11 +100,7 @@ The total travel time for the $k$-th aircraft, $\Gamma_k$, is the $n$-fold convo
 $$
 \begin{aligned}
 f_{\Gamma_k}(t_k)
-&= \bigl[f_{\tau_{k,1}}(\tau_{k,1}) \circledast f_{\tau_{k,2}}(\tau_{k,2}) \circledast \cdots \circledast f_{\tau_{k,n}}(\tau_{k,n})\bigr](t_k) \\
-&= \int_{0}^{t_k}\!\int_{0}^{t_k - x_1}\!\cdots\!\int_{0}^{t_k - x_1 - \cdots - x_{n-2}}
-f_{\tau_{k,1}}(x_1)\,f_{\tau_{k,2}}(x_2)\,\cdots\,f_{\tau_{k,n-1}}(x_{n-1})\\
-&\quad \times f_{\tau_{k,n}}\bigl(t_k - (x_1 + \dots + x_{n-1})\bigr)\,
-dx_{n-1}\,\dots\,dx_1,
+&= [f_{\tau_{k,1}}(\tau_{k,1}) \circledast f_{\tau_{k,2}}(\tau_{k,2}) \circledast \cdots \circledast f_{\tau_{k,n}}(\tau_{k,n})](t_k)
 \end{aligned}
 $$
 
@@ -120,25 +116,25 @@ $$
 
 Thus,
 
-$$
+$
 f_{\Gamma_k}(t_k) \approx
 \frac{1}{t_k\,\sigma_k^*\sqrt{2\pi}}
-\exp\!\Bigl[-\frac{(\ln t_k - \mu_k^*)^2}{2\,\sigma_k^{*2}}\Bigr],
-$$
+\exp\![-\frac{(\ln t_k - \mu_k^*)^2}{2\,\sigma_k^{*2}}],
+$
 
 and the associated cumulative density function (CDF) is
 
 $$
 F_{\Gamma_k}(t_k) \approx
-\Phi\!\Bigl(\frac{\ln t_k - \mu_k^*}{\sigma_k^*}\Bigr),
+\Phi (\frac{\ln t_k - \mu_k^*}{\sigma_k^*}),
 $$
 
 where
 
 $$
-\mu_k^* = \ln M_k \;-\; \tfrac12 \ln\Bigl(1 + \tfrac{V_k}{M_k^2}\Bigr),
+\mu_k^* = \ln M_k - \tfrac12 \ln(1 + \tfrac{V_k}{M_k^2}),
 \quad
-\sigma_k^{*2} = \ln\Bigl(1 + \tfrac{V_k}{M_k^2}\Bigr).
+\sigma_k^{*2} = \ln(1 + \tfrac{V_k}{M_k^2}).
 $$
 
 with
@@ -174,8 +170,7 @@ Substituting the Fenton–Wilkinson approximated PDFs:
 
 $$
 \begin{aligned}
-    f_\digamma(\digamma = 0) &= \int_0^\infty \frac{1}{t\,\sigma_1^*\sqrt{2\pi}}\exp\!\Biggl[-\,\frac{\Bigl(\ln t - \mu_1^*\Bigr)^2}{2\,\sigma_1^{*2}}\Biggr] \cdot \frac{1}{t\,\sigma_2^*\sqrt{2\pi}}\exp\!\Biggl[-\,\frac{\Bigl(\ln t - \mu_2^*\Bigr)^2}{2\,\sigma_2^{*2}}\Biggr] dt \\
-    &= \frac{1}{2\pi\,\sigma_1^*\sigma_2^*} \int_0^\infty \frac{1}{t^2}\,\exp\!\Biggl[-\frac{\bigl(\ln t - \mu_1^*\bigr)^2}{2\sigma_1^{*2}} - \frac{\bigl(\ln t - \mu_2^*\bigr)^2}{2\sigma_2^{*2}}\Biggr] dt.
+    f_\digamma(\digamma = 0) &= \int_0^\infty \frac{1}{t\,\sigma_1^*\sqrt{2\pi}}\exp\![-\,\frac{(\ln t - \mu_1^*)^2}{2\,\sigma_1^{*2}}] \cdot \frac{1}{t\,\sigma_2^*\sqrt{2\pi}}\exp\![-\,\frac{(\ln t - \mu_2^*)^2}{2\,\sigma_2^{*2}}] dt
 \end{aligned}
 $$
 
