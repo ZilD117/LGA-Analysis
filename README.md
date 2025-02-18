@@ -2,9 +2,21 @@
 
 This repository implements a rule-enhanced automatical speech recognition for air traffic communication transcript understanding, and build a collision risk assessment model from it, using the learned destination node similarities from NASA FACET airport node-link graphs.  
 
+
 ## Methodology Overview
 ![Animation](ATCTranscriptLearningNLP.png)
 
+# Project Overview
+
+This project involves multiple Jupyter notebook files that work together to prepare data, train machine learning models, and visualize the results.
+
+## Notebook Descriptions
+- **`ner_data_preparation.ipynb`**: Contains the code for data preparation including the usage of Whisper AI and Tesseract.
+- **`ner_transformer.ipynb`**: Includes the code for training the machine learning model with transformer embeddings.
+- **`ner_tok2vec.ipynb`**: Includes the code for training the machine learning model with tok2vec embeddings.
+- **`results_visualization.ipynb`**: Visualizes the results of the machine learning model.
+- **`case_study_1_demo.ipynb`**: Generates all the simulation steps for Case Study 1.
+- **`case_study_2_demo.ipynb`**: Generates all the simulation steps for Case Study 2.
 
 **ATC Rule-enhanced ASR:**  
 
@@ -48,37 +60,12 @@ $$
 v_{k,i} \sim \mathrm{Lognormal}(\mu_{k,i}, \sigma^2_{k,i}).
 $$
 
-or,
-
-$$
-f_{v_{k,i}}(v_{k,i}) = \frac{1}{v_{k,i}\,\sigma_{k,i}\sqrt{2\pi}}
-\exp\!\Bigl(-\frac{(\ln v_{k,i} - \mu_{k,i})^2}{2\,\sigma_{k,i}^2}\Bigr),
-\quad \forall\,v_{k,i} > 0.
-$$
 
 It is obvious that $\Gamma_k = \sum_{i=0}^n \tau_{k,i}$ where $\tau_{k,i} = \tfrac{d_{k,i}}{v_{k,i}}$ is the distribution of the $k$-th aircraft travel time duration for the $i$-th node link. By the standard formula for transformations of random variables, if $\tau_{k,i} = g(v_{k,i}) = \tfrac{d_{k,i}}{v_{k,i}}$, then:
 
 $$
 f_{\tau_{k,i}}(\tau_{k,i}) =
 f_{v_{k,i}}\bigl(g^{-1}(\tau_{k,i})\bigr)\;\left|\frac{d}{d\tau_{k,i}}\,g^{-1}(\tau_{k,i})\right|.
-$$
-
-where $g^{-1}(\tau_{k,i}) = \tfrac{d_{k,i}}{\tau_{k,i}}$ gives us
-
-$$
-\begin{aligned}
-f_{\tau_{k,i}}(\tau_{k,i})
-&= f_{v_{k,i}}\!\Bigl(\tfrac{d_{k,i}}{\tau_{k,i}}\Bigr) \;\cdot \left|\frac{d}{d\tau_{k,i}}\Bigl(\tfrac{d_{k,i}}{\tau_{k,i}}\Bigr)\right| \\
-&= f_{v_{k,i}}\!\Bigl(\tfrac{d_{k,i}}{\tau_{k,i}}\Bigr)\;\cdot \frac{d_{k,i}}{\tau_{k,i}^2} \\
-&= \frac{1}{\Bigl(\tfrac{d_{k,i}}{\tau_{k,i}}\Bigr)\,\sigma_{k,i}\sqrt{2\pi}}
-\exp\!\Bigl[-\tfrac{\bigl(\ln(\tfrac{d_{k,i}}{\tau_{k,i}}) - \mu_{k,i}\bigr)^2}{2\,\sigma_{k,i}^2}\Bigr]
-\;\cdot \frac{d_{k,i}}{\tau_{k,i}^2} \\
-&= \frac{1}{\sigma_{k,i}\sqrt{2\pi}}\;\frac{1}{\tau_{k,i}}
-\exp\!\Bigl[-\tfrac{1}{2\,\sigma_{k,i}^2}\,\bigl(\ln\!\bigl(\tfrac{d_{k,i}}{\tau_{k,i}}\bigr) - \mu_{k,i}\bigr)^2\Bigr] \\
-&= \frac{1}{\tau_{k,i}\,\sigma_{k,i}\,\sqrt{2\pi}}
-\exp\!\Bigl[-\,\frac{\bigl(\ln \tau_{k,i} - [\ln d_{k,i} - \mu_{k,i}]\bigr)^2}{2\,\sigma_{k,i}^2}\Bigr],
-\quad \forall\,\tau_{k,i} > 0.
-\end{aligned}
 $$
 
 That is, each $\tau_{k,i}$ is a lognormal-type variable, with parameters shifted by $\ln d_{k,i}$:
@@ -97,14 +84,14 @@ $$
 
 The total travel time for the $k$-th aircraft, $\Gamma_k$, is the $n$-fold convolution of each individual link distribution as:
 
-$ f_{\Gamma_k}(t_k)
-= [f_{\tau_{k,1}}(\tau_{k,1}) \circledast \cdots \circledast f_{\tau_{k,n}}(\tau_{k,n})](t_k) $
+$$ f_{\Gamma_k}(t_k)
+= [f_{\tau_{k,1}}(\tau_{k,1}) \circledast \cdots \circledast f_{\tau_{k,n}}(\tau_{k,n})](t_k) $$
 
 
 
 where $\circledast$ is the distribution convolution symbol.
 
-In practice, we approximate $f_{\Gamma_k}(t_k)$ for any time $t_k>0$ by either Monte Carlo Simulations or Moment-Matching Approximations. For the convolution of log-normal distributions with moderate variance and $n_k$, the Fenton-Wilkinson approach provides a feasible solution to directly match the first two moments, and is widely adopted as the approximated analytical solution of log-normal sums in various fields [see, e.g., Mehta (2007), Cobb (2012)].
+In practice, we approximate $f_{\Gamma_k}(t_k)$ for any time $t_k>0$ by either Monte Carlo Simulations or Moment-Matching Approximations. For the convolution of log-normal distributions with moderate variance and $n_k$, the Fenton-Wilkinson approach provides a feasible solution to directly match the first two moments, and is widely adopted as the approximated analytical solution of log-normal sums in various fields.
 
 That is, we look for parameters of an approximate distribution $\Gamma_k \approx X_k^*$ where
 
