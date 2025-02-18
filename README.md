@@ -1,4 +1,6 @@
-# Airport Surface Compliance Check and Collision Risk Assessment based on ATC Rule-enhanced ASR
+# From Voice to Safety: Language AI Powered Pilot-ATC Communication Understanding for Airport Surface Movement Collision Risk Assessment.
+### 2024 FAA Data challenge of the UT Austin Team
+**Advised by Prof. John-Paul Clarke**
 
 This repository implements a rule-enhanced automatical speech recognition for air traffic communication transcript understanding, and build a collision risk assessment model from it, using the learned destination node similarities from NASA FACET airport node-link graphs.  
 
@@ -18,42 +20,7 @@ This project involves multiple Jupyter notebook files that work together to prep
 - **`case_study_1_demo.ipynb`**: Generates all the simulation steps for Case Study 1.
 - **`case_study_2_demo.ipynb`**: Generates all the simulation steps for Case Study 2.
 
-**ATC Rule-enhanced ASR:**  
-
-| **Embedding Model**               | **Augmented Data**         | **Post Prediction Screening** | **Precision** | **Recall** | **F1 Score** |
-|-----------------------------------|----------------------------|--------------------------------|--------------|-----------|-------------|
-| **Tok2Vec (Local-Contexual)**     | Training w/o ATC Rules     | No Override                   | 0.869         | 0.566     | 0.685       |
-|                                   |                            | Override w/ ATC Rules         | 0.800         | 0.684     | 0.738       |
-|                                   | Training w/ ATC Rules      | No Override                   | 0.839         | 0.684     | 0.754       |
-|                                   |                            | Override w/ ATC Rules         | 0.841         | 0.763     | 0.800       |
-| **BERT (Contextual)**             | Training w/o ATC Rules     | No Override                   | 0.847         | 0.546     | 0.664       |
-|                                   |                            | Override w/ ATC Rules         | 0.781         | 0.658     | 0.714       |
-|                                   | Training w/ ATC Rules      | No Override                   | 0.838         | 0.750     | 0.792       |
-|                                   |                            | Override w/ ATC Rules         | 0.839         | 0.822     | 0.831       |
-| **RoBERTa (Contextual)**          | Training w/o ATC Rules     | No Override                   | 0.859         | 0.559     | 0.677       |
-|                                   |                            | Override w/ ATC Rules         | 0.805         | 0.678     | 0.736       |
-|                                   | Training w/ ATC Rules      | No Override                   | 0.853         | 0.724     | 0.783       |
-|                                   |                            | Override w/ ATC Rules         | 0.855         | 0.816     | 0.835       |
-| **mBERT (Multilingual)**          | Training w/o ATC Rules     | No Override                   | 0.871         | 0.533     | 0.661       |
-|                                   |                            | Override w/ ATC Rules         | 0.817         | 0.678     | 0.741       |
-|                                   | Training w/ ATC Rules      | No Override                   | 0.869         | 0.783     | 0.824       |
-|                                   |                            | Override w/ ATC Rules         | 0.866         | 0.809     | 0.837       |
-| **mRoBERTa (Multilingual)**       | Training w/o ATC Rules     | No Override                   | **0.872**     | 0.539     | 0.667       |
-|                                   |                            | Override w/ ATC Rules         | 0.820         | 0.691     | 0.750       |
-|                                   | Training w/ ATC Rules      | No Override                   | 0.850         | 0.711     | 0.774       |
-|                                   |                            | Override w/ ATC Rules         | 0.856         | 0.822     | 0.839       |
-| **DistillBERT (Distilled)**       | Training w/o ATC Rules     | No Override                   | 0.856         | 0.546     | 0.667       |
-|                                   |                            | Override w/ ATC Rules         | 0.800         | 0.711     | 0.753       |
-|                                   | Training w/ ATC Rules      | No Override                   | 0.831         | 0.711     | 0.766       |
-|                                   |                            | Override w/ ATC Rules         | 0.840         | 0.796     | 0.818       |
-| **BART (Generative)**             | Training w/o ATC Rules     | No Override                   | 0.840         | 0.691     | 0.758       |
-|                                   |                            | Override w/ ATC Rules         | 0.787         | 0.730     | 0.758       |
-|                                   | Training w/ ATC Rules      | No Override                   | 0.845         | 0.822     | 0.833       |
-|                                   |                            | Override w/ ATC Rules         | 0.842         | **0.842** | **0.842**   |
-
-
-
-**Travel Time Modeling:**  
+## Travel Time Modeling:
 The $k$-th aircraft travels a total of $n$ taxiway links until reaching the certain spot of interest (i.e., potential collision spot), where the total travel time is given by $\Gamma_k$. We assume each taxiway link has an associated distance $d_{k,i}$ and a taxi speed $v_{k,i}$ that is log-normally distributed with parameters $\mu_{k,i}$ and $\sigma_{k,i}^2$, which is
 
 $$
@@ -82,14 +49,7 @@ $$
 Var[\tau_{k,i}] = d_{k,i}^2\,\exp\!\Bigl(-2\mu_{k,i} + \sigma_{k,i}^2\Bigr)\bigl[\exp\!\bigl(\sigma_{k,i}^2\bigr) - 1\bigr].
 $$
 
-The total travel time for the $k$-th aircraft, $\Gamma_k$, is the $n$-fold convolution of each individual link distribution as:
-
-$$ f_{\Gamma_k}(t_k)
-= [f_{\tau_{k,1}}(\tau_{k,1}) \circledast \cdots \circledast f_{\tau_{k,n}}(\tau_{k,n})](t_k) $$
-
-
-
-where $\circledast$ is the distribution convolution symbol.
+The total travel time for the $k$-th aircraft, $\Gamma_k$, is the $n$-fold convolution of each individual link distribution.
 
 In practice, we approximate $f_{\Gamma_k}(t_k)$ for any time $t_k>0$ by either Monte Carlo Simulations or Moment-Matching Approximations. For the convolution of log-normal distributions with moderate variance and $n_k$, the Fenton-Wilkinson approach provides a feasible solution to directly match the first two moments, and is widely adopted as the approximated analytical solution of log-normal sums in various fields.
 
@@ -187,3 +147,10 @@ $$
 #### Collision Risk Assessment
 ![Animation](./taxigen/case-study-2-riskmap.gif)
 
+
+# Citations
+If you find this work useful in your research, please cite us,
+```
+@article{}
+
+```
