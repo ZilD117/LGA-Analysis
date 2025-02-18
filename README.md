@@ -6,10 +6,9 @@ This repository implements a rule-enhanced automatical speech recognition for ai
 ## Motivation
 The United States is currently facing an alarming escalation in aviation safety incidents. In the first six weeks of 2025 alone, there have been over 30 commercial aviation incidents/accidents, including four major plane crashes that have tragically claimed 85 lives. 
 ![Animation](faa-accidents-hist.png)
+![Animation](map-view.png)
 
-Accidents and Incidents in the continental U.S. from April 2024 to February 2025, documented by the FAA:
-1. [Link to Figure Visualization](faa_events_map.html) 
-2. [Link to FAA](https://www.faa.gov/newsroom/statements/accident_incidents)
+Accidents and Incidents in the continental U.S. from April 2024 to February 2025, documented by the FAA: [Link to FAA](https://www.faa.gov/newsroom/statements/accident_incidents)
 
 ## Methodology Overview
 ![Animation](ATCTranscriptLearningNLP.png)
