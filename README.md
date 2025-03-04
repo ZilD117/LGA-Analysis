@@ -92,7 +92,7 @@ However, we also get the speed distribution parameters through data analysis of 
 **Collision Risk Calculation:**  
 The collision happens when the two aircraft arrive simultaneously at the potential collision spot from the airport node-link graph (i.e., \(\Gamma_1 = \Gamma_2\) theoretically). If we take aircraft 1 at the time \(t\) it reaches \(x_c\), then a collision requires that aircraft 2 is located in the interval \([x_c-r_c,\, x_c+r_c]\) at the same time \(t\), where $r_c$ is viewed as the averaged wingspan of two aircraft to extend the point mass formulation in the simplest way. A fully coupled expression for the probability of a collision at any time is then given as,
 $$
-    P(\text{collision}) = \int_0^\infty f_{\Gamma_1}(t|x_c)\,  \left[ \int_{x_c-r_c}^{x_c+r_c} f_{X_2}(x|t)\, dx \right] dt.
+    P_c = \int_0^\infty f_{\Gamma_1}(t|x_c)\,  \left[ \int_{x_c-r_c}^{x_c+r_c} f_{X_2}(x|t)\, dx \right] dt.
 $$
 
 ### Case Study I: 2024 Henada Airport Runway Incursion
