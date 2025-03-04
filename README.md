@@ -22,6 +22,7 @@ This project involves multiple Jupyter notebook files that work together to prep
 - **`ner_transformer.ipynb`**: Includes the code for training the machine learning model with transformer embeddings.
 - **`ner_tok2vec.ipynb`**: Includes the code for training the machine learning model with tok2vec embeddings.
 - **`results_visualization.ipynb`**: Visualizes the results of the machine learning model.
+- **`link_travel_time_analysis.ipynb`**: Doing data analysis and filtering of the ASDEX data and analysis the link travel time distributions and speed parameters. 
 - **`case_study_1_demo.ipynb`**: Generates all the simulation steps for Case Study 1.
 - **`case_study_2_demo.ipynb`**: Generates all the simulation steps for Case Study 2.
 
@@ -86,22 +87,13 @@ $$
   - If one node is `Rwy` and the other is `Txy` (Taxiway), then the parameters are `(25, 5)`.
   - If both nodes are `Txy`, then the parameters are `(20, 5)`.
   - For other node types (e.g., `Ramp`, `Gate`), the default parameters are `(15, 5)`.
-
+However, we also get the speed distribution parameters through data analysis of link travel times from real world ASDEX data. 
 
 **Collision Risk Calculation:**  
-The collision happens when the two aircraft arrive simultaneously at the potential collision spot from the airport node-link graph (i.e., \(\Gamma_1 = \Gamma_2\) theoretically). Thus, the collision risk is measured by the density of the difference:
-
+The collision happens when the two aircraft arrive simultaneously at the potential collision spot from the airport node-link graph (i.e., \(\Gamma_1 = \Gamma_2\) theoretically). If we take aircraft 1 at the time \(t\) it reaches \(x_c\), then a collision requires that aircraft 2 is located in the interval \([x_c-r_c,\, x_c+r_c]\) at the same time \(t\), where $r_c$ is viewed as the averaged wingspan of two aircraft to extend the point mass formulation in the simplest way. A fully coupled expression for the probability of a collision at any time is then given as,
 $$
-\digamma = \Gamma_1 - \Gamma_2.
+    P(\text{collision}) = \int_0^\infty f_{\Gamma_1}(t|x_c)\,  \left[ \int_{x_c-r_c}^{x_c+r_c} f_{X_2}(x|t)\, dx \right] dt.
 $$
-
-Evaluated at \(\digamma=0\), this is given by:
-
-$$
-f_\digamma(\digamma = 0) = \int_0^\infty f_{\Gamma_1}(t)\, f_{\Gamma_2}(t)\, dt.
-$$
-
-
 
 ### Case Study I: 2024 Henada Airport Runway Incursion
 #### ATC Rule-enhanced ASR Results
