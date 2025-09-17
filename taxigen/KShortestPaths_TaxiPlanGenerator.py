@@ -91,8 +91,8 @@ if __name__ == "__main__":
         "TPE", "YYZ"
     ]
 
-    defFiles = [os.getcwd() + f"/taxigen/Airport Layouts/{airport}_Nodes_Def.csv" for airport in airports]
-    linkFiles = [os.getcwd() + f"/taxigen/Airport Layouts/{airport}_Nodes_Links.csv" for airport in airports]
+    defFiles = [os.getcwd() + f"/Airport Layouts/{airport}_Nodes_Def.csv" for airport in airports]
+    linkFiles = [os.getcwd() + f"/Airport Layouts/{airport}_Nodes_Links.csv" for airport in airports]
 
     graphs, nodePositions = loadData(defFiles, linkFiles)
 

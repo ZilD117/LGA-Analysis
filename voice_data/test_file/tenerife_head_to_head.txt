@@ -1,0 +1,109 @@
+1701:57.0	RDO-2	Tenerife the Clipper one seven three six. (1702:00.2)
+1702:01.8	APP	Clipper one seven three six Tenerife.
+1702:03.6	RDO-2	Ah- We were instructed to contact you and also to taxi down the runway, is that correct? (1702:07.4)
+1702:08.4	APP	Affirmative, taxi into the runway and -ah leave the runway third, third to your left, (background conversation in the tower).
+1702:16.4	RDO-2	Third to the left, O.K. (17:02.18.3)
+1702:18.4	CAM-3	Third he said.
+1702:20.6	APP	-ird one to your left.
+1702:21.9	CAM-1	I think he said first.
+1702:26.4	CAM-2	I'll ask him again.
+1702:32.2	CAM-2	Left turn.
+1702:33.1	CAM-1	I don't think they have take-off minimums anywhere right now.
+1702:39.2	CAM-1	What really happened over there today?
+1702:41.6	CAM-4	They put a bomb (in) the terminal, Sir, right where the check-in counters are.
+1702:46.6	CAM-1	Well we asked them if we could hold and -uh- I guess you got the word, we landed here **
+1702:49.8	APP	KLM four eight zero five how many taxiway -ah- did you pass?
+1702:55.6	KLM	I think we just passed charlie four now.
+1702:59.9	APP	O.K. ... at the end of the runway make one eighty and report -ah- ready -ah- for ATC clearance (background conversation in the tower).
+1703:09.3	CAM-2	The first one is a ninety degree turn.
+1703:11.0	CAM-1	Yeah, O.K.
+1703:12.1	CAM-2	Must be the third ... I'll ask him again.
+1703:14.2	CAM-1	O.K.
+1703:16.6	CAM-1	We could probably go in it's ah ...
+1703:19.1	CAM-1	You gotta make a ninety degree turn.
+1703:21.6	CAM-1	Yeah, uh.
+1703:21.6	CAM-2	Ninety degree turn to get around this ... this one down here it's a forty five.
+1703:29.3	RDO-2	Would you confirm that you want the clipper one seven three six to turn left at the third intersection? (1703:35.4).
+1703:35.1	CAM-1	One, two.
+1703:36.4	APP	The third one, sir, one; two, three, third, third one (1703:38.3)..
+1703:38.3	CAM-?	One two (four).
+1703:39.0	CAM-1	Good.
+1703:40.1	CAM-1	That's what we need right, the third one.
+1703:42.9	CAM-3	Uno, dos, tres.
+1703:44.0	CAM-1	Uno, dos, tres.
+1703:44.9	CAM-3	Tres - uh - si.
+1703:46.5	CAM-1	Right.
+1703:47.6	CAM-3	We'll make it yet.
+1703:47.6	APP	...er seven one three six report leaving the runway.
+1703:49.1	CAM-2	Wing flaps?
+1703:50.2	CAM-1	Ten, indicate ten, leading edge lights are green.
+1703:54.1	CAM-?	Get that.
+1703:55.0	RDO-2	Clipper one seven three six (1703:56.4)
+1703:56.5	CAM-2	Yaw damp and instrument?
+1703:58.6	CAM-1	Ah- Bob we'll get a left one *
+1703:59.3	CAM-2	I got a left.
+1704:00.6	CAM-1	Did you?
+1704.00.9	CAM-2	And -ah- need a right.
+1704:02.6	CAM-1	I'll give you a little *
+1704:03.8	CAM-2	Put a little aileron in this thing.
+1704:05.0	CAM-1	O.K., here's a left and I'll give you a right one right here.
+1704:09.7	CAM-1	O.K. right turn right and left yaw.
+1704:11.4	CAM-2	Left yaw checks.
+1704:12.4	CAM-1	O.K., here's the rudders.
+1704:13.6	CAM-1	Here's two left, centre, two right centre.
+1704:17.8	CAM-2	Checks.
+1704:19.2	CAM-2	Controls.
+1704:19.6	CAM-1	Haven't seen any yet!
+1704:20.3	CAM-2	I haven't either.
+1704:21. 7	CAM-1	They're free, the indicators are checked.
+1704:24.6	CAM-2	There's one.
+1704:25.8	CAM-1	There's one.
+1704:26.4	CAM-1	That's the ninety degree.
+1704:28.5	CAM-?	O.K.
+CAM-2	Weight and balance finals?
+1704:37.7	CAM	(Sounds similar to stabilizer trim).(1704:44.8)
+1704:37.2	CAM-1	We were gonna put that on four and a half
+1704:39.8	CAM-3	We got four and a half and we weigh five thirty four (sound of stabilizer trim).
+1704:44.6	CAM-2	Four and a half on the right.
+1704:46.8	CAM-2	Engineer's taxi check.
+1704:48.4	CAM-3	Taxi check is complete.
+1704:50.5	CAM-2	Take-off and departure briefing?
+1704:52.1	CAM-1	O.K., it'll be standard, we gonna go straight out there till we get thirty five hundred feet then we're gonna make that reversal and go back' out to * fourteen.
+1704:58.2	APP	-m eight seven zero five and clipper one seven ... three six, for your information, the centre line lighting is out of service. (APP transmission is readable but slightly broken.)
+1705:05.8	KLM	I copied that.
+1705:07.7	RDO-2	Clipper one seven three six.
+1705:09.6	CAM-1	We got centre line markings (* only) (could be "don't we) they count the same thing as ... we need eight hundred metres if you don't have that centre line... I read that on the back (of this) just a while ago.
+1705:22.0	CAM-1	That's two.
+1705:23.5	CAM-3	Yeh, that's forty-five there.
+1705:25.7	CAM-1	Yeh.
+1705:26.5	CAM-2	That's this one right here.
+1705:27.2	CAM-1	(Yeh)I know.
+1705:28.1	CAM-3	O.K.
+1705:28.5	CAM-3	Next one is almost a forty-five, huh yeh.
+1705:30.6	CAM-1	But it goes...
+1705:32.4	CAM-1	Yeh, but it goes ... ahead, I think (it's) gonna put us on (the) taxiway.
+1705:35.9	CAM-3	Yeah, just a little bit yeh.
+1705:39.8	CAM-?	O.K., for sure.
+1705:40.0	CAM-2	Maybe he, maybe he counts these (are) three.
+1705:44.8	CAM-?	I like this.
+1705:44.8	KLM	Uh, the KLM ... four eight zero five is now ready for take-off ... uh and we're waiting for our ATC clearance.
+1705:53.4	APP	KLM eight seven * zero five uh you are cleared to the Papa Beacon climb to and maintain flight level nine zero right turn after take-off proceed with heading zero four zero until intercepting the three two five radial from Las Palmas VOR. (1706:08.2)
+1706:09.6	KLM	Ah roger, sir, we're cleared to the Papa Beacon flight level nine zero, right turn out zero four zero until intercepting the three two five and we're now (at take-off). (1706:17.9)
+1706:13	    KLM-1	We gaan. (We're going)
+1706:18.19	APP	OK.
+1706:19.3	RDO	No .. eh.
+1706:20.08	APP	Stand by for take-off, I will call you.
+1706:20.3	RDO	And we're still taxiing down the runway, the clipper one seven three six.
+1706:19.39 - 1706:23.19		RDO and APP communications caused a shrill noise in KLM cockpit - messages not heard by KLM crew.
+1706:25.6	APP	Roger alpha one seven three six report when runway clear
+1706:29.6	RDO	OK, we'll report when we're clear.
+APP	Thank you
+1706:32.43	KLM-3	Is hij er niet af dan? {Is he not clear then?}
+1706:34.1	KLM-1	Wat zeg je? {What do you say?}
+1706:34.15	KLM-?	Yup.
+1706:34.7	KLM-3	Is hij er niet af, die Pan American? {Is he not clear that Pan American?}
+1706:35.7	KLM-1	Jawel. {Oh yes. - emphatic}
+1706:40		PanAm captain sees landinglights of KLM Boeing at approx. 700m
+1706:44		PH-BUF started rotation
+1706:47.44	KLM-1	[Scream]
+1706:50		collision
