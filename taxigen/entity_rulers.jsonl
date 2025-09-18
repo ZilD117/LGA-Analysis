@@ -2,6 +2,7 @@
 {"label":"CALLSIGN","pattern":[{"LOWER":"air"},{"LOWER":"canada"},{"TEXT":{"REGEX":"^[0-9]{1,4}$"}}]}
 {"label":"CALLSIGN","pattern":[{"LOWER":"speed"},{"LOWER":"bird"},{"TEXT":{"REGEX":"^[0-9]{1,4}$"}}]}
 {"label":"CALLSIGN","pattern":[{"LOWER":"japan"},{"LOWER":"air"},{"TEXT":{"REGEX":"^[0-9]{1,4}$"}}]}
+{"label":"CALLSIGN","pattern":[{"LOWER":"clipper"},{"TEXT":{"REGEX":"^[0-9]{1,4}$"}}]}
 {"label":"ACSTATE","pattern":[{"LOWER":{"IN":["hold","taxi","go","approach"]}}]}
 {"label":"ACSTATE","pattern":[{"LOWER":"turn"},{"LOWER":{"IN":["left","right"]}}]}
 {"label":"DESTINATION","pattern":[{"TEXT":{"REGEX":"^K[A-Z]{3}$"}}]}
