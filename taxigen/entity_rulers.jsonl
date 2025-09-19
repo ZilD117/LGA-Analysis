@@ -3,7 +3,7 @@
 {"label":"CALLSIGN","pattern":[{"LOWER":"speed"},{"LOWER":"bird"},{"TEXT":{"REGEX":"^[0-9]{1,4}$"}}]}
 {"label":"CALLSIGN","pattern":[{"LOWER":"japan"},{"LOWER":"air"},{"TEXT":{"REGEX":"^[0-9]{1,4}$"}}]}
 {"label":"CALLSIGN","pattern":[{"LOWER":"clipper"},{"TEXT":{"REGEX":"^[0-9]{1,4}$"}}]}
-{"label":"ACSTATE","pattern":[{"LOWER":{"IN":["hold","taxi","go","approach"]}}]}
+{"label":"ACSTATE","pattern":[{"LOWER":{"IN":["hold","taxi","go","approach","pass"]}}]}
 {"label":"ACSTATE","pattern":[{"LOWER":"turn"},{"LOWER":{"IN":["left","right"]}}]}
 {"label":"DESTINATION","pattern":[{"TEXT":{"REGEX":"^K[A-Z]{3}$"}}]}
 {"label":"DESTINATION","pattern":[{"LOWER":"taxiway"},{"LOWER":"alpha"}]}
@@ -11,6 +11,40 @@
 {"label":"DESTINATION","pattern":[{"LOWER":"taxiway"},{"LOWER":"charlie"}]}
 {"label":"DESTINATION","pattern":[{"LOWER":"taxiway"},{"LOWER":"mike"}]}
 {"label":"DESTINATION","pattern":[{"LOWER":"holding"},{"LOWER":"point"},{"TEXT":{"REGEX":"^[A-Za-z][0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"taxiway"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"end"},{"LOWER":"of"},{"LOWER":"the"},{"LOWER":"runway"}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"runway"}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"runway"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"runway"},{"TEXT":{"REGEX":"^[0-9]{1,2}"}},{"LOWER":"left"}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"runway"},{"TEXT":{"REGEX":"^[0-9]{1,2}"}},{"LOWER":"right"}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"runway"},{"TEXT":{"REGEX":"^[0-9]{1,2}"}},{"LOWER":"center"}]}
+{"label":"DESTINATION","pattern":[{"TEXT":{"REGEX":"^[A-Z][0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"charlie"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"alpha"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"bravo"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"delta"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"echo"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"foxtrot"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"golf"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"hotel"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"india"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"juliet"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"kilo"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"lima"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"mike"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"november"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"oscar"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"papa"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"quebec"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"romeo"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"sierra"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"tango"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"uniform"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"victor"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"whiskey"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"xray"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"yankee"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
+{"label":"DESTINATION","pattern":[{"LOWER":"zulu"},{"TEXT":{"REGEX":"^[0-9]{1,2}$"}}]}
 
 
 

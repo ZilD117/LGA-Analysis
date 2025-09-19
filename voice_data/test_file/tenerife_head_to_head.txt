@@ -1,7 +1,7 @@
 1658:14.8   KLM RT    Approach KLM 4805 on the ground in Tenerife.
 1658:21.5   APP       KLM 4805, roger.
-1658:25.7   KLM RT    We require backtrack on 12 for takeoff Runway 30.
-1658:30.4   APP       Okay, 4805 taxi to the holding position Runway 30. Taxi into the runway and—ah—leave runway (third) to your left.
+1658:25.7   KLM RT    We require backtrack on runway 12 for takeoff Runway 30.
+1658:30.4   APP       Okay, KLM 4805 taxi to the holding position Runway 30. Taxi into the runway and—ah—leave runway (third) to your left.
 1658:47.4   KLM RT    Roger, sir, (entering) the runway at this time and the first (taxiway) we, we go off the runway again for the beginning of Runway 30.
 1658:55.3   APP       Okay, KLM 80—ah—correction, KLM 4805, taxi straight ahead for the runway and make backtrack.
 1659:04.5   KLM RT    Roger, make a backtrack.
@@ -9,116 +9,30 @@
 1659:15.9   APP       KLM 4805, roger.
 1659:28.4   KLM RT    Approach, you want us to turn left at Charlie 1, taxiway Charlie 1?
 1659:32.2   APP       Negative, negative, taxi straight ahead up to the end of the runway and make backtrack.
-1659:39.9   KLM RT    Okay, sir.
 1701:57.0   PA RT     Tenerife, the Clipper 1736.
 1702:01.8   APP       Clipper 1736, Tenerife.
 1702:03.6   PA RT     Ah—we were instructed to contact you and also to taxi down the runway, is that correct?
-1702:08.4   APP       Affirmative, taxi into the runway and—ah—leave the runway third, third to your left, [background conversation in the tower].
+
+1702:08.4   APP       Affirmative, taxi into the runway and—ah—leave the runway third, third to your left.
 1702:16.4   PA RT     Third to the left, okay.
 1702:18.4   PA 3      Third, he said.
-1702:19.0   PA?       Three.
-1702:20.6   APP       [Th]ird one to your left.
-1702:21.9   PA 1      I think he said first.
-1702:26.4   PA 2      I'll ask him again.
-1702:32.2   PA 2      Left turn.
-1702:33.1   PA 1      I don't think they have takeoff minimums anywhere right now.
-1702:39.2   PA 1      What really happened over there today?
-1702:41.6   PA 4      They put a bomb (in) the terminal, sir, right where the check-in counters are.
-1702:46.6   PA 1      Well, we asked them if we could hold and—uh—I guess you got the word, we landed here...
-1702:49.8   APP       KLM 4805 how many taxiway—ah—did you pass?
+1702:19.0   PA        Three.
+1702:20.6   APP       Third one to your left.
+1702:49.8   APP       KLM 4805 how many taxiway did you pass?
 1702:55.6   KLM RT    I think we just passed Charlie 4 now.
-1702:59.9   APP       Okay ... at the end of the runway make 180 [degree turn] and report—ah—ready—ah—for ATC clearance. [background conversation in tower]
-1703:09.3   PA 2      The first one is a 90-degree turn.
-1703:11.0   PA 1      Yeah, okay.
-1703:12.1   PA 2      Must be the third ... I'll ask him again.
-1703:14.2   PA 1      Okay.
-1703:16.6   PA 1      We could probably go in, it's ah...
-1703:19.1   PA 2      You gotta make a 90-degree turn.
-1703:21.6   PA 1      Yeah, uh.
-1703:21.6   PA 2      Ninety-degree turn to get around this ... this one down here, it's a 45.
-1703:29.3   PA RT     Would you confirm that you want the Clipper 1736 to turn left at the third intersection? ["third" drawn out and emphasized]
-1703:35.1   PA 1      One, two.
-1703:36.4   APP       The third one, sir, one, two, three, third, third one.
-1703:38.3   PA?       One two (four).
-1703:39.0   PA 1      Good.
-1703:39.2   PA RT     Very good, thank you.
-1703:40.1   PA 1      That's what we need right, the third one.
-1703:42.9   PA 3      Uno, dos, tres.
-1703:44.0   PA 1      Uno, dos, tres.
-1703:44.9   PA 3      Tres—uh—si.
-1703:46.5   PA 1      Right.
-1703:47.6   PA 3      We'll make it yet.
-1703:47.6   APP       ...er 7136 [sic] report leaving the runway.
-1703:49.1   PA 2      Wing flaps?
-1703:50.2   PA 1      Ten, indicate 10, leading edge lights are green.
-1703:54.1   PA?       Get that.
-1703:55.0   PA RT     Clipper 1736.
-1703:56.5   PA 2      Yaw damp and instrument?
-1703:58.6   PA 1      Ah—Bob, we'll get a left one... 
-1703:59.3   PA 2      I got a left.
-1704:00.6   PA 1      Did you?
-1704:00.9   PA 2      And—ah—need a right.
-1704:02.6   PA 1      I'll give you a little... 
-1704:03.8   PA 2      Put a little aileron in this thing.
-1704:05.0   PA 1      Okay, here's a left and I'll give you a right one right here.
-1704:09.7   PA 1      Okay, right turn right and left yaw.
-1704:11.4   PA 2      Left yaw checks.
-1704:12.4   PA 1      Okay, here's the rudders.
-1704:13.6   PA 1      Here's two left, center, two right center.
-1704:17.8   PA 2      Checks.
-1704:19.2   PA 2      Controls.
-1704:19.6   PA 1      Haven't seen any yet!
-1704:20.3   PA 2      I haven't either.
-1704:21.7   PA 1      They're free, the indicators are checked.
-1704:24.6   PA 2      There's one.
-1704:25.8   PA 1      There's one.
-1704:26.4   PA 1      That's the 90-degree.
-1704:28.5   PA?       Okay.
-1704:34.5   PA 2      Weight and balance finals?
-1704:37.2   PA 1      We were gonna put that on four and a half.
-1704:39.8   PA 3      We got four and a half and we weigh 534. [sound of stabilizer trim]
-1704:44.6   PA 2      Four and a half on the right.
-1704:46.8   PA 2      Engineer's taxi check.
-1704:48.4   PA 3      Taxi check is complete.
-1704:50.5   PA 2      Takeoff and departure briefing?
-1704:52.1   PA 1      Okay, it'll be standard. We gonna go straight out there till we get 3,500 feet, then we're gonna make that reversal and go back out to ... 14.
-1704:58.2   APP       [KLM] 8705 [sic] and Clipper 1736, for your information, the centerline lighting is out of service. [APP transmission is readable but slightly broken]
-1705:05.8   KLM RT    I copied that.
-1705:07.7   PA RT     Clipper 1736.
-1705:09.6   PA 1      We got centerline markings (only) [could be "don't we"] they count the same thing as ... we need 800 meters if you don't have that centerline ... I read that on the back (of this) just a while ago.
-1705:22.0   PA 1      That's two.
-1705:23.5   PA 3      Yeah, that's 45 [degrees] there.
-1705:25.7   PA 1      Yeah.
-1705:26.5   PA 2      That's this one right here.
-1705:27.2   PA 1      [Yeah], I know.
-1705:28.1   PA 3      Okay.
-1705:28.5   PA 3      Next one is almost a 45, huh, yeah.
-1705:30.6   PA 1      But it goes...
-1705:32.4   PA 1      Yeah, but it goes ... ahead, I think (it's) gonna put us on (the) taxiway.
-1705:35.9   PA 3      Yeah, just a little bit, yeah.
-1705:39.8   PA?       Okay, for sure.
-1705:40.0   PA 2      Maybe he, maybe he counts these (are) three.
-1705:40.0   PA?       Huh.
-1705:41.5   KLM 2     Wait a minute, we don't have an ATC clearance.
-1705:42.0   KLM 1     No, I know that. Go ahead, ask.
+1702:59.9   APP       Okay ... at the end of the runway make 180 degree turn and report ready for ATC clearance. 
+
 1705:44.6   KLM RT    Uh, the KLM 4805 is now ready for takeoff and we're waiting for our ATC clearance.
-1705:53.4   APP       KLM 8705 [sic] uh you are cleared to the Papa beacon. Climb to and maintain flight level 90 ... right turn after takeoff proceed with heading 040 until intercepting the 325 radial from Las Palmas VOR.
+1705:53.4   APP       KLM 8705 uh you are cleared to the Papa beacon. Climb to and maintain flight level 90 ... right turn after takeoff proceed with heading 040 until intercepting the 325 radial from Las Palmas VOR.
 1706:09.6   KLM RT    Ah, roger, sir, we're cleared to the Papa beacon flight level 90, right turn out 040 until intercepting the 325, and we're now (at takeoff).
 1706:11.08  [SOUND]   [Brakes of KLM 4805 are released.]
 1706:12.25  KLM 1     Let's go ... check thrust.
 1706:14.00  [SOUND]   [Sound of engines starting to accelerate.]
-1706:18.19  APP       Okay.
 1706:20.08  APP       Stand by for takeoff ... I will call you.
-1706:20.08  PA1       No, uh.
 1706:20.08  PA RT     And we are still taxiing down the runway, the Clipper 1736.
-1706:25.47  APP       Ah—Papa Alpha 1736 report runway clear.
+1706:25.47  APP       Papa Alpha 1736 report runway clear.
 1706:25.59  PA RT     Okay, we'll report when we're clear.
-1706:31.69  APP       Thank you.
-1706:32.43  KLM 3     Is he not clear, then?
-1706:34.10  KLM 1     What do you say?
-1706:34.15  PA?       Yup.
 1706:34.70  KLM 3     Is he not clear, that Pan American?
-1706:35.70  KLM 1     Oh, yes. [emphatically]
 1706:40.00	PA        PA captain sees landinglights of KLM Boeing at approx. 700m
 1706:44.00	KLM       PH-BUF started rotation
 1706:47.44	KLM 1	  [Scream]
