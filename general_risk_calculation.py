@@ -611,11 +611,120 @@ def demonstrate_katl_case():
     
     return df, intersections
 
+def demonstrate_haneda_case():
+    """
+    Demonstrate the Haneda case study using the general risk calculation framework.
+    This adapts the case study 1 methodology to work with the general framework.
+    """
+    print("=" * 60)
+    print("HANEDA AIRPORT 2024 RISK CALCULATION")
+    print("Case Study 1: Japan Airlines Flight 516 vs Japan Coast Guard JA722A")
+    print("=" * 60)
+    
+    # Aircraft paths from case study 1
+    # Japan Air 516 path (from runway 03_001 to 03_011)
+    path_1 = ['Rwy_03_001', 'Rwy_03_002', 'Rwy_03_003', 'Rwy_03_004', 
+              'Rwy_03_005', 'Rwy_03_006', 'Rwy_03_007', 'Rwy_03_008', 
+              'Rwy_03_009', 'Rwy_03_010', 'Rwy_03_011']
+    
+    # JA722A path (from taxiway C5 to runway 03_011)
+    path_2 = ['Txy_C5_C5B', 'Rwy_03_006', 'Rwy_03_007', 'Rwy_03_008', 
+              'Rwy_03_009', 'Rwy_03_010', 'Rwy_03_011']
+    
+    print(f"Japan Air 516 Path: {path_1}")
+    print(f"JA722A Path: {path_2}")
+    print()
+    
+    # Create link distance dictionary for Haneda case
+    # Using approximate distances based on typical runway segments
+    link_dist_km = {}
+    
+    # Japan Air 516 path distances (runway segments)
+    for i in range(len(path_1) - 1):
+        # Typical runway segment distance ~0.2 km
+        link_dist_km[(path_1[i], path_1[i+1])] = 0.2
+    
+    # JA722A path distances (taxiway to runway)
+    link_dist_km[('Txy_C5_C5B', 'Rwy_03_006')] = 0.3  # taxiway to runway
+    for i in range(1, len(path_2) - 1):
+        link_dist_km[(path_2[i], path_2[i+1])] = 0.2  # runway segments
+    
+    # Calculate segment times based on different speeds
+    # Japan Air 516: faster approach speed (arrives first)
+    segment_times_1 = []
+    for i in range(len(path_1) - 1):
+        distance = link_dist_km[(path_1[i], path_1[i+1])]
+        speed_kmh = 100.0  # km/h for approach (faster)
+        time_sec = (distance / speed_kmh) * SEC_PER_HOUR
+        segment_times_1.append(time_sec)
+    
+    # JA722A: slower taxi speed (arrives slightly later)
+    segment_times_2 = []
+    for i in range(len(path_2) - 1):
+        distance = link_dist_km[(path_2[i], path_2[i+1])]
+        if i == 0:  # taxiway segment
+            speed_kmh = 30.0  # km/h for taxi
+        else:  # runway segments
+            speed_kmh = 40.0  # km/h for runway
+        time_sec = (distance / speed_kmh) * SEC_PER_HOUR
+        segment_times_2.append(time_sec)
+    
+    # Add a small delay to JA722A to simulate the actual timing
+    # JA722A starts 10 seconds after Japan Air 516
+    segment_times_2[0] += 10.0
+    
+    print(f"Japan Air 516 Segment Times (s): {[f'{t:.1f}' for t in segment_times_1]} (sum={sum(segment_times_1):.1f})")
+    print(f"JA722A Segment Times (s): {[f'{t:.1f}' for t in segment_times_2]} (sum={sum(segment_times_2):.1f})")
+    print()
+    
+    # Calculate risk using the general function
+    df, t_grid = general_risk_calculation(
+        path_1=path_1,
+        path_2=path_2,
+        segment_times_1=segment_times_1,
+        segment_times_2=segment_times_2,
+        link_dist_km=link_dist_km,
+        rc_km=0.075,
+        epsilon_sec=1.0,
+        gaussian_sigma_sec=3.0  # Tighter distribution for Haneda case
+    )
+    
+    # Determine nodes of interest (intersection nodes)
+    nodes_of_interest = ['Rwy_03_006', 'Rwy_03_007', 'Rwy_03_008', 'Rwy_03_009', 'Rwy_03_010', 'Rwy_03_011']
+    y_thres = 0.05
+    
+    # Plot the results - focus on time until aircraft reaches Rwy_03_006 (~45 seconds)
+    print("Creating risk visualization...")
+    intersections, final_time, fig, ax = plot_risk_timeseries(
+        df=df,
+        nodes_order=nodes_of_interest,
+        use_cumulative=True,
+        y_threshold=y_thres,
+        title=None,
+        xlim=(0, 50),  # Focus on first 50 seconds until Rwy_03_006
+        save_filename=f'haneda_risk_{y_thres}.png'
+    )
+    
+    # Print summary
+    print("\nHaneda Risk Summary:")
+    print("-" * 40)
+    for node in nodes_of_interest:
+        node_data = df[df['node'] == node]
+        if not node_data.empty:
+            max_fw = node_data['Cum_FW'].max()
+            max_pn = node_data['Cum_PN'].max()
+            print(f"{node}: Max FW={max_fw:.4f}, Max PN={max_pn:.4f}")
+    
+    return df, intersections
+
 if __name__ == "__main__":
-    # Run both demonstrations
+    # Run all three case study demonstrations
     print("Running Tenerife Case Study...")
     df_tenerife, intersections_tenerife = demonstrate_tenerife_case()
-        
-    print("Running KATL Case Study...")
+    
+    print("\nRunning KATL Case Study...")
     df_katl, intersections_katl = demonstrate_katl_case()
+    
+    print("\nRunning Haneda Case Study...")
+    df_haneda, intersections_haneda = demonstrate_haneda_case()
     
