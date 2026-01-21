@@ -272,6 +272,11 @@ The real-time risk calculation system provides the following performance charact
 # Citations
 If you find this work useful in your research, please cite us,
 ```
-@article{}
+@article{pang2025voice,
+  title={From voice to safety: language ai powered pilot-atc communication understanding for airport surface movement collision risk assessment},
+  author={Pang, Yutian and Kendall, Andrew Paul and Porcayo, Alex and Barsotti, Mariah and Jain, Anahita and Clarke, John-Paul},
+  journal={arXiv preprint arXiv:2503.04974},
+  year={2025}
+}
 
 ```
