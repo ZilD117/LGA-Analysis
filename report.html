@@ -163,7 +163,7 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
       <a href="#incident">Incident</a>
       <a href="#data">Data</a>
       <a href="#timeline">Timeline</a>
-      <a href="#blindspot">Blind Spot</a>
+      <a href="#blindspot">Why</a>
       <a href="#riskmap">Risk Map</a>
       <a href="#simulator">Simulator</a>
       <a href="#prevention">Prevention</a>
@@ -176,7 +176,7 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
 <section class="hero">
   <div class="container">
     <h1>Could AI Have <span class="highlight">Prevented</span> the<br>LGA Runway Collision?</h1>
-    <p class="subtitle">A second-by-second forensic analysis using real ADS-B flight data and real ATC audio, demonstrating how Language AI-powered conflict detection would have stopped the tragedy.</p>
+    <p class="subtitle">A second-by-second forensic analysis using real ADS-B flight data and real ATC audio, demonstrating how AI-powered conflict detection would have stopped the tragedy.</p>
     <div class="stats">
       <div class="stat"><div class="num red">2</div><div class="label">Pilots Killed</div></div>
       <div class="stat"><div class="num orange">8s</div><div class="label">Controller Blind Spot</div></div>
@@ -337,33 +337,51 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
   </div>
 </section>
 
-<!-- BLIND SPOT -->
+<!-- WHY IT HAPPENED -->
 <section id="blindspot">
   <div class="container">
-    <div class="section-title fade-in">The 8-Second Blind Spot</div>
-    <p class="section-subtitle fade-in">The Whisper transcript reveals a cascading human failure in three phases.</p>
+    <div class="section-title fade-in">Why It Happened</div>
+    <p class="section-subtitle fade-in">A single controller working two positions, 15+ handoffs in 2 minutes, and a landing clearance that slipped from working memory.</p>
+
+    <div class="card-grid fade-in" style="grid-template-columns: 1fr;">
+      <div class="card" style="border-left: 4px solid var(--orange); border-top: none;">
+        <h3>Root Cause: Cognitive Overload</h3>
+        <p style="margin-top:8px">Jazz 8646 was cleared to land Runway 04 at 03:35:05 UTC. The fatal crossing clearance to Truck 1 came at 03:37:01 — nearly <strong>2 full minutes later</strong>. In those 2 minutes, the controller handled at least 15 other communications: taxiing Delta 520 and Delta 2733, Southwest 3988, Frontier 4195, a vehicle crossing at Charlie Yankee, lane assignments, frequency changes. A single controller was working both ground and tower positions simultaneously — jobs normally split between two people. By the time Truck 1 requested to cross, the Jazz 8646 landing clearance had been pushed out of working memory entirely.</p>
+      </div>
+    </div>
+
+    <div class="section-title fade-in" style="font-size:clamp(1.2rem,2.5vw,1.6rem);margin-top:48px">He Said "Stop" — Why Didn't It Work?</div>
+    <p class="section-subtitle fade-in">The controller said "stop" dozens of times across four transmissions. None of them were effective.</p>
     
-    <div class="card-grid fade-in" style="grid-template-columns: repeat(3, 1fr);">
-      <div class="card" style="border-top: 3px solid var(--orange);">
-        <h3 style="color:var(--orange)">Phase 1: Blind Spot</h3>
-        <p style="font-size:28px;font-weight:800;color:var(--orange);margin:8px 0">8 seconds</p>
-        <p>After issuing the clearance, the controller showed <strong>zero awareness</strong> of the conflict. Jazz 646 was cleared 2 minutes earlier — the controller's working memory had moved on to other traffic.</p>
+    <div class="card-grid fade-in" style="grid-template-columns: 1fr;">
+      <div class="card" style="border-left: 4px solid var(--orange); border-top: none;">
+        <h3 style="color:var(--orange)">Stop #1 — T+7s: "Frontier 4195, stop there please"</h3>
+        <p style="margin-top:8px">The controller addressed <strong>Frontier 4195</strong>, a departing aircraft — not the truck. The truck driver had zero reason to react to a command with someone else's callsign. At this point the truck is only ~22m into its 86m crossing. <strong>If this had been "Truck 1, stop" instead, the truck stops at ~40m with 46m to spare. Everyone lives.</strong></p>
       </div>
-      <div class="card" style="border-top: 3px solid var(--red);">
-        <h3 style="color:var(--red)">Phase 2: Wrong Target</h3>
-        <p style="font-size:28px;font-weight:800;color:var(--red);margin:8px 0">8 seconds</p>
-        <p>The first "stop" went to <strong>Frontier 4195</strong> (wrong entity). The frantic "stop stop stop" had <strong>no callsign</strong>. The truck driver had no protocol-compliant reason to react.</p>
+      <div class="card" style="border-left: 4px solid var(--red); border-top: none;">
+        <h3 style="color:var(--red)">Stop #2 — T+11s: "Stop, stop, stop, stop, stop, stop, stop, stop, stop"</h3>
+        <p style="margin-top:8px">Pure panic. <strong>No callsign.</strong> In ATC protocol, a transmission without a callsign has no clear addressee. Multiple entities are listening — Delta 2603 on approach, Frontier 4195, the truck. The truck driver is operating under a valid, properly read-back crossing clearance. Unaddressed "stop"s on a busy frequency do not unambiguously tell him he is the target. <strong>If the controller had said "Truck 1, stop" here, the truck would be at ~44m — still stoppable with 23m to spare.</strong></p>
       </div>
-      <div class="card" style="border-top: 3px solid #dc2626;">
-        <h3 style="color:#dc2626">Phase 3: Too Late</h3>
-        <p style="font-size:28px;font-weight:800;color:#dc2626;margin:8px 0">11 seconds</p>
-        <p>First correct "Stop, <strong>Truck 1</strong>" came at T+16s. Truck was at <strong>85%</strong> of the distance. Stopping distance exceeded remaining distance by 6 meters. <strong>Physically impossible.</strong></p>
+      <div class="card" style="border-left: 4px solid #dc2626; border-top: none;">
+        <h3 style="color:#dc2626">Stop #3 — T+16s: "Stop, Truck 1, stop, stop, Truck 1"</h3>
+        <p style="margin-top:8px">The <strong>first correct address</strong> to Truck 1. But 16 seconds have passed. At ~20 km/h, the truck has covered ~73m of the 86m crossing. With 2.5s human reaction time and hard braking at 3 m/s², the truck needs ~19 more meters to stop — putting it at ~92m. The collision point is at 86m. <strong>Physically impossible to stop in time.</strong></p>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--fg2); border-top: none;">
+        <h3>Stop #4 — T+25–28s: More unaddressed "stop"s</h3>
+        <p style="margin-top:8px">The collision has already occurred. The controller continues repeating "stop" without a callsign.</p>
+      </div>
+    </div>
+
+    <div class="card-grid mt-40 fade-in" style="grid-template-columns: 1fr;">
+      <div class="card" style="border: 1px solid var(--fg); background: rgba(255,255,255,0.03);">
+        <h3>The Tragedy in One Sentence</h3>
+        <p style="margin-top:8px;font-size:15px">The controller recognized the danger at T+7s — <strong>early enough to save everyone</strong>. But he addressed the wrong entity, then dropped the callsign entirely. The correct callsign finally came 9 seconds later, when it was already physically impossible to stop. Two protocol errors, layered on top of the original clearance error, made the collision inevitable.</p>
       </div>
     </div>
 
     <div class="img-wrap mt-40 fade-in">
       <img src="lga_blind_spot_analysis.png" alt="Blind spot analysis">
-      <div class="caption">Distance to collision point over time — based on FlightAware ADS-B track data &amp; LiveATC tower audio. The yellow shaded area marks the 8-second window where the controller had no awareness of the conflict.</div>
+      <div class="caption">Distance to collision point over time — based on FlightAware ADS-B track data &amp; LiveATC tower audio. The shaded area marks the window where the controller had no awareness of the conflict.</div>
     </div>
     <div class="img-wrap fade-in">
       <img src="lga_atc_timeline.png" alt="ATC communication timeline">
@@ -490,29 +508,45 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
       </tbody>
     </table>
 
-    <div class="card-grid mt-40 fade-in" style="grid-template-columns: 1fr 1fr;">
+    <div class="card-grid mt-40 fade-in" style="grid-template-columns: 1fr 1fr 1fr;">
       <div class="card" style="border: 1px solid var(--red);">
         <h3 class="text-red">What Actually Happened</h3>
         <p style="font-family:monospace; font-size:13px; line-height:2; margin-top:12px;">
           T+ 0s &nbsp;Clearance issued<br>
           T+ 3s &nbsp;Truck starts rolling<br>
-          T+ 8s &nbsp;— Controller realizes error<br>
-          T+ 8s &nbsp;— "Frontier 4195, stop" (WRONG TARGET)<br>
-          T+11s &nbsp;— "stop stop stop" (NO CALLSIGN)<br>
-          T+16s &nbsp;— "Stop, Truck 1" (truck at 73m/86m)<br>
+          T+ 7s &nbsp;— "Frontier 4195, stop"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(WRONG callsign)<br>
+          T+11s &nbsp;— "stop stop stop"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(NO callsign)<br>
+          T+16s &nbsp;— "Stop, Truck 1"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(truck at 73m/86m)<br>
           T+27s &nbsp;— COLLISION
         </p>
       </div>
-      <div class="card" style="border: 1px solid var(--green);">
-        <h3 class="text-green">With Our System (Scenario B)</h3>
+      <div class="card" style="border: 1px solid var(--orange);">
+        <h3 class="text-orange">If He Said "Truck 1" at T+7s</h3>
         <p style="font-family:monospace; font-size:13px; line-height:2; margin-top:12px;">
-          T+ 0.0s &nbsp;Clearance audio captured<br>
-          T+ 1.5s &nbsp;— ASR + NER complete<br>
-          T+ 2.0s &nbsp;— Conflict alert to controller<br>
-          T+ 3.5s &nbsp;— Controller processes alert<br>
-          T+ 5.0s &nbsp;— "TRUCK 1, STOP" (correct target)<br>
-          T+ 9.4s &nbsp;— Truck stopped at 30m<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;56m safety margin
+          T+ 0s &nbsp;Clearance issued<br>
+          T+ 3s &nbsp;Truck starts rolling<br>
+          T+ 7s &nbsp;— "TRUCK 1, STOP"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(correct callsign)<br>
+          T+ 9.5s — Truck driver reacts<br>
+          T+13s &nbsp;— Truck stopped at ~40m<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;46m safety margin
+        </p>
+      </div>
+      <div class="card" style="border: 1px solid var(--green);">
+        <h3 class="text-green">With Air-OS-ATC (Scenario B)</h3>
+        <p style="font-family:monospace; font-size:13px; line-height:2; margin-top:12px;">
+          T+ 0.0s — Clearance audio captured<br>
+          T+ 1.5s — Conflict detected<br>
+          T+ 2.0s — Alert to controller<br>
+          T+ 3.5s — Controller processes<br>
+          T+ 5.0s — "TRUCK 1, STOP"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(correct target)<br>
+          T+ 9.4s — Truck stopped at 30m<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;56m safety margin
         </p>
       </div>
     </div>
@@ -536,7 +570,7 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
       </div>
       <div class="conclusion-card">
         <h4>Eliminates the exact failure mode</h4>
-        <p>The 8-second cognitive blind spot and the misdirected stop commands are human failure modes that an automated system cannot exhibit. The system names the correct entities instantly.</p>
+        <p>The controller recognized the danger at T+7s — early enough — but addressed the wrong entity, then dropped the callsign. An automated system cannot make either error. It identifies the correct callsign instantly, every time.</p>
       </div>
       <div class="conclusion-card">
         <h4>Validated with 100% real data</h4>
@@ -548,7 +582,7 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
       </div>
       <div class="conclusion-card" style="border-left-color: var(--accent);">
         <h4>A tireless second set of eyes</h4>
-        <p>The system doesn't replace controllers — it augments them. In a profession plagued by understaffing and cognitive overload, it catches the one clearance the human brain couldn't hold in working memory. That's all it takes.</p>
+        <p>The system doesn't replace controllers — it augments them. This controller was working two positions alone, handling 15+ handoffs in 2 minutes. The landing clearance slipped from working memory. One automated cross-check — the kind a human cannot sustain under that workload — would have caught it.</p>
       </div>
     </div>
   </div>
