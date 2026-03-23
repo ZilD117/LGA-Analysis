@@ -5,7 +5,15 @@ __pycache__/
 # Ignore virtual environment folder
 venv/
 
+# Audio files (too large for git)
 *.mp3
+
+# OS files
+.DS_Store
+
+# Test output
+output/
+
 # *.txt
 
 tok2vec/

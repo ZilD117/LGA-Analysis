@@ -1,0 +1,205 @@
+=== KLGA Tower ATC Transcript ===
+Source: LiveATC.net archive KLGA-Twr-Mar-23-2026-0330Z.mp3
+Period: 03:30 - 04:00 UTC, March 23, 2026 (23:30-00:00 ET, March 22-23)
+Transcribed by: OpenAI Whisper (small model)
+Note: Timestamps are relative to start of 30-min audio chunk (03:30:00 UTC)
+============================================================
+
+[   6.26s -    8.88s] (UTC ~03:30:06.26)  So 3878 Bravo Juliet for lane 7, sir.
+[   9.40s -   11.18s] (UTC ~03:30:09.40)  Bravo Juliet, lane 7, clear.
+[  11.36s -   12.36s] (UTC ~03:30:11.36)  Bravo 3878.
+[  21.28s -   24.12s] (UTC ~03:30:21.28)  At 1381, cross 13 Romeo, now left platform.
+[  24.12s -   28.60s] (UTC ~03:30:24.12)  Cross 13 Romeo, now left platform for United at 1381.
+[  35.04s -   39.08s] (UTC ~03:30:35.04)  Brickyard 30402, 3302 is correction, I got it moving up now.
+[  39.52s -   42.48s] (UTC ~03:30:39.52)  Make it Bravo short of Tanks, lane Mike.
+[  43.00s -   45.34s] (UTC ~03:30:43.00)  Bravo short of Mike, Brickyard 3302.
+[  53.32s -   53.72s] (UTC ~03:30:53.32)  Bravo short of Mike, Brickyard 3302.
+[  53.72s -   55.98s] (UTC ~03:30:53.72)  At 1381, it's gonna be Bravo, now stand by.
+[  57.64s -   60.06s] (UTC ~03:30:57.64)  Delta, Brickyard 3302, so that doesn't exclude you.
+[  60.18s -   61.96s] (UTC ~03:31:00.18)  So don't go past kilo for me, if you can.
+[  62.64s -   63.56s] (UTC ~03:31:02.64)  Make the right turn there, kilo.
+[  63.94s -   65.76s] (UTC ~03:31:03.94)  Alright, right here at kilo, Brickyard 3302.
+[  66.06s -   68.14s] (UTC ~03:31:06.06)  Alright, right kilo, right alpha, and you're going to lane 7,
+[  68.26s -   70.20s] (UTC ~03:31:08.26)  but let's output it in there before you steer.
+[  70.62s -   72.58s] (UTC ~03:31:10.62)  There can be opposite directions, so right kilo.
+[  72.58s -   77.14s] (UTC ~03:31:12.58)  So pull up short of lane 7, let's south west in, and you can go on after.
+[  77.72s -   81.20s] (UTC ~03:31:17.72)  Alright, right kilo, right alpha, shorter 7, wait on south west,
+[  81.30s -   82.96s] (UTC ~03:31:21.30)  and after Brickyard 3302, thanks.
+[  83.26s -   85.02s] (UTC ~03:31:23.26)  Salvo 3078, stop there for me.
+[  86.30s -   87.98s] (UTC ~03:31:26.30)  Verified, Delta 2733, clear to land.
+[  88.24s -   90.20s] (UTC ~03:31:28.24)  Not yet, stop for south west 3078.
+[  90.60s -   91.72s] (UTC ~03:31:30.60)  Stop, stop for 3078.
+[  92.08s -   94.84s] (UTC ~03:31:32.08)  Delta 520, clear, uniform for me, join Romeo, hold short, 13.
+[  96.08s -   98.62s] (UTC ~03:31:36.08)  Uniform, Romeo, hold short, 13, Delta 520.
+[  99.00s -  101.56s] (UTC ~03:31:39.00)  Brickyard 33095, 137, take off, traffic, mile and mile,
+[ 101.56s -  102.38s] (UTC ~03:31:41.56)  final, know the land level.
+[ 102.84s -  105.54s] (UTC ~03:31:42.84)  Alright, clear to check off 13, Brickyard 507.
+[ 105.80s -  108.78s] (UTC ~03:31:45.80)  Delta 2733, clear to land on 4, wind is calm.
+[ 109.50s -  111.38s] (UTC ~03:31:49.50)  Little land, runway 4, Delta 2733.
+[ 112.12s -  114.14s] (UTC ~03:31:52.12)  Brickyard 3302, they're going to take you on lane 7,
+[ 114.30s -  117.48s] (UTC ~03:31:54.30)  and they just switched out the time, it's a go in first.
+[ 118.28s -  120.52s] (UTC ~03:31:58.28)  Alright, so we're on first, on line 7, Brickyard 3302.
+[ 121.76s -  126.56s] (UTC ~03:32:01.76)  Target evening, south west, 3988, we are 10 DME, final runway 4.
+[ 127.18s -  129.08s] (UTC ~03:32:07.18)  9888, number 2, clear to land, 4 wind calm.
+[ 131.06s -  132.22s] (UTC ~03:32:11.06)  Clear to land, south west,
+[ 135.90s -  136.54s] (UTC ~03:32:15.90)  switch 3988.
+[ 136.96s -  138.54s] (UTC ~03:32:16.96)  Thanks, verify, slow to land, runway 4.
+[ 138.80s -  141.72s] (UTC ~03:32:18.80)  Clear to land, runway 4, south west, 3988.
+[ 142.16s -  142.54s] (UTC ~03:32:22.16)  Clear to land, runway 4, south west, 3988.
+[ 142.54s -  144.62s] (UTC ~03:32:22.54)  Okay, boy, 589, line up, wait 13, traffic, land 4.
+[ 145.18s -  146.74s] (UTC ~03:32:25.18)  1013, line up, wait 1589.
+[ 146.98s -  150.06s] (UTC ~03:32:26.98)  So 38, they switched to lane assignment here for me at the last minute,
+[ 150.18s -  153.18s] (UTC ~03:32:30.18)  so Bravo Lima Alfa are going to follow the frontiers to the ramp,
+[ 153.32s -  154.50s] (UTC ~03:32:33.32)  that's their opposite direction.
+[ 154.96s -  158.88s] (UTC ~03:32:34.96)  Bravo Lima Alfa behind the frontiers, south west, 3878, go on and land.
+[ 159.56s -  161.42s] (UTC ~03:32:39.56)  1381, Bravo short of Zulu Enable.
+[ 162.58s -  164.92s] (UTC ~03:32:42.58)  Very close, short of Zulu Enable, 9381.
+[ 165.70s -  168.20s] (UTC ~03:32:45.70)  Tower, current zero and company short of 4, Charlie Yankee to cross.
+[ 168.44s -  171.58s] (UTC ~03:32:48.44)  Current zero and company, cross 4, Charlie Yankee now.
+[ 172.14s -  174.24s] (UTC ~03:32:52.14)  Current zero and company crossing 4, Charlie Yankee.
+[ 175.54s -  178.58s] (UTC ~03:32:55.54)  South point 733, clear at the end, drawing Romeo, hold short 13.
+[ 179.10s -  182.34s] (UTC ~03:32:59.10)  Clear at the end, Romeo, hold short 13, Delta point 733.
+[ 184.30s -  185.26s] (UTC ~03:33:04.30)  2795, 2028.
+[ 186.02s -  187.40s] (UTC ~03:33:06.02)  2028, good night, good 795.
+[ 187.90s -  190.18s] (UTC ~03:33:07.90)  34589, 13 clear for takeoff, point com.
+[ 192.06s -  193.96s] (UTC ~03:33:12.06)  13 clear for takeoff, break out 4580 now.
+[ 194.68s -  195.72s] (UTC ~03:33:14.68)  Current zero and company clear.
+[ 196.16s -  197.16s] (UTC ~03:33:16.16)  9-0, company, roger.
+[ 218.94s -  223.44s] (UTC ~03:33:38.94)  Delta 520, make a left on 13, you're going to taxi on runway 13, for me please.
+[ 224.40s -  226.86s] (UTC ~03:33:44.40)  Left turn on runway 13, Delta 520.
+[ 227.14s -  229.26s] (UTC ~03:33:47.14)  Thank you, I'll have more for you, taxi down 13 for now.
+[ 230.76s -  234.38s] (UTC ~03:33:50.76)  Delta 2733, same instruction, you're going to make a left on runway 13,
+[ 234.56s -  237.24s] (UTC ~03:33:54.56)  taxi down runway 13, stay with me for now.
+[ 237.76s -  242.02s] (UTC ~03:33:57.76)  Okay, we'll make a left on 13 and stay with you, taxi down 13, 2733.
+[ 242.40s -  245.34s] (UTC ~03:34:02.40)  Break out 4589, Coney climb and departure 2028.
+[ 245.72s -  246.44s] (UTC ~03:34:05.72)  Coney, see ya.
+[ 246.80s -  247.84s] (UTC ~03:34:06.80)  Jazz 6460F.
+[ 273.04s -  277.24s] (UTC ~03:34:33.04)  Delta 520, you're going to lane 8, just hold short a Lima on runway 13
+[ 277.24s -  280.20s] (UTC ~03:34:37.24)  and just verify with the ramp that you'll be able to get in.
+[ 281.08s -  286.84s] (UTC ~03:34:41.08)  Okay, hold short of Lima on runway 13 and we'll talk to the ramp, get back to your Delta 520.
+[ 287.16s -  292.70s] (UTC ~03:34:47.16)  Thank you, just verifying that some Shuffle in case going on here due to an inbound that has an issue.
+[ 293.28s -  293.72s] (UTC ~03:34:53.28)  Roger.
+[ 299.18s -  301.04s] (UTC ~03:34:59.18)  Jazz 6460, what is your?
+[ 301.48s -  304.58s] (UTC ~03:35:01.48)  LHU for GALIS, 4 for Jazz 6460.
+[ 304.88s -  306.36s] (UTC ~03:35:04.88)  646, number 2 is little in 4.
+[ 307.02s -  308.80s] (UTC ~03:35:07.02)  We'll land on runway 2 for Jazz 6460.
+[ 323.04s -  326.08s] (UTC ~03:35:23.04)  Delta 520, old short of Lima on runway 13 for now.
+[ 326.60s -  329.12s] (UTC ~03:35:26.60)  Fourth short of Lima, Delta 2733.
+[ 329.98s -  332.58s] (UTC ~03:35:29.98)  Fourth Delta 520, lane 8 is open.
+[ 337.94s -  341.38s] (UTC ~03:35:37.94)  Delta 313, United 1313, Broward short of Victor 1, able?
+[ 342.22s -  344.44s] (UTC ~03:35:42.22)  Broward short of Victor 9, it's 18-1.
+[ 344.74s -  349.92s] (UTC ~03:35:44.74)  Delta 520, exit 13 at Lima and join Alpha to lane 8.
+[ 350.74s -  353.06s] (UTC ~03:35:50.74)  Lima, Alpha, lane 8, Delta 520.
+[ 353.92s -  358.82s] (UTC ~03:35:53.92)  Delta 2733, same for you, follow the company, you're going to the same lane which is lane 8.
+[ 360.24s -  363.40s] (UTC ~03:36:00.24)  Lima, Alpha, lane 8, Delta 2733.
+[ 363.80s -  370.44s] (UTC ~03:36:03.80)  Southwest, 39, 88, exit at Uniform, join Romeo and hold short of 13, stand by frequency please.
+[ 371.10s -  376.40s] (UTC ~03:36:11.10)  Alright, right on Uniform, right on Romeo, hold short of 13 and stay in with you, Southwest, 3988.
+[ 378.20s -  379.58s] (UTC ~03:36:18.20)  Flute is 5, Flute is 7.
+[ 380.10s -  385.74s] (UTC ~03:36:20.10)  Front is 4195, menu climb out, LHU 7 departure, Coney climb off of runway 13.
+[ 394.74s -  396.68s] (UTC ~03:36:34.74)  Delta 2603, ILS 4.
+[ 397.04s -  398.14s] (UTC ~03:36:37.04)  2603, stand by.
+[ 402.04s -  403.64s] (UTC ~03:36:42.04)  The vehicle needs to cross runway.
+[ 413.06s -  414.94s] (UTC ~03:36:53.06)  Truck 1 in company, LaGuardia Tower.
+[ 415.26s -  416.20s] (UTC ~03:36:55.26)  Truck 1 in company.
+[ 416.78s -  420.50s] (UTC ~03:36:56.78)  Truck 1 in company, LaGuardia Tower, requesting to cross 4 at Delta.
+[ 421.06s -  423.70s] (UTC ~03:37:01.06)  Truck 1 in company, cross 4 at Delta.
+[ 424.48s -  426.42s] (UTC ~03:37:04.48)  Truck 1 in company, crossing 4 at Delta.
+[ 428.82s -  431.16s] (UTC ~03:37:08.82)  Front is 4195, stop there please.
+[ 432.44s -  434.84s] (UTC ~03:37:12.44)  Stop, stop, stop, stop, stop, stop, stop, stop, stop.
+[ 437.02s -  440.04s] (UTC ~03:37:17.02)  Stop, truck 1, stop, stop, truck 1.
+[ 446.20s -  448.22s] (UTC ~03:37:26.20)  Stop, stop, stop, stop, stop, stop, stop.
+[ 449.60s -  450.00s] (UTC ~03:37:29.60)  Stop, stop, stop, stop, stop, stop, stop, stop.
+[ 462.28s -  464.44s] (UTC ~03:37:42.28)  Delta 2603, go around, landing 2,000.
+[ 465.24s -  466.04s] (UTC ~03:37:45.24)  Chat 646.
+[ 468.38s -  470.22s] (UTC ~03:37:48.38)  Chat 646, I'd like to ask you a question.
+[ 471.12s -  471.50s] (UTC ~03:37:51.12)  I got a cat.
+[ 472.04s -  473.20s] (UTC ~03:37:52.04)  The vehicle's ever swine to you now.
+[ 477.28s -  478.50s] (UTC ~03:37:57.28)  Is the runway closed?
+[ 489.34s -  491.76s] (UTC ~03:38:09.34)  Delta 2603, go around, runway heading 2,000.
+[ 491.94s -  493.84s] (UTC ~03:38:11.94)  Right at 2,000, go around, Delta 2603.
+[ 496.66s -  497.44s] (UTC ~03:38:16.66)  LaGuardia Tower.
+[ 515.96s -  516.36s] (UTC ~03:38:35.96)  LaGuardia Tower.
+[ 516.36s -  518.08s] (UTC ~03:38:36.36)  Chat 646, runway 4 is closed, correct?
+[ 518.62s -  520.16s] (UTC ~03:38:38.62)  Yes, go on to runway 4 now.
+[ 520.26s -  521.40s] (UTC ~03:38:40.26)  Proceed on runway 4, you have access.
+[ 523.56s -  526.68s] (UTC ~03:38:43.56)  LaGuardia Tower, car in 0, runway 422 is closed at the time.
+[ 526.86s -  527.62s] (UTC ~03:38:46.86)  9-0, Roger.
+[ 534.54s -  536.14s] (UTC ~03:38:54.54)  LaGuardia Tower, vehicle 9-8.
+[ 536.70s -  539.02s] (UTC ~03:38:56.70)  9-8.
+[ 539.04s -  543.66s] (UTC ~03:38:59.04)  9-8.
+[ 548.78s -  550.14s] (UTC ~03:39:08.78)  9-8.
+[ 550.14s -  550.16s] (UTC ~03:39:10.14)  9-8.
+[ 550.60s -  550.60s] (UTC ~03:39:10.60)  
+[ 550.62s -  551.10s] (UTC ~03:39:10.62)  9-8.
+[ 551.10s -  554.96s] (UTC ~03:39:11.10)  Vehicle 9-8, please show at this time runway 422 is closed.
+[ 554.96s -  558.18s] (UTC ~03:39:14.96)  I repeat, runway 422 is closed at this time.
+[ 563.40s -  566.40s] (UTC ~03:39:23.40)  Tower, car in 0, LaGuardia Air Force is closed at this time.
+[ 571.60s -  574.82s] (UTC ~03:39:31.60)  Delta 2603, runway 3,000, go to approach 20.8 now.
+[ 575.32s -  576.46s] (UTC ~03:39:35.32)  3,000, over.
+[ 577.04s -  579.84s] (UTC ~03:39:37.04)  Delta 3988, cross 13 at Romeo, left at Papa.
+[ 583.52s -  585.64s] (UTC ~03:39:43.52)  Delta 3988, cross 13 at Romeo, left at Papa.
+[ 586.26s -  590.34s] (UTC ~03:39:46.26)  We'll cross 13 on Romeo, left on Papa, south west, 3,988.
+[ 601.92s -  603.70s] (UTC ~03:40:01.92)  6-0-3, 20-20, to look for you.
+[ 608.76s -  612.24s] (UTC ~03:40:08.76)  Tower, car in 0, 3-0-8, LaGuardia Air Force is closed at this time.
+[ 612.44s -  613.34s] (UTC ~03:40:12.44)  No aircraft in or out.
+[ 613.64s -  614.04s] (UTC ~03:40:13.64)  Okay.
+[ 615.88s -  617.60s] (UTC ~03:40:15.88)  Front there, 4295, copy that.
+[ 620.26s -  621.66s] (UTC ~03:40:20.26)  Alright, there's an incident on the field.
+[ 621.98s -  624.74s] (UTC ~03:40:21.98)  We're closed right now, just stand by.
+[ 647.32s -  649.94s] (UTC ~03:40:47.32)  So, 3988 proceed to Bravo, Kilo, Polini.
+[ 692.28s -  693.68s] (UTC ~03:41:32.28)  Thank you.
+[ 698.82s -  705.72s] (UTC ~03:41:38.82)  Delta 1199, call us back at 10 minutes.
+[ 705.76s -  707.68s] (UTC ~03:41:45.76)  There's an incident on the field, the airport's closed right now.
+[ 733.84s -  734.54s] (UTC ~03:42:13.84)  Sorry, did you call in?
+[ 737.56s -  738.56s] (UTC ~03:42:17.56)  Someone's talking to me, who is it?
+[ 742.20s -  743.10s] (UTC ~03:42:22.20)  That's Kilo.
+[ 857.14s -  858.54s] (UTC ~03:44:17.14)  Delta 1199, call us back at 10 minutes.
+[ 887.14s -  888.54s] (UTC ~03:44:47.14)  Delta 1199, call us back at 10 minutes.
+[ 917.14s -  918.54s] (UTC ~03:45:17.14)  Delta 1199, call us back at 10 minutes.
+[ 947.14s -  948.54s] (UTC ~03:45:47.14)  Delta 1199, call us back at 10 minutes.
+[ 977.14s -  978.54s] (UTC ~03:46:17.14)  Delta 1199, call us back at 10 minutes.
+[1007.14s - 1008.54s] (UTC ~03:46:47.14)  Delta 1199, call us back at 10 minutes.
+[1037.14s - 1038.54s] (UTC ~03:47:17.14)  Delta 1199, call us back at 10 minutes.
+[1067.14s - 1068.54s] (UTC ~03:47:47.14)  Delta 1199, call us back at 10 minutes.
+[1097.14s - 1098.54s] (UTC ~03:48:17.14)  Delta 1199, call us back at 10 minutes.
+[1127.14s - 1128.54s] (UTC ~03:48:47.14)  Delta 1199, call us back at 10 minutes.
+[1157.14s - 1158.54s] (UTC ~03:49:17.14)  Delta 1199, call us back at 10 minutes.
+[1187.14s - 1188.54s] (UTC ~03:49:47.14)  Delta 1199, call us back at 10 minutes.
+[1217.14s - 1218.54s] (UTC ~03:50:17.14)  Delta 1199, call us back at 10 minutes.
+[1247.14s - 1248.54s] (UTC ~03:50:47.14)  Delta 1199, call us back at 10 minutes.
+[1277.14s - 1278.54s] (UTC ~03:51:17.14)  Delta 1199, call us back at 10 minutes.
+[1307.14s - 1308.54s] (UTC ~03:51:47.14)  Delta 1199, call us back at 10 minutes.
+[1337.14s - 1338.54s] (UTC ~03:52:17.14)  Delta 1199, call us back at 10 minutes.
+[1367.14s - 1368.54s] (UTC ~03:52:47.14)  Delta 1199, call us back at 10 minutes.
+[1397.14s - 1398.54s] (UTC ~03:53:17.14)  Delta 1199, call us back at 10 minutes.
+[1427.14s - 1428.54s] (UTC ~03:53:47.14)  Delta 1199, call us back at 10 minutes.
+[1457.14s - 1458.54s] (UTC ~03:54:17.14)  Delta 1199, call us back at 10 minutes.
+[1487.14s - 1488.54s] (UTC ~03:54:47.14)  Delta 1199, call us back at 10 minutes.
+[1517.14s - 1518.54s] (UTC ~03:55:17.14)  Delta 1199, call us back at 10 minutes.
+[1522.38s - 1525.78s] (UTC ~03:55:22.38)  Frontier 4195, I got the word that we're going to be close for a little while.
+[1526.28s - 1528.36s] (UTC ~03:55:26.28)  If you weren't prepared to return to the ramp, let me know.
+[1533.76s - 1536.10s] (UTC ~03:55:33.76)  Yeah, I know I was here. I tried to reach out and I stopped.
+[1536.26s - 1537.56s] (UTC ~03:55:36.26)  We were dealing with an emergency earlier.
+[1538.76s - 1539.60s] (UTC ~03:55:38.76)  I'm not sure.
+[1546.28s - 1548.72s] (UTC ~03:55:46.28)  This is very nice. Just reminding your position. I'm a little busy.
+[1550.66s - 1551.78s] (UTC ~03:55:50.66)  No, remind me where you are.
+[1557.10s - 1559.98s] (UTC ~03:55:57.10)  Alright, yeah, I was informed that the airport is still going to be close for a while.
+[1560.56s - 1562.50s] (UTC ~03:56:00.56)  So, sorry, let me close the office. Never mind.
+[1562.70s - 1565.56s] (UTC ~03:56:02.70)  So, plan on returning. You can sort that out with your ambulance.
+[1579.42s - 1579.80s] (UTC ~03:56:19.42)  I'm sorry.
+[1579.80s - 1581.40s] (UTC ~03:56:19.80)  Take 31, I'm sorry. Say again.
+[1589.18s - 1591.48s] (UTC ~03:56:29.18)  Yeah, it's been incident. The airport is going to be close for a while.
+[1592.36s - 1595.06s] (UTC ~03:56:32.36)  Please just coordinate with the ramp about a return.
+[1626.14s - 1627.54s] (UTC ~03:57:06.14)  Okay.
+[1656.14s - 1657.54s] (UTC ~03:57:36.14)  Okay.
+[1686.14s - 1687.54s] (UTC ~03:58:06.14)  Okay.
+[1716.14s - 1717.54s] (UTC ~03:58:36.14)  Okay.
+[1746.14s - 1747.54s] (UTC ~03:59:06.14)  Okay.
+[1776.14s - 1777.54s] (UTC ~03:59:36.14)  Okay.
+[1806.14s - 1807.54s] (UTC ~04:00:06.14)  Okay.
+[1836.14s - 1837.54s] (UTC ~04:00:36.14)  Okay.
+[1866.14s - 1867.54s] (UTC ~04:01:06.14)  Okay.
+[1896.14s - 1897.54s] (UTC ~04:01:36.14)  Okay.
+[1914.42s - 1915.82s] (UTC ~04:01:54.42)  Okay.
+
+============================================================
