@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LGA Case Study — From Voice to Safety</title>
+<title>Air-OS-ATC — LGA Runway Collision Analysis</title>
 <style>
 :root {
-  --bg: #0a0e17;
-  --bg2: #111827;
-  --bg3: #1a2234;
+  --bg: #000000;
+  --bg2: #0a0a0a;
+  --bg3: #141414;
   --fg: #e2e8f0;
   --fg2: #94a3b8;
-  --accent: #3b82f6;
+  --accent: #ffffff;
   --red: #ef4444;
   --green: #22c55e;
   --orange: #f59e0b;
   --purple: #a78bfa;
-  --card: #1e293b;
-  --border: #334155;
+  --card: #111111;
+  --border: #2a2a2a;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -27,7 +27,7 @@ a:hover { text-decoration: underline; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
 /* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,14,23,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(0,0,0,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
 nav .inner { max-width: 1100px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
 nav .brand { font-weight: 700; font-size: 14px; letter-spacing: 0.5px; }
 nav .links { display: flex; gap: 24px; }
@@ -36,9 +36,9 @@ nav .links a:hover { color: var(--fg); text-decoration: none; }
 
 /* HERO */
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; padding-top: 60px; }
-.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 30%, rgba(59,130,246,0.08) 0%, transparent 60%); }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.03) 0%, transparent 60%); }
 .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
-.hero h1 .highlight { background: linear-gradient(135deg, var(--accent), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero h1 .highlight { color: #ffffff; -webkit-text-fill-color: #ffffff; }
 .hero .subtitle { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--fg2); max-width: 700px; margin: 0 auto 40px; }
 .hero .stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
 .hero .stat { text-align: center; }
@@ -58,18 +58,18 @@ section:nth-child(even) { background: var(--bg2); }
 
 /* CARDS */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: transform .2s, border-color .2s; }
-.card:hover { transform: translateY(-2px); border-color: var(--accent); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 0; padding: 24px; transition: transform .2s, border-color .2s; }
+.card:hover { transform: translateY(-2px); border-color: var(--fg); }
 .card .icon { font-size: 28px; margin-bottom: 12px; }
 .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
 .card p { font-size: 13px; color: var(--fg2); line-height: 1.6; }
-.card .mono { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px; color: var(--accent); background: rgba(59,130,246,0.1); padding: 2px 6px; border-radius: 4px; }
+.card .mono { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px; color: var(--fg); background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 0; }
 
 /* TIMELINE */
 .timeline { position: relative; padding-left: 40px; }
 .timeline::before { content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: var(--border); }
-.tl-item { position: relative; margin-bottom: 20px; padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; transition: border-color .2s; }
-.tl-item:hover { border-color: var(--accent); }
+.tl-item { position: relative; margin-bottom: 20px; padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 0; transition: border-color .2s; }
+.tl-item:hover { border-color: var(--fg); }
 .tl-item::before { content: ''; position: absolute; left: -32px; top: 22px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg); }
 .tl-item.danger::before { border-color: var(--red); background: var(--red); }
 .tl-item.warning::before { border-color: var(--orange); background: var(--orange); }
@@ -81,15 +81,15 @@ section:nth-child(even) { background: var(--bg2); }
 .tl-source { font-size: 11px; color: var(--fg2); margin-top: 4px; }
 
 /* IMAGE VIEWERS */
-.img-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 24px 0; }
+.img-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 0; overflow: hidden; margin: 24px 0; }
 .img-wrap img { width: 100%; display: block; }
 .img-wrap .caption { padding: 12px 16px; font-size: 13px; color: var(--fg2); border-top: 1px solid var(--border); }
 .img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
 
 /* GIF PLAYER */
-.gif-container { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.gif-container { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: 0; overflow: hidden; }
 .gif-container img { width: 100%; display: block; }
-.gif-label { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.7); padding: 4px 10px; border-radius: 6px; font-size: 11px; color: var(--green); font-weight: 600; }
+.gif-label { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.7); padding: 4px 10px; border-radius: 0; font-size: 11px; color: var(--green); font-weight: 600; }
 
 /* BLIND SPOT DIAGRAM */
 .blind-spot-vis { display: flex; flex-direction: column; gap: 0; margin: 32px 0; }
@@ -104,36 +104,36 @@ section:nth-child(even) { background: var(--bg2); }
 .scenario-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
 .scenario-table th, .scenario-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
 .scenario-table th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--fg2); font-weight: 600; }
-.scenario-table tr:hover td { background: rgba(59,130,246,0.04); }
-.badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+.scenario-table tr:hover td { background: rgba(255,255,255,0.03); }
+.badge { display: inline-block; padding: 2px 10px; border-radius: 0; font-size: 12px; font-weight: 700; }
 .badge.prevented { background: rgba(34,197,94,0.15); color: var(--green); }
 .badge.collision { background: rgba(239,68,68,0.15); color: var(--red); }
 
 /* INTERACTIVE SIM */
-#sim-canvas-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; padding: 0; margin: 24px 0; }
+#sim-canvas-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 0; overflow: hidden; padding: 0; margin: 24px 0; }
 canvas#simCanvas { width: 100%; display: block; }
 .sim-controls { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .sim-controls label { font-size: 13px; font-weight: 600; }
 .sim-controls input[type=range] { flex: 1; min-width: 200px; accent-color: var(--accent); }
 .sim-controls .time-display { font-family: 'SF Mono', monospace; font-size: 14px; color: var(--accent); min-width: 90px; }
-.sim-controls select { background: var(--bg2); color: var(--fg); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 13px; }
-.sim-controls button { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .2s; }
-.sim-controls button:hover { background: #2563eb; }
+.sim-controls select { background: var(--bg2); color: var(--fg); border: 1px solid var(--border); border-radius: 0; padding: 6px 10px; font-size: 13px; }
+.sim-controls button { background: var(--fg); color: #000; border: none; border-radius: 0; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .2s; }
+.sim-controls button:hover { background: #ccc; }
 
 /* APPROACH CHART */
-#approach-chart-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 24px 0; }
+#approach-chart-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 0; overflow: hidden; margin: 24px 0; }
 canvas#approachCanvas { width: 100%; display: block; }
 
 /* CONCLUSIONS */
 .conclusion-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-.conclusion-card { background: var(--card); border-left: 4px solid var(--green); border-radius: 0 12px 12px 0; padding: 24px; }
+.conclusion-card { background: var(--card); border-left: 4px solid var(--green); border-radius: 0; padding: 24px; }
 .conclusion-card h4 { font-size: 15px; margin-bottom: 8px; }
 .conclusion-card p { font-size: 13px; color: var(--fg2); line-height: 1.7; }
 .conclusion-card.critical { border-left-color: var(--red); }
 
 /* FOOTER */
 footer { padding: 40px 0; text-align: center; font-size: 13px; color: var(--fg2); border-top: 1px solid var(--border); }
-footer .cite { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 16px auto; max-width: 700px; font-family: monospace; font-size: 12px; text-align: left; white-space: pre-wrap; color: var(--fg2); }
+footer .cite { background: var(--card); border: 1px solid var(--border); border-radius: 0; padding: 16px; margin: 16px auto; max-width: 700px; font-family: monospace; font-size: 12px; text-align: left; white-space: pre-wrap; color: var(--fg2); }
 
 /* UTILS */
 .text-red { color: var(--red); }
@@ -158,7 +158,7 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
 <!-- NAV -->
 <nav>
   <div class="inner">
-    <div class="brand">FROM VOICE TO SAFETY</div>
+    <div class="brand">AIR-OS-ATC</div>
     <div class="links">
       <a href="#incident">Incident</a>
       <a href="#data">Data</a>
@@ -194,22 +194,22 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
     <p class="section-subtitle fade-in">LaGuardia Airport, March 22, 2026 — 11:37 PM ET</p>
     <div class="card-grid fade-in">
       <div class="card">
-        <div class="icon">✈️</div>
+        <div class="icon" style="font-size:16px;font-weight:800;color:var(--fg);letter-spacing:1px">AC8646</div>
         <h3>Air Canada Express 8646</h3>
         <p>Bombardier CRJ-900 (C-GNJZ), Jazz Aviation. Montreal (YUL) → LaGuardia (LGA). Cleared to land Runway 04 at 23:35:05 ET.</p>
       </div>
       <div class="card">
-        <div class="icon">🚒</div>
+        <div class="icon" style="font-size:16px;font-weight:800;color:var(--fg);letter-spacing:1px">TRK-1</div>
         <h3>"Truck 1 and Company"</h3>
         <p>Port Authority fire truck convoy. Requested and received clearance to cross Runway 04 at Taxiway Delta — while the CRJ-900 was on short final approach.</p>
       </div>
       <div class="card">
-        <div class="icon">💥</div>
+        <div class="icon" style="font-size:16px;font-weight:800;color:var(--red);letter-spacing:1px">24 MPH</div>
         <h3>Collision at 24 mph</h3>
         <p>The aircraft struck the fire truck at the Runway 04 / Taxiway Delta intersection (~23:37:28 ET). Both pilots were killed; 41 others injured.</p>
       </div>
       <div class="card">
-        <div class="icon">⚠️</div>
+        <div class="icon" style="font-size:16px;font-weight:800;color:var(--orange);letter-spacing:1px">ATC</div>
         <h3>Root Cause: ATC Error</h3>
         <p>A single controller managing duties normally split between two positions cleared the truck convoy onto an active runway. Chronic ATC understaffing contributed.</p>
       </div>
@@ -224,24 +224,24 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
     <p class="section-subtitle fade-in">Every timestamp, speed, and distance in this analysis comes from real-world sources.</p>
     <div class="card-grid fade-in">
       <div class="card">
-        <div class="icon">📡</div>
+        <div class="icon" style="font-size:16px;font-weight:800;color:var(--fg);letter-spacing:1px">ADS-B</div>
         <h3>FlightAware AeroAPI v4</h3>
         <p><strong>152 ADS-B positions</strong> covering the full flight from Montreal to the final approach at LGA. Last return: 300 ft, 135 kts at 03:37:06 UTC.</p>
         <p style="margin-top:8px"><span class="mono">JZA8646-1773986653-airline-1074p</span></p>
       </div>
       <div class="card">
-        <div class="icon">🎙️</div>
+        <div class="icon" style="font-size:16px;font-weight:800;color:var(--fg);letter-spacing:1px">TWR</div>
         <h3>LiveATC.net Tower Audio</h3>
         <p><strong>30-minute recording</strong> of KLGA Tower (118.7 MHz), 03:30–04:00 UTC. Captures every communication before, during, and after the collision.</p>
         <p style="margin-top:8px"><span class="mono">KLGA-Twr-Mar-23-2026-0330Z.mp3</span></p>
       </div>
       <div class="card">
-        <div class="icon">🤖</div>
+        <div class="icon" style="font-size:16px;font-weight:800;color:var(--fg);letter-spacing:1px">ASR</div>
         <h3>OpenAI Whisper ASR</h3>
         <p><strong>196 segments</strong> with word-level timestamps. Precise to the tenth of a second. Correctly identifies callsigns, clearances, and stop commands.</p>
       </div>
       <div class="card">
-        <div class="icon">🗺️</div>
+        <div class="icon" style="font-size:16px;font-weight:800;color:var(--fg);letter-spacing:1px">FACET</div>
         <h3>NASA FACET Layout</h3>
         <p><strong>278 nodes, 341 links</strong> in the KLGA airport graph. Provides precise coordinates for the runway threshold, taxiway hold points, and the collision intersection.</p>
       </div>
@@ -280,18 +280,18 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
       </div>
       <div class="tl-item">
         <span class="tl-time">23:36:50 ET</span><span class="tl-offset">T−10s</span>
-        <div class="tl-text" style="color:var(--accent)">✦ ADS-B: Jazz 646 at 500 ft, 134 kts, 1,424 m from threshold</div>
+        <div class="tl-text" style="color:var(--accent)">[ADS-B] Jazz 646 at 500 ft, 134 kts, 1,424 m from threshold</div>
         <div class="tl-source">FlightAware AeroAPI — aircraft is on short final</div>
       </div>
       <div class="tl-item warning">
         <span class="tl-time">23:36:57 ET</span><span class="tl-offset">T−3s</span>
         <div class="tl-text">Truck 1 and company, LaGuardia Tower, requesting to cross 4 at Delta.</div>
-        <div class="tl-source">🟢 SYSTEM SCENARIO C/D: Alert fires HERE — conflict detected on request</div>
+        <div class="tl-source">SYSTEM SCENARIO C/D: Alert fires HERE — conflict detected on request</div>
       </div>
       <div class="tl-item danger">
         <span class="tl-time">23:37:01 ET</span><span class="tl-offset">T+0s</span>
-        <div class="tl-text" style="font-weight:700;font-size:15px;color:var(--red)">★ "Truck 1 and company, cross 4 at Delta."</div>
-        <div class="tl-source">FATAL CLEARANCE ISSUED — 🟢 SYSTEM SCENARIO B: Alert fires HERE within 1.5s</div>
+        <div class="tl-text" style="font-weight:700;font-size:15px;color:var(--red)">"Truck 1 and company, cross 4 at Delta."</div>
+        <div class="tl-source">FATAL CLEARANCE ISSUED — SYSTEM SCENARIO B: Alert fires HERE within 1.5s</div>
       </div>
       <div class="tl-item">
         <span class="tl-time">23:37:04 ET</span><span class="tl-offset">T+3s</span>
@@ -300,18 +300,18 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
       </div>
       <div class="tl-item">
         <span class="tl-time">23:37:06 ET</span><span class="tl-offset">T+5s</span>
-        <div class="tl-text" style="color:var(--accent)">✦ ADS-B: Jazz 646 at 300 ft, 135 kts, 280 m from threshold</div>
+        <div class="tl-text" style="color:var(--accent)">[ADS-B] Jazz 646 at 300 ft, 135 kts, 280 m from threshold</div>
         <div class="tl-source">Last ADS-B position — aircraft 4 seconds from the runway</div>
       </div>
       <div class="tl-item warning">
         <span class="tl-time">23:37:09 ET</span><span class="tl-offset">T+8s</span>
         <div class="tl-text" style="color:var(--orange)">"<strong>Frontier 4195</strong>, stop there please."</div>
-        <div class="tl-source">⚠️ WRONG TARGET — Stop command addressed to a departing aircraft, not the truck</div>
+        <div class="tl-source">WRONG TARGET — Stop command addressed to a departing aircraft, not the truck</div>
       </div>
       <div class="tl-item danger">
         <span class="tl-time">23:37:12 ET</span><span class="tl-offset">T+11s</span>
         <div class="tl-text" style="color:var(--red)">"Stop, stop, stop, stop, stop, stop, stop, stop, stop."</div>
-        <div class="tl-source">⚠️ NO CALLSIGN — Truck has no reason to know this is directed at them</div>
+        <div class="tl-source">NO CALLSIGN — Truck has no reason to know this is directed at them</div>
       </div>
       <div class="tl-item danger">
         <span class="tl-time">23:37:17 ET</span><span class="tl-offset">T+16s</span>
@@ -320,7 +320,7 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
       </div>
       <div class="tl-item danger">
         <span class="tl-time">~23:37:28 ET</span><span class="tl-offset">T+27s</span>
-        <div class="tl-text" style="font-weight:700;font-size:15px;color:var(--red)">★★★ COLLISION ★★★ — 24 mph at Rwy_01_006</div>
+        <div class="tl-text" style="font-weight:700;font-size:15px;color:var(--red)">COLLISION — 24 mph at Rwy_01_006</div>
         <div class="tl-source">Aircraft strikes fire truck at Runway 04 / Taxiway Delta intersection</div>
       </div>
       <div class="tl-item">
@@ -379,7 +379,7 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
     <p class="section-subtitle fade-in">Real-time collision risk visualization on the KLGA surface map, frame by frame.</p>
     <div class="gif-container fade-in">
       <img src="taxigen/case-study-4-riskmap_real.gif" alt="Risk map animation">
-      <div class="gif-label">● LIVE RISK DATA</div>
+      <div class="gif-label">LIVE RISK DATA</div>
     </div>
     <div class="img-grid mt-40 fade-in">
       <div class="img-wrap">
@@ -496,23 +496,23 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
         <p style="font-family:monospace; font-size:13px; line-height:2; margin-top:12px;">
           T+ 0s &nbsp;Clearance issued<br>
           T+ 3s &nbsp;Truck starts rolling<br>
-          T+ 8s &nbsp;⚠ Controller realizes error<br>
-          T+ 8s &nbsp;❌ "Frontier 4195, stop" (WRONG TARGET)<br>
-          T+11s &nbsp;❌ "stop stop stop" (NO CALLSIGN)<br>
-          T+16s &nbsp;⚠ "Stop, Truck 1" (truck at 73m/86m)<br>
-          T+27s &nbsp;💥 COLLISION
+          T+ 8s &nbsp;— Controller realizes error<br>
+          T+ 8s &nbsp;— "Frontier 4195, stop" (WRONG TARGET)<br>
+          T+11s &nbsp;— "stop stop stop" (NO CALLSIGN)<br>
+          T+16s &nbsp;— "Stop, Truck 1" (truck at 73m/86m)<br>
+          T+27s &nbsp;— COLLISION
         </p>
       </div>
       <div class="card" style="border: 1px solid var(--green);">
         <h3 class="text-green">With Our System (Scenario B)</h3>
         <p style="font-family:monospace; font-size:13px; line-height:2; margin-top:12px;">
           T+ 0.0s &nbsp;Clearance audio captured<br>
-          T+ 1.5s &nbsp;✅ Whisper ASR + NER complete<br>
-          T+ 2.0s &nbsp;✅ Conflict alert to controller<br>
-          T+ 3.5s &nbsp;✅ Controller processes alert<br>
-          T+ 5.0s &nbsp;✅ "TRUCK 1, STOP" (correct target)<br>
-          T+ 9.4s &nbsp;✅ Truck stopped at 30m<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🛡️ 56m safety margin
+          T+ 1.5s &nbsp;— ASR + NER complete<br>
+          T+ 2.0s &nbsp;— Conflict alert to controller<br>
+          T+ 3.5s &nbsp;— Controller processes alert<br>
+          T+ 5.0s &nbsp;— "TRUCK 1, STOP" (correct target)<br>
+          T+ 9.4s &nbsp;— Truck stopped at 30m<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;56m safety margin
         </p>
       </div>
     </div>
@@ -527,19 +527,19 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
     
     <div class="conclusion-grid fade-in">
       <div class="conclusion-card">
-        <h4>✅ Prevents the collision in all scenarios</h4>
+        <h4>Prevents the collision in all scenarios</h4>
         <p>Whether deployed as a pre-clearance safety interlock, post-clearance audio monitor, early-warning system, or ADS-B fusion platform — the collision is prevented with substantial margin.</p>
       </div>
       <div class="conclusion-card">
-        <h4>✅ 56-meter margin in the worst case</h4>
+        <h4>56-meter margin in the worst case</h4>
         <p>Even with 5 seconds of pipeline latency (ASR + NER + alert + human reaction + radio), the truck stops at barely one-third of the distance to the runway. There is no ambiguity in this result.</p>
       </div>
       <div class="conclusion-card">
-        <h4>✅ Eliminates the exact failure mode</h4>
+        <h4>Eliminates the exact failure mode</h4>
         <p>The 8-second cognitive blind spot and the misdirected stop commands are human failure modes that an automated system cannot exhibit. The system names the correct entities instantly.</p>
       </div>
       <div class="conclusion-card">
-        <h4>✅ Validated with 100% real data</h4>
+        <h4>Validated with 100% real data</h4>
         <p>Every number in this analysis comes from FlightAware ADS-B, LiveATC audio transcribed by Whisper, and NASA FACET geometry. No simulations, no assumptions, no estimates.</p>
       </div>
       <div class="conclusion-card critical">
@@ -557,7 +557,7 @@ footer .cite { background: var(--card); border: 1px solid var(--border); border-
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <p><strong>From Voice to Safety</strong> — Language AI Powered ATC Communication Understanding</p>
+    <p><strong>Air-OS-ATC</strong> — Intelligent ATC Conflict Detection</p>
   </div>
 </footer>
 
@@ -598,13 +598,13 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     const pad = {t:30,r:60,b:40,l:60};
     const cw = W-pad.l-pad.r, ch = H-pad.t-pad.b;
     ctx.clearRect(0,0,W,H);
-    ctx.fillStyle = '#1e293b'; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle = '#111111'; ctx.fillRect(0,0,W,H);
 
     const n = data.length;
     const altMax = 3400, gsMin = 120, gsMax = 210;
 
     // grid
-    ctx.strokeStyle = '#334155'; ctx.lineWidth = 0.5;
+    ctx.strokeStyle = '#2a2a2a'; ctx.lineWidth = 0.5;
     for (let a = 0; a <= 3200; a += 800) {
       const y = pad.t + ch - (a/altMax)*ch;
       ctx.beginPath(); ctx.moveTo(pad.l,y); ctx.lineTo(pad.l+cw,y); ctx.stroke();
@@ -613,7 +613,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     }
 
     // altitude line
-    ctx.beginPath(); ctx.strokeStyle = '#3b82f6'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2.5;
     data.forEach((d,i) => {
       const x = pad.l + (i/(n-1))*cw;
       const y = pad.t + ch - (d.alt/altMax)*ch;
@@ -626,7 +626,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
       const x = pad.l + (i/(n-1))*cw;
       const y = pad.t + ch - (d.alt/altMax)*ch;
       ctx.beginPath(); ctx.arc(x,y,3,0,Math.PI*2);
-      ctx.fillStyle = '#3b82f6'; ctx.fill();
+      ctx.fillStyle = '#ffffff'; ctx.fill();
     });
 
     // speed line (right axis)
@@ -664,7 +664,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     ctx.fillText('300ft 135kts — LAST ADS-B', lx-12, ly-10);
 
     // legend
-    ctx.fillStyle = '#3b82f6'; ctx.fillRect(pad.l+10, pad.t+5, 20, 3);
+    ctx.fillStyle = '#ffffff'; ctx.fillRect(pad.l+10, pad.t+5, 20, 3);
     ctx.fillStyle = '#e2e8f0'; ctx.font = '11px sans-serif'; ctx.textAlign = 'left';
     ctx.fillText('Altitude (ft)', pad.l+36, pad.t+10);
     ctx.fillStyle = '#f59e0b'; ctx.setLineDash([4,3]);
@@ -741,7 +741,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     const t = parseFloat(slider.value);
     const scenario = scenarioSel.value;
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = '#1e293b'; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = '#111111'; ctx.fillRect(0, 0, W, H);
 
     const pad = {l: 60, r: 40, t: 60, b: 100};
     const cw = W - pad.l - pad.r;
@@ -786,18 +786,18 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     if (acDist >= 0) {
       const acX = threshX + (acDist / AC_RWY_TOTAL) * (collisionX - threshX);
       // Aircraft shape
-      ctx.fillStyle = '#3b82f6';
+      ctx.fillStyle = '#ffffff';
       ctx.beginPath();
       ctx.moveTo(acX + 18, rwyY + rwyH/2);
       ctx.lineTo(acX - 10, rwyY + rwyH/2 - 10);
       ctx.lineTo(acX - 6, rwyY + rwyH/2);
       ctx.lineTo(acX - 10, rwyY + rwyH/2 + 10);
       ctx.closePath(); ctx.fill();
-      ctx.fillStyle = '#93c5fd'; ctx.font = 'bold 11px sans-serif'; ctx.textAlign = 'center';
+      ctx.fillStyle = '#e2e8f0'; ctx.font = 'bold 11px sans-serif'; ctx.textAlign = 'center';
       ctx.fillText('JZA 8646', acX, rwyY + rwyH/2 - 16);
     } else {
       // Show approaching
-      ctx.fillStyle = '#3b82f680'; ctx.font = '11px sans-serif'; ctx.textAlign = 'left';
+      ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '11px sans-serif'; ctx.textAlign = 'left';
       ctx.fillText('← Jazz 646 on approach', rwyX + 10, rwyY + 15);
     }
 
@@ -821,7 +821,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     if (trkDist >= RWY_LEN - 2 && acDist >= AC_RWY_TOTAL - 30 && scenario === 'actual') {
       ctx.fillStyle = '#ef4444';
       ctx.font = 'bold 18px sans-serif'; ctx.textAlign = 'center';
-      ctx.fillText('💥 COLLISION', collisionX, rwyY + rwyH + 30);
+      ctx.fillText('COLLISION', collisionX, rwyY + rwyH + 30);
     }
 
     // Status panel
@@ -831,7 +831,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     ctx.font = '12px monospace'; ctx.textAlign = 'left';
     const col1 = 20, col2 = W/3, col3 = 2*W/3;
     
-    ctx.fillStyle = '#3b82f6';
+    ctx.fillStyle = '#e2e8f0';
     ctx.fillText(`Aircraft: ${acDist < 0 ? 'On approach' : Math.round(acDist)+'m from threshold'}`, col1, panelY+20);
     const acSpeed = acDist < 0 ? 135 : Math.round(135 - (acDist/AC_RWY_TOTAL) * 114);
     ctx.fillText(`Speed: ~${acSpeed} kts`, col1, panelY+40);
@@ -840,7 +840,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     ctx.fillText(`Truck: ${Math.round(trkDist)}m / ${RWY_LEN}m to runway`, col2, panelY+20);
     const stopped = scenario !== 'actual' && scenario !== 'C' && t > 10 && Math.abs(truckPos(t, scenario) - truckPos(t-0.5, scenario)) < 0.01;
     const stoppedActual = scenario === 'actual' && trkDist >= RWY_LEN;
-    ctx.fillText(scenario === 'C' ? 'Status: HELD (clearance blocked)' : stopped ? '✅ STOPPED SAFELY' : stoppedActual ? '❌ ON RUNWAY' : `Moving: ${Math.round(trkDist/RWY_LEN*100)}%`, col2, panelY+40);
+    ctx.fillText(scenario === 'C' ? 'Status: HELD (clearance blocked)' : stopped ? 'STOPPED SAFELY' : stoppedActual ? 'ON RUNWAY' : `Moving: ${Math.round(trkDist/RWY_LEN*100)}%`, col2, panelY+40);
     
     ctx.fillStyle = scenario === 'actual' ? '#ef4444' : '#22c55e';
     const label = scenario === 'actual' ? 'NO SYSTEM PROTECTION' : scenario === 'B' ? 'SYSTEM: Alert on clearance' : 'SYSTEM: Clearance blocked';
