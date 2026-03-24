@@ -1,0 +1,2390 @@
+{
+  "summary": {
+    "total_segments_pre_collision": 97,
+    "total_unique_callsigns": 19,
+    "peak_transmissions_per_min": 23,
+    "peak_transmissions_at": "03:30:50",
+    "critical_window_transmissions": 20,
+    "critical_window_duration_s": 116.0,
+    "critical_window_callsigns": 8,
+    "type_breakdown": {
+      "unknown": 5,
+      "vehicle": 3,
+      "ground_taxi": 4,
+      "departure": 3,
+      "arrival": 4
+    },
+    "all_callsigns": [
+      "1013",
+      "2733",
+      "3878",
+      "Brickyard 30402",
+      "Brickyard 3302",
+      "Brickyard 33095",
+      "Brickyard 507",
+      "Current zero",
+      "Delta 2603",
+      "Delta 2733",
+      "Delta 313",
+      "Delta 520",
+      "Delta 733",
+      "Frontier 4195",
+      "Jazz 6460",
+      "Southwest 3078",
+      "Truck 1",
+      "United 1313",
+      "United 1381"
+    ]
+  },
+  "tx_per_min": [
+    {
+      "window_center_s": 30,
+      "utc": "03:30:00",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 35,
+      "utc": "03:30:05",
+      "transmissions": 14
+    },
+    {
+      "window_center_s": 40,
+      "utc": "03:30:10",
+      "transmissions": 14
+    },
+    {
+      "window_center_s": 45,
+      "utc": "03:30:15",
+      "transmissions": 15
+    },
+    {
+      "window_center_s": 50,
+      "utc": "03:30:20",
+      "transmissions": 16
+    },
+    {
+      "window_center_s": 55,
+      "utc": "03:30:25",
+      "transmissions": 16
+    },
+    {
+      "window_center_s": 60,
+      "utc": "03:30:30",
+      "transmissions": 18
+    },
+    {
+      "window_center_s": 65,
+      "utc": "03:30:35",
+      "transmissions": 20
+    },
+    {
+      "window_center_s": 70,
+      "utc": "03:30:40",
+      "transmissions": 20
+    },
+    {
+      "window_center_s": 75,
+      "utc": "03:30:45",
+      "transmissions": 21
+    },
+    {
+      "window_center_s": 80,
+      "utc": "03:30:50",
+      "transmissions": 23
+    },
+    {
+      "window_center_s": 85,
+      "utc": "03:30:55",
+      "transmissions": 23
+    },
+    {
+      "window_center_s": 90,
+      "utc": "03:31:00",
+      "transmissions": 23
+    },
+    {
+      "window_center_s": 95,
+      "utc": "03:31:05",
+      "transmissions": 21
+    },
+    {
+      "window_center_s": 100,
+      "utc": "03:31:10",
+      "transmissions": 20
+    },
+    {
+      "window_center_s": 105,
+      "utc": "03:31:15",
+      "transmissions": 19
+    },
+    {
+      "window_center_s": 110,
+      "utc": "03:31:20",
+      "transmissions": 21
+    },
+    {
+      "window_center_s": 115,
+      "utc": "03:31:25",
+      "transmissions": 21
+    },
+    {
+      "window_center_s": 120,
+      "utc": "03:31:30",
+      "transmissions": 21
+    },
+    {
+      "window_center_s": 125,
+      "utc": "03:31:35",
+      "transmissions": 22
+    },
+    {
+      "window_center_s": 130,
+      "utc": "03:31:40",
+      "transmissions": 21
+    },
+    {
+      "window_center_s": 135,
+      "utc": "03:31:45",
+      "transmissions": 20
+    },
+    {
+      "window_center_s": 140,
+      "utc": "03:31:50",
+      "transmissions": 20
+    },
+    {
+      "window_center_s": 145,
+      "utc": "03:31:55",
+      "transmissions": 19
+    },
+    {
+      "window_center_s": 150,
+      "utc": "03:32:00",
+      "transmissions": 20
+    },
+    {
+      "window_center_s": 155,
+      "utc": "03:32:05",
+      "transmissions": 20
+    },
+    {
+      "window_center_s": 160,
+      "utc": "03:32:10",
+      "transmissions": 21
+    },
+    {
+      "window_center_s": 165,
+      "utc": "03:32:15",
+      "transmissions": 22
+    },
+    {
+      "window_center_s": 170,
+      "utc": "03:32:20",
+      "transmissions": 20
+    },
+    {
+      "window_center_s": 175,
+      "utc": "03:32:25",
+      "transmissions": 18
+    },
+    {
+      "window_center_s": 180,
+      "utc": "03:32:30",
+      "transmissions": 16
+    },
+    {
+      "window_center_s": 185,
+      "utc": "03:32:35",
+      "transmissions": 13
+    },
+    {
+      "window_center_s": 190,
+      "utc": "03:32:40",
+      "transmissions": 13
+    },
+    {
+      "window_center_s": 195,
+      "utc": "03:32:45",
+      "transmissions": 13
+    },
+    {
+      "window_center_s": 200,
+      "utc": "03:32:50",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 205,
+      "utc": "03:32:55",
+      "transmissions": 13
+    },
+    {
+      "window_center_s": 210,
+      "utc": "03:33:00",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 215,
+      "utc": "03:33:05",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 220,
+      "utc": "03:33:10",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 225,
+      "utc": "03:33:15",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 230,
+      "utc": "03:33:20",
+      "transmissions": 9
+    },
+    {
+      "window_center_s": 235,
+      "utc": "03:33:25",
+      "transmissions": 9
+    },
+    {
+      "window_center_s": 240,
+      "utc": "03:33:30",
+      "transmissions": 9
+    },
+    {
+      "window_center_s": 245,
+      "utc": "03:33:35",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 250,
+      "utc": "03:33:40",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 255,
+      "utc": "03:33:45",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 260,
+      "utc": "03:33:50",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 265,
+      "utc": "03:33:55",
+      "transmissions": 9
+    },
+    {
+      "window_center_s": 270,
+      "utc": "03:34:00",
+      "transmissions": 9
+    },
+    {
+      "window_center_s": 275,
+      "utc": "03:34:05",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 280,
+      "utc": "03:34:10",
+      "transmissions": 9
+    },
+    {
+      "window_center_s": 285,
+      "utc": "03:34:15",
+      "transmissions": 9
+    },
+    {
+      "window_center_s": 290,
+      "utc": "03:34:20",
+      "transmissions": 9
+    },
+    {
+      "window_center_s": 295,
+      "utc": "03:34:25",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 300,
+      "utc": "03:34:30",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 305,
+      "utc": "03:34:35",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 310,
+      "utc": "03:34:40",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 315,
+      "utc": "03:34:45",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 320,
+      "utc": "03:34:50",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 325,
+      "utc": "03:34:55",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 330,
+      "utc": "03:35:00",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 335,
+      "utc": "03:35:05",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 340,
+      "utc": "03:35:10",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 345,
+      "utc": "03:35:15",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 350,
+      "utc": "03:35:20",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 355,
+      "utc": "03:35:25",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 360,
+      "utc": "03:35:30",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 365,
+      "utc": "03:35:35",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 370,
+      "utc": "03:35:40",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 375,
+      "utc": "03:35:45",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 380,
+      "utc": "03:35:50",
+      "transmissions": 10
+    },
+    {
+      "window_center_s": 385,
+      "utc": "03:35:55",
+      "transmissions": 9
+    },
+    {
+      "window_center_s": 390,
+      "utc": "03:36:00",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 395,
+      "utc": "03:36:05",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 400,
+      "utc": "03:36:10",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 405,
+      "utc": "03:36:15",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 410,
+      "utc": "03:36:20",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 415,
+      "utc": "03:36:25",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 420,
+      "utc": "03:36:30",
+      "transmissions": 13
+    },
+    {
+      "window_center_s": 425,
+      "utc": "03:36:35",
+      "transmissions": 12
+    },
+    {
+      "window_center_s": 430,
+      "utc": "03:36:40",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 435,
+      "utc": "03:36:45",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 440,
+      "utc": "03:36:50",
+      "transmissions": 13
+    },
+    {
+      "window_center_s": 445,
+      "utc": "03:36:55",
+      "transmissions": 14
+    },
+    {
+      "window_center_s": 450,
+      "utc": "03:37:00",
+      "transmissions": 13
+    },
+    {
+      "window_center_s": 455,
+      "utc": "03:37:05",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 460,
+      "utc": "03:37:10",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 465,
+      "utc": "03:37:15",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 470,
+      "utc": "03:37:20",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 475,
+      "utc": "03:37:25",
+      "transmissions": 11
+    },
+    {
+      "window_center_s": 480,
+      "utc": "03:37:30",
+      "transmissions": 9
+    }
+  ],
+  "active_entities": [
+    {
+      "window_center_s": 60,
+      "utc": "03:30:00",
+      "total": 10,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 3,
+      "vehicles": 1,
+      "unknown": 2,
+      "callsigns": [
+        "2733",
+        "3878",
+        "Brickyard 30402",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078",
+        "United 1381"
+      ]
+    },
+    {
+      "window_center_s": 65,
+      "utc": "03:30:05",
+      "total": 10,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 3,
+      "vehicles": 1,
+      "unknown": 2,
+      "callsigns": [
+        "2733",
+        "3878",
+        "Brickyard 30402",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078",
+        "United 1381"
+      ]
+    },
+    {
+      "window_center_s": 70,
+      "utc": "03:30:10",
+      "total": 10,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 3,
+      "vehicles": 1,
+      "unknown": 2,
+      "callsigns": [
+        "2733",
+        "3878",
+        "Brickyard 30402",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078",
+        "United 1381"
+      ]
+    },
+    {
+      "window_center_s": 75,
+      "utc": "03:30:15",
+      "total": 9,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 3,
+      "vehicles": 0,
+      "unknown": 2,
+      "callsigns": [
+        "2733",
+        "Brickyard 30402",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078",
+        "United 1381"
+      ]
+    },
+    {
+      "window_center_s": 80,
+      "utc": "03:30:20",
+      "total": 9,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 3,
+      "vehicles": 0,
+      "unknown": 2,
+      "callsigns": [
+        "2733",
+        "Brickyard 30402",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078",
+        "United 1381"
+      ]
+    },
+    {
+      "window_center_s": 85,
+      "utc": "03:30:25",
+      "total": 8,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 2,
+      "callsigns": [
+        "2733",
+        "Brickyard 30402",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 90,
+      "utc": "03:30:30",
+      "total": 9,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 3,
+      "callsigns": [
+        "1013",
+        "2733",
+        "Brickyard 30402",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 95,
+      "utc": "03:30:35",
+      "total": 10,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 3,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 30402",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 100,
+      "utc": "03:30:40",
+      "total": 9,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 105,
+      "utc": "03:30:45",
+      "total": 9,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 110,
+      "utc": "03:30:50",
+      "total": 10,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 115,
+      "utc": "03:30:55",
+      "total": 10,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 120,
+      "utc": "03:31:00",
+      "total": 11,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 3,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 125,
+      "utc": "03:31:05",
+      "total": 11,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 3,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 130,
+      "utc": "03:31:10",
+      "total": 11,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 3,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 135,
+      "utc": "03:31:15",
+      "total": 11,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 3,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 140,
+      "utc": "03:31:20",
+      "total": 11,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 3,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 145,
+      "utc": "03:31:25",
+      "total": 11,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 3,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733",
+        "Southwest 3078"
+      ]
+    },
+    {
+      "window_center_s": 150,
+      "utc": "03:31:30",
+      "total": 10,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 155,
+      "utc": "03:31:35",
+      "total": 10,
+      "arrivals": 2,
+      "departures": 2,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 33095",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 160,
+      "utc": "03:31:40",
+      "total": 9,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Brickyard 507",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 165,
+      "utc": "03:31:45",
+      "total": 8,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "2733",
+        "3878",
+        "Brickyard 3302",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 170,
+      "utc": "03:31:50",
+      "total": 6,
+      "arrivals": 0,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "3878",
+        "Brickyard 3302",
+        "Current zero",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 175,
+      "utc": "03:31:55",
+      "total": 7,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "3878",
+        "Brickyard 3302",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 180,
+      "utc": "03:32:00",
+      "total": 6,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "3878",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 185,
+      "utc": "03:32:05",
+      "total": 6,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "3878",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 190,
+      "utc": "03:32:10",
+      "total": 6,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "3878",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 195,
+      "utc": "03:32:15",
+      "total": 6,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "3878",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 200,
+      "utc": "03:32:20",
+      "total": 6,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "3878",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 205,
+      "utc": "03:32:25",
+      "total": 6,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 2,
+      "unknown": 2,
+      "callsigns": [
+        "1013",
+        "3878",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 210,
+      "utc": "03:32:30",
+      "total": 5,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 2,
+      "unknown": 1,
+      "callsigns": [
+        "3878",
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 215,
+      "utc": "03:32:35",
+      "total": 4,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 220,
+      "utc": "03:32:40",
+      "total": 4,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 225,
+      "utc": "03:32:45",
+      "total": 4,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 230,
+      "utc": "03:32:50",
+      "total": 4,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 235,
+      "utc": "03:32:55",
+      "total": 4,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Delta 733"
+      ]
+    },
+    {
+      "window_center_s": 240,
+      "utc": "03:33:00",
+      "total": 4,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Jazz 6460"
+      ]
+    },
+    {
+      "window_center_s": 245,
+      "utc": "03:33:05",
+      "total": 4,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Jazz 6460"
+      ]
+    },
+    {
+      "window_center_s": 250,
+      "utc": "03:33:10",
+      "total": 4,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Jazz 6460"
+      ]
+    },
+    {
+      "window_center_s": 255,
+      "utc": "03:33:15",
+      "total": 4,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2733",
+        "Delta 520",
+        "Jazz 6460"
+      ]
+    },
+    {
+      "window_center_s": 260,
+      "utc": "03:33:20",
+      "total": 3,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 0,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 520",
+        "Jazz 6460"
+      ]
+    },
+    {
+      "window_center_s": 265,
+      "utc": "03:33:25",
+      "total": 3,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 0,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 520",
+        "Jazz 6460"
+      ]
+    },
+    {
+      "window_center_s": 270,
+      "utc": "03:33:30",
+      "total": 3,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 0,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 520",
+        "Jazz 6460"
+      ]
+    },
+    {
+      "window_center_s": 275,
+      "utc": "03:33:35",
+      "total": 3,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 1,
+      "vehicles": 0,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 520",
+        "Jazz 6460"
+      ]
+    },
+    {
+      "window_center_s": 280,
+      "utc": "03:33:40",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 285,
+      "utc": "03:33:45",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 290,
+      "utc": "03:33:50",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 295,
+      "utc": "03:33:55",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 300,
+      "utc": "03:34:00",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 305,
+      "utc": "03:34:05",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 310,
+      "utc": "03:34:10",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 315,
+      "utc": "03:34:15",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 320,
+      "utc": "03:34:20",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 0,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 325,
+      "utc": "03:34:25",
+      "total": 6,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 330,
+      "utc": "03:34:30",
+      "total": 6,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 335,
+      "utc": "03:34:35",
+      "total": 7,
+      "arrivals": 3,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 340,
+      "utc": "03:34:40",
+      "total": 7,
+      "arrivals": 3,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 345,
+      "utc": "03:34:45",
+      "total": 7,
+      "arrivals": 3,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 350,
+      "utc": "03:34:50",
+      "total": 7,
+      "arrivals": 3,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 0,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Jazz 6460",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 355,
+      "utc": "03:34:55",
+      "total": 8,
+      "arrivals": 3,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Jazz 6460",
+        "Truck 1",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 360,
+      "utc": "03:35:00",
+      "total": 8,
+      "arrivals": 3,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Jazz 6460",
+        "Truck 1",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 365,
+      "utc": "03:35:05",
+      "total": 8,
+      "arrivals": 3,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Jazz 6460",
+        "Truck 1",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 370,
+      "utc": "03:35:10",
+      "total": 7,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Truck 1",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 375,
+      "utc": "03:35:15",
+      "total": 7,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Truck 1",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 380,
+      "utc": "03:35:20",
+      "total": 7,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Truck 1",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 385,
+      "utc": "03:35:25",
+      "total": 7,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Truck 1",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 390,
+      "utc": "03:35:30",
+      "total": 7,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Truck 1",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 395,
+      "utc": "03:35:35",
+      "total": 7,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 2,
+      "vehicles": 1,
+      "unknown": 1,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 313",
+        "Delta 520",
+        "Frontier 4195",
+        "Truck 1",
+        "United 1313"
+      ]
+    },
+    {
+      "window_center_s": 400,
+      "utc": "03:35:40",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 520",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 405,
+      "utc": "03:35:45",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 520",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 410,
+      "utc": "03:35:50",
+      "total": 5,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 1,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Delta 520",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 415,
+      "utc": "03:35:55",
+      "total": 4,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 420,
+      "utc": "03:36:00",
+      "total": 4,
+      "arrivals": 2,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Delta 2733",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 425,
+      "utc": "03:36:05",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 430,
+      "utc": "03:36:10",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 435,
+      "utc": "03:36:15",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 440,
+      "utc": "03:36:20",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 445,
+      "utc": "03:36:25",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 450,
+      "utc": "03:36:30",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 455,
+      "utc": "03:36:35",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 460,
+      "utc": "03:36:40",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 1,
+      "unknown": 0,
+      "callsigns": [
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 465,
+      "utc": "03:36:45",
+      "total": 4,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 2,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 470,
+      "utc": "03:36:50",
+      "total": 4,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 2,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1"
+      ]
+    },
+    {
+      "window_center_s": 475,
+      "utc": "03:36:55",
+      "total": 5,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 3,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1",
+        "Vehicle 9-8"
+      ]
+    },
+    {
+      "window_center_s": 480,
+      "utc": "03:37:00",
+      "total": 5,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 3,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1",
+        "Vehicle 9-8"
+      ]
+    },
+    {
+      "window_center_s": 485,
+      "utc": "03:37:05",
+      "total": 5,
+      "arrivals": 1,
+      "departures": 1,
+      "ground_taxi": 0,
+      "vehicles": 3,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Frontier 4195",
+        "Truck 1",
+        "Vehicle 9-8"
+      ]
+    },
+    {
+      "window_center_s": 490,
+      "utc": "03:37:10",
+      "total": 4,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 0,
+      "vehicles": 3,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Truck 1",
+        "Vehicle 9-8"
+      ]
+    },
+    {
+      "window_center_s": 495,
+      "utc": "03:37:15",
+      "total": 4,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 0,
+      "vehicles": 3,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Truck 1",
+        "Vehicle 9-8"
+      ]
+    },
+    {
+      "window_center_s": 500,
+      "utc": "03:37:20",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 0,
+      "vehicles": 2,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Vehicle 9-8"
+      ]
+    },
+    {
+      "window_center_s": 505,
+      "utc": "03:37:25",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 0,
+      "vehicles": 2,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Vehicle 9-8"
+      ]
+    },
+    {
+      "window_center_s": 510,
+      "utc": "03:37:30",
+      "total": 3,
+      "arrivals": 1,
+      "departures": 0,
+      "ground_taxi": 0,
+      "vehicles": 2,
+      "unknown": 0,
+      "callsigns": [
+        "Current zero",
+        "Delta 2603",
+        "Vehicle 9-8"
+      ]
+    }
+  ],
+  "entity_inventory": [
+    {
+      "callsign": "3878",
+      "type": "vehicle",
+      "full_name": "Vehicle 3878 (Bravo Juliet)",
+      "operator": "Ground Ops",
+      "first_utc": "03:30:06",
+      "last_utc": "03:32:34",
+      "first_s": 6.26,
+      "last_s": 154.96,
+      "transmission_count": 4
+    },
+    {
+      "callsign": "United 1381",
+      "type": "ground_taxi",
+      "full_name": "United 1381",
+      "operator": "United Airlines",
+      "first_utc": "03:30:24",
+      "last_utc": "03:30:24",
+      "first_s": 24.12,
+      "last_s": 24.12,
+      "transmission_count": 1
+    },
+    {
+      "callsign": "Brickyard 30402",
+      "type": "unknown",
+      "full_name": "Brickyard 30402",
+      "operator": "",
+      "first_utc": "03:30:35",
+      "last_utc": "03:30:35",
+      "first_s": 35.04,
+      "last_s": 35.04,
+      "transmission_count": 1
+    },
+    {
+      "callsign": "Brickyard 3302",
+      "type": "ground_taxi",
+      "full_name": "Republic Airways 3302",
+      "operator": "Republic Airways",
+      "first_utc": "03:30:43",
+      "last_utc": "03:31:58",
+      "first_s": 43.0,
+      "last_s": 118.28,
+      "transmission_count": 7
+    },
+    {
+      "callsign": "2733",
+      "type": "arrival",
+      "full_name": "2733",
+      "operator": "",
+      "first_utc": "03:31:26",
+      "last_utc": "03:31:45",
+      "first_s": 86.3,
+      "last_s": 105.8,
+      "transmission_count": 2
+    },
+    {
+      "callsign": "Delta 2733",
+      "type": "arrival",
+      "full_name": "Delta 2733",
+      "operator": "Delta Air Lines",
+      "first_utc": "03:31:26",
+      "last_utc": "03:36:00",
+      "first_s": 86.3,
+      "last_s": 360.24,
+      "transmission_count": 7
+    },
+    {
+      "callsign": "Southwest 3078",
+      "type": "unknown",
+      "full_name": "Southwest 3078",
+      "operator": "",
+      "first_utc": "03:31:28",
+      "last_utc": "03:31:28",
+      "first_s": 88.24,
+      "last_s": 88.24,
+      "transmission_count": 1
+    },
+    {
+      "callsign": "Delta 520",
+      "type": "ground_taxi",
+      "full_name": "Delta 520",
+      "operator": "Delta Air Lines",
+      "first_utc": "03:31:32",
+      "last_utc": "03:35:50",
+      "first_s": 92.08,
+      "last_s": 350.74,
+      "transmission_count": 10
+    },
+    {
+      "callsign": "Brickyard 33095",
+      "type": "departure",
+      "full_name": "Republic Airways 33095",
+      "operator": "Republic Airways",
+      "first_utc": "03:31:39",
+      "last_utc": "03:31:39",
+      "first_s": 99.0,
+      "last_s": 99.0,
+      "transmission_count": 1
+    },
+    {
+      "callsign": "Brickyard 507",
+      "type": "departure",
+      "full_name": "Republic Airways 507",
+      "operator": "Republic Airways",
+      "first_utc": "03:31:42",
+      "last_utc": "03:31:42",
+      "first_s": 102.84,
+      "last_s": 102.84,
+      "transmission_count": 1
+    },
+    {
+      "callsign": "1013",
+      "type": "unknown",
+      "full_name": "1013",
+      "operator": "",
+      "first_utc": "03:32:25",
+      "last_utc": "03:32:25",
+      "first_s": 145.18,
+      "last_s": 145.18,
+      "transmission_count": 1
+    },
+    {
+      "callsign": "Current zero",
+      "type": "vehicle",
+      "full_name": "Vehicle Current-0",
+      "operator": "Port Authority",
+      "first_utc": "03:32:45",
+      "last_utc": "03:40:08",
+      "first_s": 165.7,
+      "last_s": 608.76,
+      "transmission_count": 8
+    },
+    {
+      "callsign": "Delta 733",
+      "type": "unknown",
+      "full_name": "Delta 733",
+      "operator": "",
+      "first_utc": "03:32:59",
+      "last_utc": "03:32:59",
+      "first_s": 179.1,
+      "last_s": 179.1,
+      "transmission_count": 1
+    },
+    {
+      "callsign": "Jazz 6460",
+      "type": "arrival",
+      "full_name": "Jazz 6460",
+      "operator": "",
+      "first_utc": "03:34:59",
+      "last_utc": "03:35:07",
+      "first_s": 299.18,
+      "last_s": 307.02,
+      "transmission_count": 3
+    },
+    {
+      "callsign": "Delta 313",
+      "type": "unknown",
+      "full_name": "Delta 313",
+      "operator": "",
+      "first_utc": "03:35:37",
+      "last_utc": "03:35:37",
+      "first_s": 337.94,
+      "last_s": 337.94,
+      "transmission_count": 1
+    },
+    {
+      "callsign": "United 1313",
+      "type": "ground_taxi",
+      "full_name": "United 1313",
+      "operator": "United Airlines",
+      "first_utc": "03:35:37",
+      "last_utc": "03:35:37",
+      "first_s": 337.94,
+      "last_s": 337.94,
+      "transmission_count": 1
+    },
+    {
+      "callsign": "Frontier 4195",
+      "type": "departure",
+      "full_name": "Frontier 4195",
+      "operator": "Frontier Airlines",
+      "first_utc": "03:36:20",
+      "last_utc": "03:55:22",
+      "first_s": 380.1,
+      "last_s": 1522.38,
+      "transmission_count": 3
+    },
+    {
+      "callsign": "Delta 2603",
+      "type": "arrival",
+      "full_name": "Delta 2603",
+      "operator": "Delta Air Lines",
+      "first_utc": "03:36:34",
+      "last_utc": "03:39:31",
+      "first_s": 394.74,
+      "last_s": 571.6,
+      "transmission_count": 5
+    },
+    {
+      "callsign": "Truck 1",
+      "type": "vehicle",
+      "full_name": "Port Authority Fire Truck 1",
+      "operator": "Port Authority",
+      "first_utc": "03:36:53",
+      "last_utc": "03:37:17",
+      "first_s": 413.06,
+      "last_s": 437.02,
+      "transmission_count": 6
+    },
+    {
+      "callsign": "Vehicle 9-8",
+      "type": "vehicle",
+      "full_name": "Vehicle 9-8",
+      "operator": "Port Authority",
+      "first_utc": "03:38:54",
+      "last_utc": "03:39:11",
+      "first_s": 534.54,
+      "last_s": 551.1,
+      "transmission_count": 2
+    },
+    {
+      "callsign": "Delta 3988",
+      "type": "unknown",
+      "full_name": "Delta 3988",
+      "operator": "",
+      "first_utc": "03:39:37",
+      "last_utc": "03:39:43",
+      "first_s": 577.04,
+      "last_s": 583.52,
+      "transmission_count": 2
+    },
+    {
+      "callsign": "Delta 1199",
+      "type": "arrival",
+      "full_name": "Delta 1199",
+      "operator": "Delta Air Lines",
+      "first_utc": "03:41:38",
+      "last_utc": "03:55:17",
+      "first_s": 698.82,
+      "last_s": 1517.14,
+      "transmission_count": 24
+    }
+  ]
+}
