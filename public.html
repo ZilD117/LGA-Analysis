@@ -20,15 +20,15 @@
   --fg: #e2e8f0;
   --fg2: #94a3b8;
   --fg3: #64748b;
-  --accent: #ffffff;
-  --red: #ef4444;
-  --red-dim: rgba(239,68,68,0.15);
-  --green: #22c55e;
-  --green-dim: rgba(34,197,94,0.15);
-  --orange: #f59e0b;
-  --orange-dim: rgba(245,158,11,0.15);
-  --blue: #3b82f6;
-  --purple: #a78bfa;
+  --accent: #00CFE3;
+  --red: #E13131;
+  --red-dim: rgba(225,49,49,0.15);
+  --green: #55EF88;
+  --green-dim: rgba(85,239,136,0.15);
+  --orange: #D4993D;
+  --orange-dim: rgba(212,153,61,0.15);
+  --blue: #00CFE3;
+  --purple: #8B9CB8;
   --card: #141414;
   --border: #262626;
   --border2: #333333;
@@ -48,7 +48,7 @@ nav .links a { color: var(--fg3); font-size: 12px; font-weight: 600; letter-spac
 nav .links a:hover { color: var(--fg); }
 
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; padding: 100px 24px 80px; }
-.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 20%, rgba(239,68,68,0.04) 0%, transparent 50%); }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 20%, rgba(225,49,49,0.04) 0%, transparent 50%); }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 200px; background: linear-gradient(transparent, var(--bg)); }
 .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.02em; }
 .hero h1 .red { color: var(--red); }
@@ -90,12 +90,12 @@ section:nth-child(even) { background: var(--bg2); }
 .htl-ev:hover .htl-stem { opacity: 1; }
 .htl-ev .htl-dot { position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg); transform: translate(-7px, -7px); transition: transform .2s, box-shadow .2s; z-index: 2; }
 .htl-ev:hover .htl-dot { transform: translate(-7px, -7px) scale(1.4); }
-.htl-ev.danger .htl-dot { border-color: var(--red); background: var(--red); box-shadow: 0 0 12px rgba(239,68,68,0.5); }
-.htl-ev.warning .htl-dot { border-color: var(--orange); background: var(--orange); box-shadow: 0 0 10px rgba(245,158,11,0.4); }
+.htl-ev.danger .htl-dot { border-color: var(--red); background: var(--red); box-shadow: 0 0 12px rgba(225,49,49,0.5); }
+.htl-ev.warning .htl-dot { border-color: var(--orange); background: var(--orange); box-shadow: 0 0 10px rgba(212,153,61,0.4); }
 .htl-ev.info .htl-dot { border-color: var(--blue); background: var(--blue); }
 .htl-ev.neutral .htl-dot { border-color: var(--fg3); background: var(--fg3); }
-.htl-ev.collision .htl-dot { width: 24px; height: 24px; transform: translate(-12px, -12px); border-color: var(--red); background: var(--red); box-shadow: 0 0 24px rgba(239,68,68,0.7), 0 0 48px rgba(239,68,68,0.3); animation: pulse-dot 1.2s ease-in-out infinite; }
-@keyframes pulse-dot { 0%,100%{ box-shadow: 0 0 24px rgba(239,68,68,0.7); } 50%{ box-shadow: 0 0 36px rgba(239,68,68,1), 0 0 60px rgba(239,68,68,0.4); }}
+.htl-ev.collision .htl-dot { width: 24px; height: 24px; transform: translate(-12px, -12px); border-color: var(--red); background: var(--red); box-shadow: 0 0 24px rgba(225,49,49,0.7), 0 0 48px rgba(225,49,49,0.3); animation: pulse-dot 1.2s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100%{ box-shadow: 0 0 24px rgba(225,49,49,0.7); } 50%{ box-shadow: 0 0 36px rgba(225,49,49,1), 0 0 60px rgba(225,49,49,0.4); }}
 .htl-card { position: absolute; left: 50%; transform: translateX(-50%); width: 230px; padding: 14px 16px; background: var(--card); border: 1px solid var(--border); transition: border-color .25s, box-shadow .25s; }
 .htl-ev:hover .htl-card { border-color: var(--border2); box-shadow: 0 4px 24px rgba(0,0,0,0.5); z-index: 10; }
 .htl-ev.above .htl-stem { bottom: 50%; top: auto; }
@@ -287,7 +287,7 @@ footer p { line-height: 2; }
   <div class="container">
     <div class="section-label fade-in">The Incident</div>
     <div class="section-title fade-in">LaGuardia Airport — March 22, 2026, 11:37 PM</div>
-    <p class="section-subtitle fade-in">A single controller, working two positions alone, cleared a fire truck convoy onto Runway 4 while a CRJ-900 was on landing rollout. The result was catastrophic.</p>
+    <p class="section-subtitle fade-in">A single controller, working two positions alone, cleared a fire truck convoy onto Runway 4 while a CRJ-900 was on short final. The result was catastrophic.</p>
     
     <div class="incident-cards fade-in">
       <div class="incident-card">
@@ -308,7 +308,7 @@ footer p { line-height: 2; }
       <div class="incident-card orange-top">
         <div class="tag mono" style="color:var(--orange)">ROOT CAUSE</div>
         <h3>Controller Overload</h3>
-        <p>A single controller was managing both ground and tower positions — duties normally split between two people. After 15+ handoffs in 2 minutes, the landing clearance for Jazz 8646 had been pushed out of working memory.</p>
+        <p>A single controller was managing both ground and tower positions — duties normally split between two people. After 20 consecutive transmissions in 2 minutes, the landing clearance for Jazz 8646 had been pushed out of working memory.</p>
       </div>
     </div>
 
@@ -346,7 +346,7 @@ footer p { line-height: 2; }
       <div class="card" style="text-align:center;">
         <div style="font-family:'JetBrains Mono',monospace;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:900;color:var(--fg2);">4</div>
         <div style="font-size:11px;color:var(--fg3);margin-top:6px;text-transform:uppercase;letter-spacing:1px;font-weight:600;">Arrivals</div>
-        <p style="margin-top:8px;">Delta 2733, SW 3988, Jazz 646, Delta 2603 — all on RW04.</p>
+        <p style="margin-top:8px;">Delta 2733, SW 3078, Jazz 8646, Delta 2603 — all on RW04.</p>
       </div>
       <div class="card" style="text-align:center;">
         <div style="font-family:'JetBrains Mono',monospace;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:900;color:var(--fg2);">3+</div>
@@ -378,11 +378,11 @@ footer p { line-height: 2; }
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;">
         <div class="card" style="padding:14px 16px;border-left:3px solid var(--blue);">
           <div style="font-size:11px;color:var(--blue);font-weight:700;letter-spacing:1px;">ARRIVAL — RW04</div>
-          <div style="font-size:13px;margin-top:6px;line-height:1.8;">Delta 2733<br>Southwest 3988<br>Jazz 8646<br>Delta 2603</div>
+          <div style="font-size:13px;margin-top:6px;line-height:1.8;">Delta 2733<br>Southwest 3078<br>Jazz 8646<br>Delta 2603</div>
         </div>
         <div class="card" style="padding:14px 16px;border-left:3px solid var(--purple);">
           <div style="font-size:11px;color:var(--purple);font-weight:700;letter-spacing:1px;">DEPARTURE — RW13</div>
-          <div style="font-size:13px;margin-top:6px;line-height:1.8;">Brickyard 33095<br>Brickyard 507<br>Frontier 4195<br>Flight 4589</div>
+          <div style="font-size:13px;margin-top:6px;line-height:1.8;">Brickyard 33095<br>Brickyard 507<br>Frontier 4195</div>
         </div>
         <div class="card" style="padding:14px 16px;border-left:3px solid var(--fg2);">
           <div style="font-size:11px;color:var(--fg2);font-weight:700;letter-spacing:1px;">GROUND TAXI</div>
@@ -397,7 +397,7 @@ footer p { line-height: 2; }
 
     <div class="callout fade-in" style="margin-top:32px;border-left:3px solid var(--red);">
       <h4>The Critical 116 Seconds</h4>
-      <p>Between Jazz 646's landing clearance (23:35:05) and the fatal crossing clearance (23:37:01), the controller handled <strong>20 separate transmissions</strong> involving <strong>8 different callsigns</strong> — including taxi instructions for Delta 520, lane assignments, frequency changes, the Delta 2603 approach sequence, and the Frontier 4195 departure clearance. Every one of those 20 transmissions pushed Jazz 646 further out of working memory. By the time Truck 1 asked to cross, the controller's mental model of Runway 04 no longer included an inbound aircraft.</p>
+      <p>Between Jazz 8646's landing clearance (23:35:05) and the fatal crossing clearance (23:37:01), the controller handled <strong>20 separate transmissions</strong> involving <strong>8 different callsigns</strong> — including taxi instructions for Delta 520, lane assignments, frequency changes, the Delta 2603 approach sequence, and the Frontier 4195 departure clearance. Every one of those 20 transmissions pushed Jazz 8646 further out of working memory. By the time Truck 1 asked to cross, the controller's mental model of Runway 04 no longer included an inbound aircraft.</p>
     </div>
   </div>
 </section>
@@ -429,7 +429,7 @@ footer p { line-height: 2; }
     
     <div class="callout fade-in">
       <h4>How 2 Minutes Erased a Landing Clearance</h4>
-      <p>Jazz 8646 was cleared to land at 23:35:05. The fatal crossing clearance came at 23:37:01 — <strong>nearly 2 full minutes later</strong>. In those 2 minutes, the controller handled at least <strong>15 separate communications</strong> across two runways, multiple taxiways, and several ground vehicles. A single controller was doing the work of two. By the time Truck 1 asked to cross, Jazz 8646's landing clearance had completely faded from working memory.</p>
+      <p>Jazz 8646 was cleared to land at 23:35:05. The fatal crossing clearance came at 23:37:01 — <strong>nearly 2 full minutes later</strong>. In those 2 minutes, the controller handled at least <strong>20 separate transmissions</strong> across two runways, multiple taxiways, and several ground vehicles. A single controller was doing the work of two. By the time Truck 1 asked to cross, Jazz 8646's landing clearance had completely faded from working memory.</p>
     </div>
     
     <!-- Interactive blind spot timeline canvas -->
@@ -495,13 +495,13 @@ footer p { line-height: 2; }
         <div class="verdict" style="background:var(--green-dim);color:var(--green)">IF THIS HAD BEEN "TRUCK 1, STOP" → Truck at ~44m. Still stoppable. Safety margin: 23 meters.</div>
       </div>
       
-      <div class="stop-card" style="border-left: 3px solid #dc2626;">
+      <div class="stop-card" style="border-left: 3px solid #B82525;">
         <div class="stop-header">
           <span class="stop-num">STOP #3</span>
-          <span class="stop-time" style="color:#dc2626">T+16s — 23:37:17</span>
+          <span class="stop-time" style="color:#B82525">T+16s — 23:37:17</span>
         </div>
-        <div class="quote" style="border-color:#dc2626">"Stop, <strong>Truck 1</strong>, stop, stop, <strong>Truck 1</strong>."</div>
-        <p>The <strong>first correct address</strong>. Sixteen seconds have passed. At ~20 km/h, the truck has covered ~73 meters of the 86-meter crossing. With 2.5 seconds of human reaction time and hard braking at 3 m/s², the truck needs 19 more meters to stop — putting it at 92 meters. The collision point is at 86 meters.</p>
+        <div class="quote" style="border-color:#B82525">"Stop, <strong>Truck 1</strong>, stop, stop, <strong>Truck 1</strong>."</div>
+        <p>The <strong>first correct address</strong>. Sixteen seconds have passed. Having accelerated to ~20 km/h, the truck has covered ~73 meters of the 86-meter crossing. With 2.5 seconds of human reaction time and hard braking at 3 m/s², the truck needs 19 more meters to stop — putting it at 92 meters. The collision point is at 86 meters.</p>
         <div class="verdict" style="background:var(--red-dim);color:var(--red)">PHYSICALLY IMPOSSIBLE TO STOP. The truck is past the point of no return.</div>
       </div>
       
@@ -547,7 +547,7 @@ footer p { line-height: 2; }
         </tr>
       </thead>
       <tbody>
-        <tr style="background:rgba(239,68,68,0.04)">
+        <tr style="background:rgba(225,49,49,0.04)">
           <td><strong>What actually happened</strong></td>
           <td>No intervention</td>
           <td class="mono">T+16s</td>
@@ -671,14 +671,14 @@ T+ 9.4s  Truck stopped at 30m
   <div class="container">
     <div class="section-label fade-in">Historical Context</div>
     <div class="section-title fade-in">This Is Not an Isolated Failure</div>
-    <p class="section-subtitle fade-in">The same structural failure — a controller clearing traffic onto an occupied runway — has caused some of the worst disasters in aviation history.</p>
+    <p class="section-subtitle fade-in">Breakdowns in runway safety — from miscommunication to clearance errors — have caused some of the worst disasters in aviation history.</p>
     
     <table class="scenario-table fade-in">
       <thead>
         <tr>
           <th>Incident</th>
           <th>Date</th>
-          <th>Root Cause</th>
+          <th>What Happened</th>
           <th>Outcome</th>
         </tr>
       </thead>
@@ -692,7 +692,7 @@ T+ 9.4s  Truck stopped at 30m
         <tr>
           <td><strong>Haneda RW34R, Tokyo</strong></td>
           <td class="mono">Jan 2, 2024</td>
-          <td>ATC cleared JA722A onto active runway</td>
+          <td>JA722A entered active runway after misinterpreting ATC instruction</td>
           <td><span class="text-red">5 fatalities</span></td>
         </tr>
         <tr>
@@ -701,7 +701,7 @@ T+ 9.4s  Truck stopped at 30m
           <td>Two aircraft on converging taxiway paths</td>
           <td><span class="text-orange">Wing collision</span></td>
         </tr>
-        <tr style="background:rgba(239,68,68,0.04)">
+        <tr style="background:rgba(225,49,49,0.04)">
           <td><strong>LaGuardia RW04, New York</strong></td>
           <td class="mono">Mar 22, 2026</td>
           <td>ATC cleared truck onto active runway</td>
@@ -711,7 +711,7 @@ T+ 9.4s  Truck stopped at 30m
     </table>
     
     <div class="callout fade-in" style="margin-top: 32px;">
-      <p style="font-size:15px">In every single case, the root cause is the same: a human controller issuing a clearance while losing situational awareness of conflicting traffic. This is not a rare edge case. It is a <strong>systemic, recurring failure mode</strong> that basic automated cross-checks could eliminate.</p>
+      <p style="font-size:15px">In each case, breakdowns in communication and situational awareness — whether by controllers, pilots, or both — created deadly conflicts on active runways. This is not a rare edge case. It is a <strong>systemic, recurring failure mode</strong> that automated cross-checks could help prevent.</p>
     </div>
   </div>
 </section>
@@ -730,7 +730,7 @@ T+ 9.4s  Truck stopped at 30m
       </div>
       <div class="conclusion-card">
         <h4>The understaffing factor</h4>
-        <p>One controller was doing the work of two, handling 40+ transmissions in 7 minutes across two runways, multiple taxiways, and several ground vehicles. The landing clearance slipped from working memory. This is a predictable, preventable outcome of chronic ATC understaffing.</p>
+        <p>One controller was doing the work of two, handling 97 transmissions in 7 minutes across two runways, multiple taxiways, and several ground vehicles. The landing clearance slipped from working memory. This is a predictable, preventable outcome of chronic ATC understaffing.</p>
       </div>
       <div class="conclusion-card">
         <h4>The callsign problem</h4>
@@ -746,7 +746,7 @@ T+ 9.4s  Truck stopped at 30m
       </div>
       <div class="conclusion-card neutral">
         <h4>Not replacement — augmentation</h4>
-        <p>This is not about replacing controllers. It's about giving them a tireless, always-attentive safety net. One automated cross-check — the kind a human cannot sustain at 15+ handoffs per minute — would have caught this. A second set of eyes that never blinks.</p>
+        <p>This is not about replacing controllers. It's about giving them a tireless, always-attentive safety net. One automated cross-check — the kind a human cannot sustain at 20+ transmissions per minute — would have caught this. A second set of eyes that never blinks.</p>
       </div>
     </div>
   </div>
@@ -839,7 +839,7 @@ function drawCrosshair(ctx, x, pad, ch) {
      note:'Aircraft is cleared — this clearance will be forgotten in under 2 minutes.'},
     {t:-93, time:'23:35:28', off:'~93s gap', type:'neutral', side:'below', stem:140,
      quote:'Controller handles 15+ comms: Delta 520, 2733, SW 3988, Frontier 4195, vehicle at CY, lane assigns, freq changes\u2026',
-     note:'Working two positions simultaneously. Jazz 646\u2019s clearance fades from working memory.'},
+     note:'Working two positions simultaneously. Jazz 8646\u2019s clearance fades from working memory.'},
     {t:-26, time:'23:36:35', off:'T\u221226s', type:'neutral', side:'above', stem:130,
      quote:'"Delta 2603, ILS runway 4."',
      note:'Next arrival being sequenced — controller juggling multiple approaches.'},
@@ -847,11 +847,11 @@ function drawCrosshair(ctx, x, pad, ch) {
      quote:'"The vehicle needs to cross runway."',
      note:'Ground coordination. A basic runway-status check here catches the conflict.'},
     {t:-11, time:'23:36:50', off:'T\u221211s', type:'info', side:'above', stem:170,
-     quote:'Jazz 646 at 500 ft, 134 kts — 1,424 m from threshold.',
+     quote:'Jazz 8646 at 500 ft, 134 kts — 1,424 m from threshold.',
      note:'Aircraft on short final. Committed to landing.'},
     {t:-4, time:'23:36:57', off:'T\u22124s', type:'warning', side:'below', stem:100,
      quote:'"Truck 1, requesting to cross 4 at Delta."',
-     note:'Should have triggered a runway status check. Jazz 646 is seconds from touchdown.'},
+     note:'Should have triggered a runway status check. Jazz 8646 is seconds from touchdown.'},
     {t:0, time:'23:37:01', off:'T+0s', type:'danger', side:'above', stem:220, highlight:true,
      quote:'"Truck 1 and company, cross 4 at Delta."',
      note:'THE FATAL CLEARANCE. 27 seconds to collision.'},
@@ -859,7 +859,7 @@ function drawCrosshair(ctx, x, pad, ch) {
      quote:'"Truck 1 and company, crossing 4 at Delta."',
      note:'Truck readback correct. Convoy begins rolling.'},
     {t:5, time:'23:37:06', off:'T+5s', type:'info', side:'above', stem:80,
-     quote:'Jazz 646 at 300 ft, 135 kts — 280 m from threshold.',
+     quote:'Jazz 8646 at 300 ft, 135 kts — 280 m from threshold.',
      note:'Last ADS-B return. Truck 22 m into 86 m crossing.'},
     {t:8, time:'23:37:09', off:'T+8s', type:'warning', side:'below', stem:180,
      quote:'"Frontier 4195, stop there please."',
@@ -890,10 +890,10 @@ function drawCrosshair(ctx, x, pad, ch) {
 
   // Colored background zones
   const zones = [
-    {from:-119, to:0, color:'rgba(59,130,246,0.06)'},
-    {from:0, to:8, color:'rgba(239,68,68,0.10)'},
-    {from:8, to:16, color:'rgba(245,158,11,0.08)'},
-    {from:16, to:27, color:'rgba(239,68,68,0.05)'},
+    {from:-119, to:0, color:'rgba(0,207,227,0.06)'},
+    {from:0, to:8, color:'rgba(225,49,49,0.10)'},
+    {from:8, to:16, color:'rgba(212,153,61,0.08)'},
+    {from:16, to:27, color:'rgba(225,49,49,0.05)'},
   ];
   zones.forEach(z => {
     const el = document.createElement('div');
@@ -906,10 +906,10 @@ function drawCrosshair(ctx, x, pad, ch) {
 
   // Zone labels on the axis
   const zoneLabels = [
-    {from:-119, to:0, text:'PRE-CLEARANCE', color:'rgba(59,130,246,0.3)'},
-    {from:0, to:8, text:'8s BLIND SPOT', color:'rgba(239,68,68,0.5)'},
-    {from:8, to:16, text:'MISDIRECTED', color:'rgba(245,158,11,0.4)'},
-    {from:16, to:27, text:'TOO LATE', color:'rgba(239,68,68,0.35)'},
+    {from:-119, to:0, text:'PRE-CLEARANCE', color:'rgba(0,207,227,0.3)'},
+    {from:0, to:8, text:'8s BLIND SPOT', color:'rgba(225,49,49,0.5)'},
+    {from:8, to:16, text:'MISDIRECTED', color:'rgba(212,153,61,0.4)'},
+    {from:16, to:27, text:'TOO LATE', color:'rgba(225,49,49,0.35)'},
   ];
   zoneLabels.forEach(z => {
     const lbl = document.createElement('div');
@@ -956,7 +956,7 @@ function drawCrosshair(ctx, x, pad, ch) {
     if (ev.side === 'above') card.style.bottom = 'calc(50% + ' + (stemH + 6) + 'px)';
     else card.style.top = 'calc(50% + ' + (stemH + 6) + 'px)';
     if (ev.highlight) card.style.borderColor = 'var(--red)';
-    if (ev.collision) { card.style.borderColor = 'var(--red)'; card.style.background = 'rgba(239,68,68,0.08)'; }
+    if (ev.collision) { card.style.borderColor = 'var(--red)'; card.style.background = 'rgba(225,49,49,0.08)'; }
     card.innerHTML =
       '<span class="htl-time">' + ev.time + '</span><span class="htl-off">' + ev.off + '</span>' +
       '<div class="htl-quote">' + (ev.highlight || ev.collision ? '<strong>' + ev.quote + '</strong>' : ev.quote) + '</div>' +
@@ -1037,7 +1037,7 @@ function drawCrosshair(ctx, x, pad, ch) {
       ctx.beginPath(); ctx.arc(x,y,2.5,0,Math.PI*2);
       ctx.fillStyle = '#ffffff'; ctx.fill();
     });
-    ctx.beginPath(); ctx.strokeStyle = '#f59e0b'; ctx.lineWidth = 1.5; ctx.setLineDash([5,4]);
+    ctx.beginPath(); ctx.strokeStyle = '#D4993D'; ctx.lineWidth = 1.5; ctx.setLineDash([5,4]);
     data.forEach((d,i) => {
       const x = pad.l + (i/(n-1))*cw, y = pad.t + ch - ((d.gs-gsMin)/(gsMax-gsMin))*ch;
       i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
@@ -1045,7 +1045,7 @@ function drawCrosshair(ctx, x, pad, ch) {
     ctx.stroke(); ctx.setLineDash([]);
     for (let s = 120; s <= 200; s += 40) {
       const y = pad.t + ch - ((s-gsMin)/(gsMax-gsMin))*ch;
-      ctx.fillStyle = '#f59e0b'; ctx.textAlign = 'left'; ctx.font = '11px JetBrains Mono, monospace';
+      ctx.fillStyle = '#D4993D'; ctx.textAlign = 'left'; ctx.font = '11px JetBrains Mono, monospace';
       ctx.fillText(s+' kts', pad.l+cw+10, y+4);
     }
     ctx.fillStyle = '#64748b'; ctx.textAlign = 'center'; ctx.font = '10px JetBrains Mono, monospace';
@@ -1057,15 +1057,15 @@ function drawCrosshair(ctx, x, pad, ch) {
     });
     const lx = pad.l + cw, ly = pad.t + ch - (300/altMax)*ch;
     ctx.beginPath(); ctx.arc(lx,ly,8,0,Math.PI*2);
-    ctx.fillStyle = 'rgba(239,68,68,0.25)'; ctx.fill();
+    ctx.fillStyle = 'rgba(225,49,49,0.25)'; ctx.fill();
     ctx.beginPath(); ctx.arc(lx,ly,4,0,Math.PI*2);
-    ctx.fillStyle = '#ef4444'; ctx.fill();
-    ctx.fillStyle = '#ef4444'; ctx.font = 'bold 11px Inter, sans-serif'; ctx.textAlign = 'right';
+    ctx.fillStyle = '#E13131'; ctx.fill();
+    ctx.fillStyle = '#E13131'; ctx.font = 'bold 11px Inter, sans-serif'; ctx.textAlign = 'right';
     ctx.fillText('300 ft, 135 kts — Last position', lx-14, ly-12);
     ctx.fillStyle = '#fff'; ctx.fillRect(pad.l+12, pad.t+8, 16, 2.5);
     ctx.fillStyle = '#94a3b8'; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
     ctx.fillText('Altitude', pad.l+34, pad.t+12);
-    ctx.fillStyle = '#f59e0b'; ctx.setLineDash([4,3]);
+    ctx.fillStyle = '#D4993D'; ctx.setLineDash([4,3]);
     ctx.beginPath(); ctx.moveTo(pad.l+100,pad.t+10); ctx.lineTo(pad.l+116,pad.t+10); ctx.stroke();
     ctx.setLineDash([]); ctx.fillText('Ground Speed', pad.l+122, pad.t+12);
     if (hover.isHovering()) {
@@ -1079,12 +1079,12 @@ function drawCrosshair(ctx, x, pad, ch) {
         drawCrosshair(ctx, px, {t:pad.t}, ch);
         ctx.beginPath(); ctx.arc(px, yA, 6, 0, Math.PI*2); ctx.fillStyle = '#ffffff'; ctx.fill();
         ctx.beginPath(); ctx.arc(px, yA, 10, 0, Math.PI*2); ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = 1; ctx.stroke();
-        ctx.beginPath(); ctx.arc(px, yG, 6, 0, Math.PI*2); ctx.fillStyle = '#f59e0b'; ctx.fill();
-        ctx.beginPath(); ctx.arc(px, yG, 10, 0, Math.PI*2); ctx.strokeStyle = 'rgba(245,158,11,0.3)'; ctx.lineWidth = 1; ctx.stroke();
+        ctx.beginPath(); ctx.arc(px, yG, 6, 0, Math.PI*2); ctx.fillStyle = '#D4993D'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, yG, 10, 0, Math.PI*2); ctx.strokeStyle = 'rgba(212,153,61,0.3)'; ctx.lineWidth = 1; ctx.stroke();
         drawTooltip(ctx, px, Math.min(yA, yG) - 10, [
           {text: d.ts, mono: true, color: '#94a3b8'},
           {text: 'Altitude: ' + d.alt.toLocaleString() + ' ft', color: '#ffffff'},
-          {text: 'Ground Speed: ' + d.gs + ' kts', color: '#f59e0b'},
+          {text: 'Ground Speed: ' + d.gs + ' kts', color: '#D4993D'},
         ], W);
       }
     }
@@ -1137,17 +1137,17 @@ function drawCrosshair(ctx, x, pad, ch) {
     function ty(v) { return pad.t + ch - (v/txMax)*ch; }
 
     // Color bands
-    ctx.fillStyle = 'rgba(34,197,94,0.04)';
+    ctx.fillStyle = 'rgba(85,239,136,0.04)';
     ctx.fillRect(pad.l, ty(12), cw, ty(0)-ty(12));
-    ctx.fillStyle = 'rgba(245,158,11,0.05)';
+    ctx.fillStyle = 'rgba(212,153,61,0.05)';
     ctx.fillRect(pad.l, ty(18), cw, ty(12)-ty(18));
-    ctx.fillStyle = 'rgba(239,68,68,0.06)';
+    ctx.fillStyle = 'rgba(225,49,49,0.06)';
     ctx.fillRect(pad.l, ty(txMax), cw, ty(18)-ty(txMax));
 
-    ctx.fillStyle = 'rgba(34,197,94,0.3)'; ctx.font = '9px Inter, sans-serif'; ctx.textAlign = 'right';
+    ctx.fillStyle = 'rgba(85,239,136,0.3)'; ctx.font = '9px Inter, sans-serif'; ctx.textAlign = 'right';
     ctx.fillText('NORMAL', pad.l+cw-4, ty(1));
-    ctx.fillStyle = 'rgba(245,158,11,0.4)'; ctx.fillText('HIGH', pad.l+cw-4, ty(13));
-    ctx.fillStyle = 'rgba(239,68,68,0.4)'; ctx.fillText('OVERLOAD', pad.l+cw-4, ty(19));
+    ctx.fillStyle = 'rgba(212,153,61,0.4)'; ctx.fillText('HIGH', pad.l+cw-4, ty(13));
+    ctx.fillStyle = 'rgba(225,49,49,0.4)'; ctx.fillText('OVERLOAD', pad.l+cw-4, ty(19));
 
     // Grid
     ctx.strokeStyle = '#222'; ctx.lineWidth = 0.5;
@@ -1174,9 +1174,9 @@ function drawCrosshair(ctx, x, pad, ch) {
     txData.forEach(d => ctx.lineTo(tx(d.t), ty(d.tx)));
     ctx.lineTo(tx(txData[txData.length-1].t), ty(0)); ctx.closePath();
     const grad = ctx.createLinearGradient(0, pad.t, 0, pad.t+ch);
-    grad.addColorStop(0, 'rgba(239,68,68,0.15)');
-    grad.addColorStop(0.5, 'rgba(245,158,11,0.08)');
-    grad.addColorStop(1, 'rgba(34,197,94,0.02)');
+    grad.addColorStop(0, 'rgba(225,49,49,0.15)');
+    grad.addColorStop(0.5, 'rgba(212,153,61,0.08)');
+    grad.addColorStop(1, 'rgba(85,239,136,0.02)');
     ctx.fillStyle = grad; ctx.fill();
 
     // Line
@@ -1186,8 +1186,8 @@ function drawCrosshair(ctx, x, pad, ch) {
 
     // Event markers
     const events = [
-      {t:305, label:'Jazz 646\ncleared to land', color:'#3b82f6'},
-      {t:421, label:'FATAL\nCLEARANCE', color:'#ef4444'},
+      {t:305, label:'Jazz 8646\ncleared to land', color:'#00CFE3'},
+      {t:421, label:'FATAL\nCLEARANCE', color:'#E13131'},
     ];
     events.forEach(ev => {
       ctx.strokeStyle = ev.color; ctx.lineWidth = 1.5; ctx.setLineDash([4,3]);
@@ -1199,10 +1199,10 @@ function drawCrosshair(ctx, x, pad, ch) {
     });
 
     // Peak annotation
-    ctx.fillStyle = '#ef4444'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'left';
+    ctx.fillStyle = '#E13131'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'left';
     ctx.fillText('Peak: 23 tx/min', tx(55)+6, ty(23)-4);
     ctx.beginPath(); ctx.arc(tx(50), ty(23), 4, 0, Math.PI*2);
-    ctx.fillStyle = '#ef4444'; ctx.fill();
+    ctx.fillStyle = '#E13131'; ctx.fill();
 
     // Axis label
     ctx.fillStyle = '#64748b'; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
@@ -1223,7 +1223,7 @@ function drawCrosshair(ctx, x, pad, ch) {
         const min = Math.floor(best.t / 60), sec = best.t % 60;
         const tStr = '23:' + String(30 + min).padStart(2,'0') + ':' + String(sec).padStart(2,'0');
         const zone = best.tx >= 18 ? 'OVERLOAD' : best.tx >= 12 ? 'HIGH' : 'NORMAL';
-        const zc = best.tx >= 18 ? '#ef4444' : best.tx >= 12 ? '#f59e0b' : '#22c55e';
+        const zc = best.tx >= 18 ? '#E13131' : best.tx >= 12 ? '#D4993D' : '#55EF88';
         drawTooltip(ctx, px, py - 10, [
           {text: tStr, mono: true, color: '#94a3b8'},
           {text: best.tx + ' transmissions/min', color: '#e2e8f0'},
@@ -1290,10 +1290,10 @@ function drawCrosshair(ctx, x, pad, ch) {
 
     // Stacked areas (bottom to top: vehicles, ground, departures, arrivals)
     const layers = [
-      {key:'veh', color:'rgba(245,158,11,0.35)', stroke:'#f59e0b'},
+      {key:'veh', color:'rgba(212,153,61,0.35)', stroke:'#D4993D'},
       {key:'gnd', color:'rgba(148,163,184,0.25)', stroke:'#94a3b8'},
-      {key:'dep', color:'rgba(167,139,250,0.3)', stroke:'#a78bfa'},
-      {key:'arr', color:'rgba(59,130,246,0.35)', stroke:'#3b82f6'},
+      {key:'dep', color:'rgba(139,156,184,0.3)', stroke:'#8B9CB8'},
+      {key:'arr', color:'rgba(0,207,227,0.35)', stroke:'#00CFE3'},
     ];
     const stacked = entityData.map(d => {
       let cum = 0;
@@ -1321,10 +1321,10 @@ function drawCrosshair(ctx, x, pad, ch) {
     ctx.stroke();
 
     // Fatal clearance marker
-    ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 1.5; ctx.setLineDash([4,3]);
+    ctx.strokeStyle = '#E13131'; ctx.lineWidth = 1.5; ctx.setLineDash([4,3]);
     ctx.beginPath(); ctx.moveTo(tx(421), pad.t); ctx.lineTo(tx(421), pad.t+ch); ctx.stroke();
     ctx.setLineDash([]);
-    ctx.fillStyle = '#ef4444'; ctx.font = 'bold 9px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillStyle = '#E13131'; ctx.font = 'bold 9px Inter, sans-serif'; ctx.textAlign = 'center';
     ctx.fillText('FATAL', tx(421), pad.t+14);
     ctx.fillText('CLEARANCE', tx(421), pad.t+25);
 
@@ -1336,8 +1336,8 @@ function drawCrosshair(ctx, x, pad, ch) {
     // Legend
     const legendY = pad.t + 6;
     const legendItems = [
-      {label:'Arrivals', color:'#3b82f6'}, {label:'Departures', color:'#a78bfa'},
-      {label:'Ground Taxi', color:'#94a3b8'}, {label:'Vehicles', color:'#f59e0b'},
+      {label:'Arrivals', color:'#00CFE3'}, {label:'Departures', color:'#8B9CB8'},
+      {label:'Ground Taxi', color:'#94a3b8'}, {label:'Vehicles', color:'#D4993D'},
       {label:'Total', color:'#ffffff'},
     ];
     let lx = pad.l + 4;
@@ -1370,10 +1370,10 @@ function drawCrosshair(ctx, x, pad, ch) {
         drawTooltip(ctx, px, py - 10, [
           {text: tStr, mono: true, color: '#94a3b8'},
           {text: 'Total: ' + s.total + ' entities', color: '#ffffff'},
-          {text: 'Arrivals: ' + d.arr, color: '#3b82f6'},
-          {text: 'Departures: ' + d.dep, color: '#a78bfa'},
+          {text: 'Arrivals: ' + d.arr, color: '#00CFE3'},
+          {text: 'Departures: ' + d.dep, color: '#8B9CB8'},
           {text: 'Ground: ' + d.gnd, color: '#94a3b8'},
-          {text: 'Vehicles: ' + d.veh, color: '#f59e0b'},
+          {text: 'Vehicles: ' + d.veh, color: '#D4993D'},
         ], W);
       }
     }
@@ -1415,19 +1415,19 @@ function drawCrosshair(ctx, x, pad, ch) {
       ctx.fillText('T+'+t+'s', tx(t), H-pad.b+18);
     }
     // Blind spot shading (T+0 to T+8)
-    ctx.fillStyle = 'rgba(239,68,68,0.06)';
+    ctx.fillStyle = 'rgba(225,49,49,0.06)';
     ctx.fillRect(tx(0), pad.t, tx(8)-tx(0), ch);
-    ctx.fillStyle = 'rgba(239,68,68,0.5)'; ctx.font = 'bold 11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillStyle = 'rgba(225,49,49,0.5)'; ctx.font = 'bold 11px Inter, sans-serif'; ctx.textAlign = 'center';
     ctx.fillText('8s BLIND SPOT', (tx(0)+tx(8))/2, pad.t+20);
     // Misdirected zone (T+8 to T+16)
-    ctx.fillStyle = 'rgba(245,158,11,0.05)';
+    ctx.fillStyle = 'rgba(212,153,61,0.05)';
     ctx.fillRect(tx(8), pad.t, tx(16)-tx(8), ch);
-    ctx.fillStyle = 'rgba(245,158,11,0.5)'; ctx.font = 'bold 10px Inter, sans-serif';
+    ctx.fillStyle = 'rgba(212,153,61,0.5)'; ctx.font = 'bold 10px Inter, sans-serif';
     ctx.fillText('WRONG TARGET / NO CALLSIGN', (tx(8)+tx(16))/2, pad.t+20);
     // Collision line
-    ctx.strokeStyle = 'rgba(239,68,68,0.5)'; ctx.lineWidth = 1; ctx.setLineDash([4,4]);
+    ctx.strokeStyle = 'rgba(225,49,49,0.5)'; ctx.lineWidth = 1; ctx.setLineDash([4,4]);
     ctx.beginPath(); ctx.moveTo(pad.l, ty(0)); ctx.lineTo(pad.l+cw, ty(0)); ctx.stroke();
-    ctx.setLineDash([]); ctx.fillStyle = '#ef4444'; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
+    ctx.setLineDash([]); ctx.fillStyle = '#E13131'; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
     ctx.fillText('Collision Point', pad.l+4, ty(0)-6);
     // Aircraft distance from collision (decreasing from ~1097m to 0)
     ctx.beginPath(); ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2.5;
@@ -1441,7 +1441,7 @@ function drawCrosshair(ctx, x, pad, ch) {
     }
     ctx.stroke();
     // Truck distance from collision (86m, decreasing)
-    ctx.beginPath(); ctx.strokeStyle = '#f59e0b'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.strokeStyle = '#D4993D'; ctx.lineWidth = 2.5;
     for (let t = tMin; t <= tMax; t += 0.2) {
       let d;
       if (t < 3) d = 86;
@@ -1451,19 +1451,19 @@ function drawCrosshair(ctx, x, pad, ch) {
     }
     ctx.stroke();
     // Collision X
-    ctx.fillStyle = '#ef4444'; ctx.font = 'bold 16px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillStyle = '#E13131'; ctx.font = 'bold 16px Inter, sans-serif'; ctx.textAlign = 'center';
     ctx.fillText('COLLISION', tx(27), ty(0)-14);
     // Labels
     ctx.fillStyle = '#ffffff'; ctx.font = 'bold 11px Inter, sans-serif'; ctx.textAlign = 'left';
     ctx.fillText('Aircraft (Jazz 8646)', tx(-3), ty(870));
-    ctx.fillStyle = '#f59e0b';
+    ctx.fillStyle = '#D4993D';
     ctx.fillText('Truck 1', tx(-3), ty(100));
     // Annotations
     const annotations = [
-      {t:0, label:'Clearance', color:'#ef4444'},
-      {t:8, label:'"Frontier 4195, stop"', color:'#f59e0b'},
-      {t:11, label:'"stop stop stop" (no callsign)', color:'#ef4444'},
-      {t:16, label:'First "Truck 1, stop"', color:'#dc2626'},
+      {t:0, label:'Clearance', color:'#E13131'},
+      {t:8, label:'"Frontier 4195, stop"', color:'#D4993D'},
+      {t:11, label:'"stop stop stop" (no callsign)', color:'#E13131'},
+      {t:16, label:'First "Truck 1, stop"', color:'#B82525'},
     ];
     annotations.forEach(a => {
       ctx.strokeStyle = a.color; ctx.lineWidth = 1; ctx.setLineDash([3,3]);
@@ -1496,14 +1496,14 @@ function drawCrosshair(ctx, x, pad, ch) {
         const yAc = ty(Math.max(0, acD)), yTk = ty(Math.max(0, tkD));
         drawCrosshair(ctx, px, {t:pad.t}, ch);
         ctx.beginPath(); ctx.arc(px, yAc, 6, 0, Math.PI*2); ctx.fillStyle = '#ffffff'; ctx.fill();
-        ctx.beginPath(); ctx.arc(px, yTk, 6, 0, Math.PI*2); ctx.fillStyle = '#f59e0b'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, yTk, 6, 0, Math.PI*2); ctx.fillStyle = '#D4993D'; ctx.fill();
         const tLabel = ht >= 0 ? 'T+' + ht.toFixed(1) + 's' : 'T' + ht.toFixed(1) + 's';
         const sep = Math.round(Math.abs(acD - tkD));
         drawTooltip(ctx, px, Math.min(yAc, yTk) - 10, [
           {text: tLabel, mono: true, color: '#94a3b8'},
           {text: 'Aircraft: ' + Math.round(acD) + 'm', color: '#ffffff'},
-          {text: 'Truck: ' + Math.round(tkD) + 'm', color: '#f59e0b'},
-          {text: 'Separation: ' + sep + 'm', color: sep < 100 ? '#ef4444' : '#22c55e'},
+          {text: 'Truck: ' + Math.round(tkD) + 'm', color: '#D4993D'},
+          {text: 'Separation: ' + sep + 'm', color: sep < 100 ? '#E13131' : '#55EF88'},
         ], W);
       }
     }
@@ -1582,26 +1582,26 @@ function drawCrosshair(ctx, x, pad, ch) {
       ctx.fillText('T+'+t+'s', tx(t), H-pad.b+18);
     }
     // Runway line at 86m
-    ctx.strokeStyle = 'rgba(239,68,68,0.6)'; ctx.lineWidth = 2; ctx.setLineDash([6,4]);
+    ctx.strokeStyle = 'rgba(225,49,49,0.6)'; ctx.lineWidth = 2; ctx.setLineDash([6,4]);
     ctx.beginPath(); ctx.moveTo(pad.l, ty(RWY)); ctx.lineTo(pad.l+cw, ty(RWY)); ctx.stroke();
-    ctx.setLineDash([]); ctx.fillStyle = '#ef4444'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'right';
+    ctx.setLineDash([]); ctx.fillStyle = '#E13131'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'right';
     ctx.fillText('RUNWAY (86m)', pad.l+cw, ty(RWY)-6);
     // Actual trajectory
-    ctx.beginPath(); ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.strokeStyle = '#E13131'; ctx.lineWidth = 2.5;
     for (let t = 0; t <= tMax; t += 0.2) {
       const d = Math.min(truckActual(t), 95);
       t === 0 ? ctx.moveTo(tx(t),ty(d)) : ctx.lineTo(tx(t),ty(d));
     }
     ctx.stroke();
     // If correct at T+8
-    ctx.beginPath(); ctx.strokeStyle = '#f59e0b'; ctx.lineWidth = 2; ctx.setLineDash([6,3]);
+    ctx.beginPath(); ctx.strokeStyle = '#D4993D'; ctx.lineWidth = 2; ctx.setLineDash([6,3]);
     for (let t = 0; t <= tMax; t += 0.2) {
       const d = truckIfCorrect8(t);
       t === 0 ? ctx.moveTo(tx(t),ty(d)) : ctx.lineTo(tx(t),ty(d));
     }
     ctx.stroke(); ctx.setLineDash([]);
     // With auto detection
-    ctx.beginPath(); ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.strokeStyle = '#55EF88'; ctx.lineWidth = 2;
     for (let t = 0; t <= tMax; t += 0.2) {
       const d = truckAuto(t);
       t === 0 ? ctx.moveTo(tx(t),ty(d)) : ctx.lineTo(tx(t),ty(d));
@@ -1610,14 +1610,14 @@ function drawCrosshair(ctx, x, pad, ch) {
     // Labels on right side of lines
     const labT = 22;
     ctx.font = 'bold 11px Inter, sans-serif'; ctx.textAlign = 'left';
-    ctx.fillStyle = '#ef4444';
+    ctx.fillStyle = '#E13131';
     ctx.fillText('Actual: COLLISION', tx(labT)+8, ty(Math.min(truckActual(labT),95))+4);
-    ctx.fillStyle = '#f59e0b';
+    ctx.fillStyle = '#D4993D';
     ctx.fillText('If "Truck 1" at T+8s: stops at ~40m', tx(14)+8, ty(truckIfCorrect8(14))-8);
-    ctx.fillStyle = '#22c55e';
+    ctx.fillStyle = '#55EF88';
     ctx.fillText('Auto detection: stops at ~30m', tx(12)+8, ty(truckAuto(12))-8);
     // Stop command markers
-    ctx.fillStyle = 'rgba(239,68,68,0.7)'; ctx.font = '9px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillStyle = 'rgba(225,49,49,0.7)'; ctx.font = '9px Inter, sans-serif'; ctx.textAlign = 'center';
     [{t:8,l:'Stop #1\n(wrong target)'},{t:11,l:'Stop #2\n(no callsign)'},{t:16,l:'Stop #3\n(too late)'}].forEach(m => {
       ctx.strokeStyle = 'rgba(255,255,255,0.15)'; ctx.lineWidth = 1; ctx.setLineDash([2,3]);
       ctx.beginPath(); ctx.moveTo(tx(m.t), pad.t); ctx.lineTo(tx(m.t), pad.t+ch); ctx.stroke();
@@ -1640,14 +1640,14 @@ function drawCrosshair(ctx, x, pad, ch) {
         const dAu = truckAuto(ht);
         const px = tx(ht);
         drawCrosshair(ctx, px, {t:pad.t}, ch);
-        ctx.beginPath(); ctx.arc(px, ty(dA), 6, 0, Math.PI*2); ctx.fillStyle = '#ef4444'; ctx.fill();
-        ctx.beginPath(); ctx.arc(px, ty(dC), 6, 0, Math.PI*2); ctx.fillStyle = '#f59e0b'; ctx.fill();
-        ctx.beginPath(); ctx.arc(px, ty(dAu), 6, 0, Math.PI*2); ctx.fillStyle = '#22c55e'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, ty(dA), 6, 0, Math.PI*2); ctx.fillStyle = '#E13131'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, ty(dC), 6, 0, Math.PI*2); ctx.fillStyle = '#D4993D'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, ty(dAu), 6, 0, Math.PI*2); ctx.fillStyle = '#55EF88'; ctx.fill();
         drawTooltip(ctx, px, ty(Math.max(dA, dC, dAu)) - 10, [
           {text: 'T+' + ht.toFixed(1) + 's', mono: true, color: '#94a3b8'},
-          {text: 'Actual: ' + Math.round(dA) + 'm' + (dA >= RWY ? ' — ON RUNWAY' : ''), color: '#ef4444'},
-          {text: 'Correct @T+8: ' + Math.round(dC) + 'm', color: '#f59e0b'},
-          {text: 'Auto detect: ' + Math.round(dAu) + 'm', color: '#22c55e'},
+          {text: 'Actual: ' + Math.round(dA) + 'm' + (dA >= RWY ? ' — ON RUNWAY' : ''), color: '#E13131'},
+          {text: 'Correct @T+8: ' + Math.round(dC) + 'm', color: '#D4993D'},
+          {text: 'Auto detect: ' + Math.round(dAu) + 'm', color: '#55EF88'},
         ], W);
       }
     }
@@ -1718,11 +1718,11 @@ function drawCrosshair(ctx, x, pad, ch) {
     ctx.textAlign = 'right'; ctx.fillText('22', rwyX + cw - 8, rwyY + rwyH/2 + 4);
     // Collision point
     const collisionX = rwyX + cw * 0.75;
-    ctx.strokeStyle = 'rgba(239,68,68,0.3)'; ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(225,49,49,0.3)'; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.arc(collisionX, rwyY + rwyH/2, 22, 0, Math.PI*2); ctx.stroke();
     ctx.beginPath(); ctx.arc(collisionX, rwyY + rwyH/2, 1, 0, Math.PI*2);
-    ctx.fillStyle = 'rgba(239,68,68,0.5)'; ctx.fill();
-    ctx.fillStyle = '#ef4444'; ctx.font = '10px JetBrains Mono, monospace'; ctx.textAlign = 'center';
+    ctx.fillStyle = 'rgba(225,49,49,0.5)'; ctx.fill();
+    ctx.fillStyle = '#E13131'; ctx.font = '10px JetBrains Mono, monospace'; ctx.textAlign = 'center';
     ctx.fillText('RW04 / TXY-D', collisionX, rwyY - 10);
     // Threshold
     const threshX = rwyX + cw * 0.08;
@@ -1751,24 +1751,24 @@ function drawCrosshair(ctx, x, pad, ch) {
       ctx.fillText('Jazz 8646', acX, rwyY + rwyH/2 - 18);
     } else {
       ctx.fillStyle = 'rgba(255,255,255,0.4)'; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'left';
-      ctx.fillText('Jazz 646 on approach', rwyX + 14, rwyY + 16);
+      ctx.fillText('Jazz 8646 on approach', rwyX + 14, rwyY + 16);
     }
     // Truck
     const trkDist = truckPos(t, scenario);
     const trkFrac = trkDist / RWY_LEN;
     const trkY = txyStartY + 50 - trkFrac * (txyStartY + 50 - (rwyY + rwyH/2));
-    ctx.fillStyle = trkDist >= RWY_LEN - 5 ? '#ef4444' : '#f59e0b';
+    ctx.fillStyle = trkDist >= RWY_LEN - 5 ? '#E13131' : '#D4993D';
     ctx.fillRect(txyX - 11, trkY - 8, 22, 16);
     ctx.fillStyle = '#000'; ctx.font = 'bold 8px JetBrains Mono, monospace'; ctx.textAlign = 'center';
     ctx.fillText('T1', txyX, trkY + 3);
-    ctx.fillStyle = '#fbbf24'; ctx.font = 'bold 10px Inter, sans-serif';
+    ctx.fillStyle = '#D4993D'; ctx.font = 'bold 10px Inter, sans-serif';
     ctx.fillText('Truck 1', txyX + 32, trkY + 4);
     // Collision flash
     if (trkDist >= RWY_LEN - 2 && ad >= AC_RWY_TOTAL - 30 && scenario === 'actual') {
       const pulse = 0.5 + 0.5 * Math.sin(Date.now() / 150);
-      ctx.fillStyle = `rgba(239,68,68,${0.3 * pulse})`;
+      ctx.fillStyle = `rgba(225,49,49,${0.3 * pulse})`;
       ctx.beginPath(); ctx.arc(collisionX, rwyY + rwyH/2, 30, 0, Math.PI*2); ctx.fill();
-      ctx.fillStyle = '#ef4444'; ctx.font = 'bold 18px Inter, sans-serif'; ctx.textAlign = 'center';
+      ctx.fillStyle = '#E13131'; ctx.font = 'bold 18px Inter, sans-serif'; ctx.textAlign = 'center';
       ctx.fillText('COLLISION', collisionX, rwyY + rwyH + 30);
     }
     // Status bar
@@ -1779,18 +1779,18 @@ function drawCrosshair(ctx, x, pad, ch) {
     ctx.fillStyle = '#e2e8f0';
     ctx.fillText('Aircraft: ' + (ad < 0 ? 'On approach' : Math.round(ad)+'m from threshold'), col1, panelY+22);
     ctx.fillText('Speed: ~' + (ad < 0 ? 135 : Math.max(24, Math.round(135 - (ad/AC_RWY_TOTAL)*111))) + ' kts', col1, panelY+42);
-    ctx.fillStyle = '#f59e0b';
+    ctx.fillStyle = '#D4993D';
     ctx.fillText('Truck: ' + Math.round(trkDist) + 'm / ' + RWY_LEN + 'm', col2, panelY+22);
     const isStopped = scenario !== 'actual' && t > 12 && Math.abs(truckPos(t, scenario) - truckPos(t-0.3, scenario)) < 0.01;
     const onRunway = scenario === 'actual' && trkDist >= RWY_LEN;
     const statusTxt = scenario === 'blocked' ? 'HELD (clearance denied)' : isStopped ? 'STOPPED SAFELY' : onRunway ? 'ON RUNWAY' : Math.round(trkDist/RWY_LEN*100)+'% across';
     ctx.fillText('Status: ' + statusTxt, col2, panelY+42);
-    ctx.fillStyle = scenario === 'actual' ? '#ef4444' : '#22c55e';
+    ctx.fillStyle = scenario === 'actual' ? '#E13131' : '#55EF88';
     ctx.font = 'bold 12px Inter, sans-serif';
     const scenLabels = {actual:'ACTUAL EVENT (no intervention)', correct8:'WHAT IF: correct callsign at T+8s', auto:'WHAT IF: automated conflict detection', blocked:'WHAT IF: mandatory runway check'};
     ctx.fillText(scenLabels[scenario] || '', col3, panelY+22);
     if (scenario !== 'actual') {
-      ctx.fillStyle = '#22c55e'; ctx.font = '12px JetBrains Mono, monospace';
+      ctx.fillStyle = '#55EF88'; ctx.font = '12px JetBrains Mono, monospace';
       ctx.fillText('Safety margin: ' + Math.max(0, Math.round(RWY_LEN - trkDist)) + 'm', col3, panelY+42);
     }
     // Clock
@@ -1868,7 +1868,7 @@ function drawCrosshair(ctx, x, pad, ch) {
     const riskLevel = t < 3 ? 0 : Math.min(1, (t - 3) / 20);
     if (riskLevel > 0) {
       const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, rwyLen * 0.5);
-      grad.addColorStop(0, `rgba(239,68,68,${riskLevel * 0.12})`);
+      grad.addColorStop(0, `rgba(225,49,49,${riskLevel * 0.12})`);
       grad.addColorStop(1, 'transparent');
       ctx.fillStyle = grad; ctx.fillRect(0, 0, W, H);
     }
@@ -1910,14 +1910,14 @@ function drawCrosshair(ctx, x, pad, ch) {
     if (t > 15) {
       const pulse = 0.5 + 0.5 * Math.sin(Date.now() / 200);
       const glow = ctx.createRadialGradient(intX, intY, 0, intX, intY, 40);
-      glow.addColorStop(0, `rgba(239,68,68,${Math.min(0.4, (t-15)/12) * pulse})`);
+      glow.addColorStop(0, `rgba(225,49,49,${Math.min(0.4, (t-15)/12) * pulse})`);
       glow.addColorStop(1, 'transparent');
       ctx.fillStyle = glow;
       ctx.beginPath(); ctx.arc(intX, intY, 40, 0, Math.PI*2); ctx.fill();
     }
 
     // Collision point marker
-    ctx.strokeStyle = `rgba(239,68,68,${0.2 + riskLevel * 0.4})`; ctx.lineWidth = 1;
+    ctx.strokeStyle = `rgba(225,49,49,${0.2 + riskLevel * 0.4})`; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.arc(intX, intY, 16, 0, Math.PI*2); ctx.stroke();
 
     // Aircraft position along runway
@@ -1971,29 +1971,29 @@ function drawCrosshair(ctx, x, pad, ch) {
       const ttY = txyStart.y + (intY - txyStart.y) * (trkFrac - tTrLen);
       const ttGrad = ctx.createLinearGradient(ttX, ttY, trkX, trkY);
       ttGrad.addColorStop(0, 'transparent');
-      ttGrad.addColorStop(1, 'rgba(245,158,11,0.3)');
+      ttGrad.addColorStop(1, 'rgba(212,153,61,0.3)');
       ctx.strokeStyle = ttGrad; ctx.lineWidth = 3;
       ctx.beginPath(); ctx.moveTo(ttX, ttY); ctx.lineTo(trkX, trkY); ctx.stroke();
     }
 
     // Truck dot
-    const trkColor = trkFrac >= 0.95 ? '#ef4444' : '#f59e0b';
+    const trkColor = trkFrac >= 0.95 ? '#E13131' : '#D4993D';
     ctx.fillStyle = trkColor;
     ctx.beginPath(); ctx.arc(trkX, trkY, 5, 0, Math.PI*2); ctx.fill();
     ctx.fillStyle = trkColor.replace(')', ',0.2)').replace('rgb', 'rgba');
     ctx.beginPath(); ctx.arc(trkX, trkY, 10, 0, Math.PI*2); ctx.fill();
 
-    ctx.fillStyle = '#fbbf24'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'right';
+    ctx.fillStyle = '#D4993D'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'right';
     ctx.fillText('Truck 1', trkX - 16, trkY + 4);
 
     // Collision X
     if (t >= 27 && trkFrac >= 0.95) {
       const pulse = 0.6 + 0.4 * Math.sin(Date.now() / 120);
-      ctx.strokeStyle = `rgba(239,68,68,${pulse})`; ctx.lineWidth = 3;
+      ctx.strokeStyle = `rgba(225,49,49,${pulse})`; ctx.lineWidth = 3;
       const s = 14;
       ctx.beginPath(); ctx.moveTo(intX-s, intY-s); ctx.lineTo(intX+s, intY+s); ctx.stroke();
       ctx.beginPath(); ctx.moveTo(intX+s, intY-s); ctx.lineTo(intX-s, intY+s); ctx.stroke();
-      ctx.fillStyle = '#ef4444'; ctx.font = 'bold 16px Inter, sans-serif'; ctx.textAlign = 'center';
+      ctx.fillStyle = '#E13131'; ctx.font = 'bold 16px Inter, sans-serif'; ctx.textAlign = 'center';
       ctx.fillText('COLLISION', intX, intY - 28);
     }
 
@@ -2002,12 +2002,12 @@ function drawCrosshair(ctx, x, pad, ch) {
     ctx.fillStyle = '#1e293b'; ctx.fillRect(barX, barY, barW, barH);
     const riskW = barW * riskLevel;
     const riskGrad = ctx.createLinearGradient(barX, 0, barX + barW, 0);
-    riskGrad.addColorStop(0, '#22c55e'); riskGrad.addColorStop(0.4, '#f59e0b'); riskGrad.addColorStop(0.8, '#ef4444');
+    riskGrad.addColorStop(0, '#55EF88'); riskGrad.addColorStop(0.4, '#D4993D'); riskGrad.addColorStop(0.8, '#E13131');
     ctx.fillStyle = riskGrad; ctx.fillRect(barX, barY, riskW, barH);
     ctx.fillStyle = '#64748b'; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
     ctx.fillText('LOW', barX, barY - 6);
     ctx.textAlign = 'center'; ctx.fillText('COLLISION RISK', barX + barW/2, barY - 6);
-    ctx.textAlign = 'right'; ctx.fillStyle = '#ef4444'; ctx.fillText('CRITICAL', barX + barW, barY - 6);
+    ctx.textAlign = 'right'; ctx.fillStyle = '#E13131'; ctx.fillText('CRITICAL', barX + barW, barY - 6);
 
     // Time + info
     ctx.fillStyle = '#e2e8f0'; ctx.font = 'bold 14px JetBrains Mono, monospace'; ctx.textAlign = 'right';
@@ -2015,12 +2015,12 @@ function drawCrosshair(ctx, x, pad, ch) {
 
     // ATC event annotations
     const events = [
-      {t:0, text:'Crossing clearance issued', color:'#ef4444'},
-      {t:3, text:'Truck begins rolling', color:'#f59e0b'},
-      {t:8, text:'"Frontier 4195, stop" (wrong target)', color:'#f59e0b'},
-      {t:11, text:'"Stop stop stop" (no callsign)', color:'#ef4444'},
-      {t:16, text:'"Truck 1, stop" (too late)', color:'#dc2626'},
-      {t:27, text:'COLLISION', color:'#ef4444'},
+      {t:0, text:'Crossing clearance issued', color:'#E13131'},
+      {t:3, text:'Truck begins rolling', color:'#D4993D'},
+      {t:8, text:'"Frontier 4195, stop" (wrong target)', color:'#D4993D'},
+      {t:11, text:'"Stop stop stop" (no callsign)', color:'#E13131'},
+      {t:16, text:'"Truck 1, stop" (too late)', color:'#B82525'},
+      {t:27, text:'COLLISION', color:'#E13131'},
     ];
     const currentEvents = events.filter(e => t >= e.t && t < e.t + 3);
     if (currentEvents.length > 0) {
@@ -2108,9 +2108,9 @@ function drawCrosshair(ctx, x, pad, ch) {
     }
 
     // Threshold line at 1%
-    ctx.strokeStyle = 'rgba(245,158,11,0.5)'; ctx.lineWidth = 1; ctx.setLineDash([5,4]);
+    ctx.strokeStyle = 'rgba(212,153,61,0.5)'; ctx.lineWidth = 1; ctx.setLineDash([5,4]);
     ctx.beginPath(); ctx.moveTo(pad.l, ty(0.01)); ctx.lineTo(pad.l+cw, ty(0.01)); ctx.stroke();
-    ctx.setLineDash([]); ctx.fillStyle = '#f59e0b'; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
+    ctx.setLineDash([]); ctx.fillStyle = '#D4993D'; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
     ctx.fillText('Alert Threshold (1%)', pad.l+4, ty(0.01)-6);
 
     // Fill under instantaneous risk curve
@@ -2119,19 +2119,19 @@ function drawCrosshair(ctx, x, pad, ch) {
     for (let t = 0; t <= tMax; t += 0.3) ctx.lineTo(tx(t), ty(riskInstant(t)));
     ctx.lineTo(tx(tMax), ty(0)); ctx.closePath();
     const fillGrad = ctx.createLinearGradient(0, pad.t, 0, pad.t+ch);
-    fillGrad.addColorStop(0, 'rgba(239,68,68,0.15)');
-    fillGrad.addColorStop(1, 'rgba(239,68,68,0.02)');
+    fillGrad.addColorStop(0, 'rgba(225,49,49,0.15)');
+    fillGrad.addColorStop(1, 'rgba(225,49,49,0.02)');
     ctx.fillStyle = fillGrad; ctx.fill();
 
     // Instantaneous risk line
-    ctx.beginPath(); ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.strokeStyle = '#E13131'; ctx.lineWidth = 2.5;
     for (let t = 0; t <= tMax; t += 0.3) {
       t === 0 ? ctx.moveTo(tx(t), ty(riskInstant(t))) : ctx.lineTo(tx(t), ty(riskInstant(t)));
     }
     ctx.stroke();
 
     // Cumulative risk line
-    ctx.beginPath(); ctx.strokeStyle = '#a78bfa'; ctx.lineWidth = 2; ctx.setLineDash([6,3]);
+    ctx.beginPath(); ctx.strokeStyle = '#8B9CB8'; ctx.lineWidth = 2; ctx.setLineDash([6,3]);
     for (let t = 0; t <= tMax; t += 0.3) {
       t === 0 ? ctx.moveTo(tx(t), ty(riskCumulative(t))) : ctx.lineTo(tx(t), ty(riskCumulative(t)));
     }
@@ -2139,29 +2139,29 @@ function drawCrosshair(ctx, x, pad, ch) {
 
     // Level 1 alert marker
     const l1t = 3;
-    ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 1.5; ctx.setLineDash([3,3]);
+    ctx.strokeStyle = '#55EF88'; ctx.lineWidth = 1.5; ctx.setLineDash([3,3]);
     ctx.beginPath(); ctx.moveTo(tx(l1t), pad.t); ctx.lineTo(tx(l1t), pad.t+ch); ctx.stroke();
     ctx.setLineDash([]);
-    ctx.fillStyle = '#22c55e'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillStyle = '#55EF88'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'center';
     ctx.fillText('LEVEL 1', tx(l1t), pad.t+16);
     ctx.font = '9px Inter, sans-serif';
     ctx.fillText('Conflict Detected', tx(l1t), pad.t+28);
 
     // Level 2 alert marker (when risk crosses threshold, ~15s)
     const l2t = 15;
-    ctx.strokeStyle = '#f59e0b'; ctx.lineWidth = 1.5; ctx.setLineDash([3,3]);
+    ctx.strokeStyle = '#D4993D'; ctx.lineWidth = 1.5; ctx.setLineDash([3,3]);
     ctx.beginPath(); ctx.moveTo(tx(l2t), pad.t); ctx.lineTo(tx(l2t), pad.t+ch); ctx.stroke();
     ctx.setLineDash([]);
-    ctx.fillStyle = '#f59e0b'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillStyle = '#D4993D'; ctx.font = 'bold 10px Inter, sans-serif'; ctx.textAlign = 'center';
     ctx.fillText('LEVEL 2', tx(l2t), pad.t+16);
     ctx.font = '9px Inter, sans-serif';
     ctx.fillText('Threshold Exceeded', tx(l2t), pad.t+28);
 
     // Collision marker
-    ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 2; ctx.setLineDash([3,3]);
+    ctx.strokeStyle = '#E13131'; ctx.lineWidth = 2; ctx.setLineDash([3,3]);
     ctx.beginPath(); ctx.moveTo(tx(27), pad.t); ctx.lineTo(tx(27), pad.t+ch); ctx.stroke();
     ctx.setLineDash([]);
-    ctx.fillStyle = '#ef4444'; ctx.font = 'bold 10px Inter, sans-serif';
+    ctx.fillStyle = '#E13131'; ctx.font = 'bold 10px Inter, sans-serif';
     ctx.fillText('COLLISION', tx(27), pad.t+16);
 
     // ATC stop command markers
@@ -2174,10 +2174,10 @@ function drawCrosshair(ctx, x, pad, ch) {
     });
 
     // Legend
-    ctx.fillStyle = '#ef4444'; ctx.fillRect(pad.l+cw-240, pad.t+8, 14, 2.5);
+    ctx.fillStyle = '#E13131'; ctx.fillRect(pad.l+cw-240, pad.t+8, 14, 2.5);
     ctx.fillStyle = '#94a3b8'; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
     ctx.fillText('Instantaneous Risk', pad.l+cw-222, pad.t+12);
-    ctx.strokeStyle = '#a78bfa'; ctx.lineWidth = 1.5; ctx.setLineDash([4,3]);
+    ctx.strokeStyle = '#8B9CB8'; ctx.lineWidth = 1.5; ctx.setLineDash([4,3]);
     ctx.beginPath(); ctx.moveTo(pad.l+cw-240, pad.t+24); ctx.lineTo(pad.l+cw-226, pad.t+24); ctx.stroke();
     ctx.setLineDash([]);
     ctx.fillText('Cumulative Risk', pad.l+cw-222, pad.t+28);
@@ -2192,12 +2192,12 @@ function drawCrosshair(ctx, x, pad, ch) {
         const ri = riskInstant(ht), rc = riskCumulative(ht);
         const px = tx(ht), pyI = ty(ri), pyC = ty(rc);
         drawCrosshair(ctx, px, {t:pad.t}, ch);
-        ctx.beginPath(); ctx.arc(px, pyI, 6, 0, Math.PI*2); ctx.fillStyle = '#ef4444'; ctx.fill();
-        ctx.beginPath(); ctx.arc(px, pyC, 6, 0, Math.PI*2); ctx.fillStyle = '#a78bfa'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, pyI, 6, 0, Math.PI*2); ctx.fillStyle = '#E13131'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, pyC, 6, 0, Math.PI*2); ctx.fillStyle = '#8B9CB8'; ctx.fill();
         drawTooltip(ctx, px, Math.min(pyI, pyC) - 10, [
           {text: 'T+' + ht.toFixed(1) + 's', mono: true, color: '#94a3b8'},
-          {text: 'Instant Risk: ' + (ri*100).toFixed(1) + '%', color: '#ef4444'},
-          {text: 'Cumulative: ' + (rc*100).toFixed(1) + '%', color: '#a78bfa'},
+          {text: 'Instant Risk: ' + (ri*100).toFixed(1) + '%', color: '#E13131'},
+          {text: 'Cumulative: ' + (rc*100).toFixed(1) + '%', color: '#8B9CB8'},
         ], W);
       }
     }
