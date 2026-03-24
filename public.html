@@ -73,19 +73,42 @@ section:nth-child(even) { background: var(--bg2); }
 .card h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
 .card p { font-size: 13px; color: var(--fg2); line-height: 1.7; }
 
-.timeline { position: relative; padding-left: 44px; }
-.timeline::before { content: ''; position: absolute; left: 17px; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--border), var(--red), var(--border)); }
-.tl-item { position: relative; margin-bottom: 16px; padding: 18px 22px; background: var(--card); border: 1px solid var(--border); transition: border-color .3s; cursor: default; }
-.tl-item:hover { border-color: var(--border2); }
-.tl-item::before { content: ''; position: absolute; left: -35px; top: 24px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg); transition: all .3s; }
-.tl-item.danger::before { border-color: var(--red); background: var(--red); box-shadow: 0 0 12px rgba(239,68,68,0.4); }
-.tl-item.warning::before { border-color: var(--orange); background: var(--orange); box-shadow: 0 0 12px rgba(245,158,11,0.3); }
-.tl-item.info::before { border-color: var(--blue); background: var(--blue); }
-.tl-item.neutral::before { border-color: var(--fg3); background: var(--fg3); }
-.tl-time { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); font-weight: 600; }
-.tl-offset { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--fg3); margin-left: 10px; padding: 2px 8px; background: rgba(255,255,255,0.05); }
-.tl-text { margin-top: 6px; font-size: 14px; line-height: 1.6; }
-.tl-note { font-size: 12px; color: var(--fg3); margin-top: 6px; font-style: italic; }
+/* Horizontal scrollable timeline */
+.htl-outer { position: relative; margin-top: 24px; padding: 0 16px; }
+.htl-scroll { overflow-x: scroll; cursor: grab; -webkit-overflow-scrolling: touch; padding-bottom: 16px; scrollbar-width: thin; scrollbar-color: var(--border2) transparent; }
+.htl-scroll:active { cursor: grabbing; }
+.htl-scroll::-webkit-scrollbar { height: 8px; }
+.htl-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); border-radius: 4px; }
+.htl-scroll::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+.htl-track { position: relative; height: 900px; }
+.htl-axis { position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: linear-gradient(90deg, var(--border), var(--fg3) 15%, var(--red) 65%, var(--fg3) 85%, var(--border)); transform: translateY(-1px); }
+.htl-tick { position: absolute; top: 50%; width: 1px; height: 14px; background: var(--border); transform: translateY(-7px); }
+.htl-tick-label { position: absolute; top: calc(50% + 16px); font: 10px 'JetBrains Mono', monospace; color: var(--fg3); transform: translateX(-50%); white-space: nowrap; }
+.htl-zone { position: absolute; top: calc(50% - 28px); height: 56px; pointer-events: none; }
+.htl-ev { position: absolute; top: 0; height: 100%; transform: translateX(-50%); }
+.htl-ev .htl-stem { position: absolute; left: 50%; width: 2px; background: var(--border); transform: translateX(-1px); opacity: 0.5; }
+.htl-ev:hover .htl-stem { opacity: 1; }
+.htl-ev .htl-dot { position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg); transform: translate(-7px, -7px); transition: transform .2s, box-shadow .2s; z-index: 2; }
+.htl-ev:hover .htl-dot { transform: translate(-7px, -7px) scale(1.4); }
+.htl-ev.danger .htl-dot { border-color: var(--red); background: var(--red); box-shadow: 0 0 12px rgba(239,68,68,0.5); }
+.htl-ev.warning .htl-dot { border-color: var(--orange); background: var(--orange); box-shadow: 0 0 10px rgba(245,158,11,0.4); }
+.htl-ev.info .htl-dot { border-color: var(--blue); background: var(--blue); }
+.htl-ev.neutral .htl-dot { border-color: var(--fg3); background: var(--fg3); }
+.htl-ev.collision .htl-dot { width: 24px; height: 24px; transform: translate(-12px, -12px); border-color: var(--red); background: var(--red); box-shadow: 0 0 24px rgba(239,68,68,0.7), 0 0 48px rgba(239,68,68,0.3); animation: pulse-dot 1.2s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100%{ box-shadow: 0 0 24px rgba(239,68,68,0.7); } 50%{ box-shadow: 0 0 36px rgba(239,68,68,1), 0 0 60px rgba(239,68,68,0.4); }}
+.htl-card { position: absolute; left: 50%; transform: translateX(-50%); width: 230px; padding: 14px 16px; background: var(--card); border: 1px solid var(--border); transition: border-color .25s, box-shadow .25s; }
+.htl-ev:hover .htl-card { border-color: var(--border2); box-shadow: 0 4px 24px rgba(0,0,0,0.5); z-index: 10; }
+.htl-ev.above .htl-stem { bottom: 50%; top: auto; }
+.htl-ev.above .htl-card { bottom: auto; top: auto; }
+.htl-ev.below .htl-stem { top: 50%; bottom: auto; }
+.htl-ev.below .htl-card { top: auto; bottom: auto; }
+.htl-card .htl-time { font: 600 13px 'JetBrains Mono', monospace; color: var(--accent); }
+.htl-card .htl-off { font: 11px 'JetBrains Mono', monospace; color: var(--fg3); margin-left: 6px; padding: 1px 6px; background: rgba(255,255,255,0.05); }
+.htl-card .htl-quote { margin-top: 8px; font-size: 13px; line-height: 1.55; color: var(--fg1); }
+.htl-card .htl-desc { font-size: 11px; color: var(--fg3); margin-top: 6px; font-style: italic; line-height: 1.45; }
+.htl-hint { text-align: center; margin-top: 8px; font-size: 11px; color: var(--fg3); letter-spacing: 0.5px; }
+.htl-hint span { display: inline-block; animation: nudge 2s ease-in-out infinite; }
+@keyframes nudge { 0%,100%{ transform: translateX(0); } 50%{ transform: translateX(6px); } }
 
 .stop-card { background: var(--card); border: 1px solid var(--border); padding: 28px; margin-bottom: 16px; position: relative; }
 .stop-card .stop-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
@@ -183,7 +206,10 @@ footer p { line-height: 2; }
 @media (max-width: 768px) {
   nav .links { display: none; }
   .hero .stats { gap: 24px; }
-  .timeline { padding-left: 36px; }
+  .htl-track { height: 780px; }
+  .htl-card { width: 190px; padding: 10px 12px; }
+  .htl-card .htl-quote { font-size: 12px; }
+  .htl-card .htl-desc { font-size: 10px; }
   .comparison-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 1.8rem; }
 }
@@ -382,96 +408,13 @@ footer p { line-height: 2; }
     <div class="section-label fade-in">Second by Second</div>
     <div class="section-title fade-in">ATC Communication Timeline</div>
     <p class="section-subtitle fade-in">Reconstructed from the KLGA Tower frequency (118.7 MHz). Every transmission, every second, every missed opportunity.</p>
-    
-    <div class="timeline fade-in">
-      <div class="tl-item info">
-        <span class="tl-time">23:35:05</span><span class="tl-offset">T-119s</span>
-        <div class="tl-text"><strong>"Jazz 646, runway 4, cleared to land."</strong></div>
-        <div class="tl-note">Aircraft is cleared — this clearance will be forgotten in under 2 minutes.</div>
-      </div>
-      
-      <div class="tl-item neutral">
-        <span class="tl-time">23:35:05–23:37:01</span><span class="tl-offset">119 seconds</span>
-        <div class="tl-text" style="color:var(--fg2)">Controller handles 15+ separate communications: Delta 520, Delta 2733, Southwest 3988, Frontier 4195, a vehicle crossing at Charlie Yankee, lane assignments, frequency changes...</div>
-        <div class="tl-note">Working two positions simultaneously. Jazz 646's landing clearance fades from working memory.</div>
-      </div>
-      
-      <div class="tl-item neutral">
-        <span class="tl-time">23:36:35</span><span class="tl-offset">T-26s</span>
-        <div class="tl-text">"Delta 2603, ILS runway 4."</div>
-        <div class="tl-note">The next arrival is being sequenced — controller is juggling multiple approaches.</div>
-      </div>
-      
-      <div class="tl-item warning">
-        <span class="tl-time">23:36:42</span><span class="tl-offset">T-19s</span>
-        <div class="tl-text"><strong>"The vehicle needs to cross runway."</strong></div>
-        <div class="tl-note">Ground coordination. A basic runway-status check here would have caught the conflict.</div>
-      </div>
-      
-      <div class="tl-item info">
-        <span class="tl-time">23:36:50</span><span class="tl-offset">T-11s</span>
-        <div class="tl-text" style="color:var(--blue)">Jazz 646 at 500 ft, 134 kts — 1,424 m from the runway threshold.</div>
-        <div class="tl-note">Aircraft on short final. Committed to landing. ADS-B shows it clearly.</div>
-      </div>
-      
-      <div class="tl-item warning">
-        <span class="tl-time">23:36:57</span><span class="tl-offset">T-4s</span>
-        <div class="tl-text"><strong>"Truck 1 and company, LaGuardia Tower, requesting to cross 4 at Delta."</strong></div>
-        <div class="tl-note">The request itself should have triggered a runway status check. Jazz 646 is seconds from touchdown.</div>
-      </div>
-      
-      <div class="tl-item danger">
-        <span class="tl-time">23:37:01</span><span class="tl-offset">T+0s</span>
-        <div class="tl-text" style="font-weight:700;font-size:15px;color:var(--red)">"Truck 1 and company, cross 4 at Delta."</div>
-        <div class="tl-note">THE FATAL CLEARANCE. The clock starts. 27 seconds to collision.</div>
-      </div>
-      
-      <div class="tl-item neutral">
-        <span class="tl-time">23:37:04</span><span class="tl-offset">T+3s</span>
-        <div class="tl-text">"Truck 1 and company, crossing 4 at Delta."</div>
-        <div class="tl-note">Truck readback is textbook correct. Convoy begins rolling toward the runway.</div>
-      </div>
-      
-      <div class="tl-item info">
-        <span class="tl-time">23:37:06</span><span class="tl-offset">T+5s</span>
-        <div class="tl-text" style="color:var(--blue)">Jazz 646 at 300 ft, 135 kts — 280 m from threshold.</div>
-        <div class="tl-note">Last ADS-B return. Aircraft is 4 seconds from the runway. Truck is 22 meters into its 86m crossing.</div>
-      </div>
-      
-      <div class="tl-item warning">
-        <span class="tl-time">23:37:09</span><span class="tl-offset">T+8s</span>
-        <div class="tl-text" style="color:var(--orange)"><strong>"Frontier 4195</strong>, stop there please."</div>
-        <div class="tl-note">WRONG TARGET. The controller addresses a departing aircraft, not the truck. The truck driver hears someone else's callsign — no reason to react.</div>
-      </div>
-      
-      <div class="tl-item danger">
-        <span class="tl-time">23:37:12</span><span class="tl-offset">T+11s</span>
-        <div class="tl-text" style="color:var(--red)">"Stop, stop, stop, stop, stop, stop, stop, stop, stop."</div>
-        <div class="tl-note">NO CALLSIGN. Nine repetitions with no addressee. In ATC protocol, the truck driver has no reason to think this is for him — he's operating under a valid clearance.</div>
-      </div>
-      
-      <div class="tl-item danger">
-        <span class="tl-time">23:37:17</span><span class="tl-offset">T+16s</span>
-        <div class="tl-text" style="color:var(--red)">"Stop, <strong>Truck 1</strong>, stop, stop, <strong>Truck 1</strong>."</div>
-        <div class="tl-note">FIRST CORRECT ADDRESS — 16 seconds too late. Truck has traveled 73m of 86m. Even with immediate braking, it needs 19 more meters. Collision point is at 86m. Physically impossible to stop.</div>
-      </div>
-      
-      <div class="tl-item danger">
-        <span class="tl-time">~23:37:28</span><span class="tl-offset">T+27s</span>
-        <div class="tl-text" style="font-weight:700;font-size:16px;color:var(--red)">COLLISION</div>
-        <div class="tl-note">Aircraft strikes fire truck at the Runway 04 / Taxiway Delta intersection. Impact speed approximately 24 mph.</div>
-      </div>
-      
-      <div class="tl-item neutral">
-        <span class="tl-time">23:37:42</span><span class="tl-offset">T+41s</span>
-        <div class="tl-text">"Delta 2603, go around, runway heading 2,000."</div>
-        <div class="tl-note">The next arrival is sent around. The runway is compromised.</div>
-      </div>
-      
-      <div class="tl-item neutral">
-        <span class="tl-time">23:37:45</span><span class="tl-offset">T+44s</span>
-        <div class="tl-text">"Jazz 646..." — first attempt to contact the aircraft.</div>
-        <div class="tl-note">No response. Both pilots are fatally injured.</div>
+    <div class="htl-hint fade-in">Scroll or drag horizontally <span>&rarr;</span></div>
+  </div>
+  <!-- break out of container for full-width scroll -->
+  <div class="htl-outer fade-in">
+    <div class="htl-scroll" id="htlScroll">
+      <div class="htl-track" id="htlTrack">
+        <div class="htl-axis"></div>
       </div>
     </div>
   </div>
@@ -824,6 +767,227 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// ── SHARED HOVER SYSTEM ──
+function makeInteractive(canvas, opts) {
+  const dpr = window.devicePixelRatio || 1;
+  let mouseX = -1, mouseY = -1, hovering = false;
+  function getPos(e) {
+    const r = canvas.getBoundingClientRect();
+    return { x: (e.clientX - r.left), y: (e.clientY - r.top) };
+  }
+  canvas.addEventListener('mousemove', (e) => {
+    const p = getPos(e);
+    mouseX = p.x; mouseY = p.y; hovering = true;
+    canvas.style.cursor = 'crosshair';
+    if (opts.onHover) opts.onHover(mouseX, mouseY);
+  });
+  canvas.addEventListener('mouseleave', () => {
+    mouseX = -1; mouseY = -1; hovering = false;
+    canvas.style.cursor = 'default';
+    if (opts.onLeave) opts.onLeave();
+  });
+  return { getMouseX: () => mouseX, getMouseY: () => mouseY, isHovering: () => hovering };
+}
+function drawTooltip(ctx, x, y, lines, W) {
+  const font = '11px Inter, sans-serif';
+  const fontMono = '11px JetBrains Mono, monospace';
+  ctx.font = font;
+  const lineH = 18;
+  const padX = 12, padY = 10;
+  let maxW = 0;
+  lines.forEach(l => { const w = ctx.measureText(l.text || l).width; if (w > maxW) maxW = w; });
+  const boxW = maxW + padX * 2;
+  const boxH = lines.length * lineH + padY * 2;
+  let bx = x + 14, by = y - boxH / 2;
+  if (bx + boxW > W - 10) bx = x - boxW - 14;
+  if (by < 4) by = 4;
+  ctx.fillStyle = 'rgba(0,0,0,0.88)';
+  ctx.fillRect(bx, by, boxW, boxH);
+  ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(bx, by, boxW, boxH);
+  lines.forEach((l, i) => {
+    const isObj = typeof l === 'object';
+    ctx.fillStyle = isObj && l.color ? l.color : '#e2e8f0';
+    ctx.font = isObj && l.mono ? fontMono : font;
+    ctx.textAlign = 'left';
+    ctx.fillText(isObj ? l.text : l, bx + padX, by + padY + (i + 1) * lineH - 4);
+  });
+}
+function drawCrosshair(ctx, x, pad, ch) {
+  ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([4,4]);
+  ctx.beginPath();
+  ctx.moveTo(x, pad.t);
+  ctx.lineTo(x, pad.t + ch);
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+// ── HORIZONTAL TIMELINE ──
+(function() {
+  const track = document.getElementById('htlTrack');
+  const scroll = document.getElementById('htlScroll');
+  if (!track || !scroll) return;
+
+  // stem = pixels from axis to card. "above" cards go up, "below" go down.
+  // Stagger heights so nearby events don't overlap.
+  const events = [
+    {t:-119, time:'23:35:05', off:'T\u2212119s', type:'info', side:'above', stem:160,
+     quote:'"Jazz 646, runway 4, cleared to land."',
+     note:'Aircraft is cleared — this clearance will be forgotten in under 2 minutes.'},
+    {t:-93, time:'23:35:28', off:'~93s gap', type:'neutral', side:'below', stem:140,
+     quote:'Controller handles 15+ comms: Delta 520, 2733, SW 3988, Frontier 4195, vehicle at CY, lane assigns, freq changes\u2026',
+     note:'Working two positions simultaneously. Jazz 646\u2019s clearance fades from working memory.'},
+    {t:-26, time:'23:36:35', off:'T\u221226s', type:'neutral', side:'above', stem:130,
+     quote:'"Delta 2603, ILS runway 4."',
+     note:'Next arrival being sequenced — controller juggling multiple approaches.'},
+    {t:-19, time:'23:36:42', off:'T\u221219s', type:'warning', side:'below', stem:150,
+     quote:'"The vehicle needs to cross runway."',
+     note:'Ground coordination. A basic runway-status check here catches the conflict.'},
+    {t:-11, time:'23:36:50', off:'T\u221211s', type:'info', side:'above', stem:170,
+     quote:'Jazz 646 at 500 ft, 134 kts — 1,424 m from threshold.',
+     note:'Aircraft on short final. Committed to landing.'},
+    {t:-4, time:'23:36:57', off:'T\u22124s', type:'warning', side:'below', stem:100,
+     quote:'"Truck 1, requesting to cross 4 at Delta."',
+     note:'Should have triggered a runway status check. Jazz 646 is seconds from touchdown.'},
+    {t:0, time:'23:37:01', off:'T+0s', type:'danger', side:'above', stem:220, highlight:true,
+     quote:'"Truck 1 and company, cross 4 at Delta."',
+     note:'THE FATAL CLEARANCE. 27 seconds to collision.'},
+    {t:3, time:'23:37:04', off:'T+3s', type:'neutral', side:'below', stem:80,
+     quote:'"Truck 1 and company, crossing 4 at Delta."',
+     note:'Truck readback correct. Convoy begins rolling.'},
+    {t:5, time:'23:37:06', off:'T+5s', type:'info', side:'above', stem:80,
+     quote:'Jazz 646 at 300 ft, 135 kts — 280 m from threshold.',
+     note:'Last ADS-B return. Truck 22 m into 86 m crossing.'},
+    {t:8, time:'23:37:09', off:'T+8s', type:'warning', side:'below', stem:180,
+     quote:'"Frontier 4195, stop there please."',
+     note:'WRONG TARGET. Addresses a departing aircraft, not the truck.'},
+    {t:11, time:'23:37:12', off:'T+11s', type:'danger', side:'above', stem:140,
+     quote:'"Stop, stop, stop, stop, stop, stop, stop, stop, stop."',
+     note:'NO CALLSIGN. Nine repetitions. Truck has no reason to react.'},
+    {t:16, time:'23:37:17', off:'T+16s', type:'danger', side:'below', stem:220,
+     quote:'"Stop, Truck 1, stop, stop, Truck 1."',
+     note:'FIRST CORRECT ADDRESS — 16 s too late. Truck at 73/86 m. Impossible to stop.'},
+    {t:27, time:'~23:37:28', off:'T+27s', type:'danger', side:'above', stem:180, collision:true,
+     quote:'COLLISION',
+     note:'Aircraft strikes fire truck at RW04 / Taxiway D. Impact speed ~24 mph.'},
+    {t:41, time:'23:37:42', off:'T+41s', type:'neutral', side:'below', stem:130,
+     quote:'"Delta 2603, go around, runway heading 2,000."',
+     note:'The next arrival is sent around. Runway compromised.'},
+    {t:44, time:'23:37:45', off:'T+44s', type:'neutral', side:'above', stem:100,
+     quote:'"Jazz 646\u2026" — first attempt to contact the aircraft.',
+     note:'No response. Both pilots are fatally injured.'},
+  ];
+
+  const tMin = -130, tMax = 55;
+  const pxPerSec = 70;
+  const padL = 200;
+  const totalW = padL + (tMax - tMin) * pxPerSec + 200;
+  track.style.minWidth = totalW + 'px';
+  function tToX(t) { return padL + (t - tMin) * pxPerSec; }
+
+  // Colored background zones
+  const zones = [
+    {from:-119, to:0, color:'rgba(59,130,246,0.06)'},
+    {from:0, to:8, color:'rgba(239,68,68,0.10)'},
+    {from:8, to:16, color:'rgba(245,158,11,0.08)'},
+    {from:16, to:27, color:'rgba(239,68,68,0.05)'},
+  ];
+  zones.forEach(z => {
+    const el = document.createElement('div');
+    el.className = 'htl-zone';
+    el.style.left = tToX(z.from) + 'px';
+    el.style.width = (tToX(z.to) - tToX(z.from)) + 'px';
+    el.style.background = z.color;
+    track.appendChild(el);
+  });
+
+  // Zone labels on the axis
+  const zoneLabels = [
+    {from:-119, to:0, text:'PRE-CLEARANCE', color:'rgba(59,130,246,0.3)'},
+    {from:0, to:8, text:'8s BLIND SPOT', color:'rgba(239,68,68,0.5)'},
+    {from:8, to:16, text:'MISDIRECTED', color:'rgba(245,158,11,0.4)'},
+    {from:16, to:27, text:'TOO LATE', color:'rgba(239,68,68,0.35)'},
+  ];
+  zoneLabels.forEach(z => {
+    const lbl = document.createElement('div');
+    lbl.style.cssText = 'position:absolute;top:calc(50% + 32px);font:bold 9px Inter,sans-serif;letter-spacing:1.5px;color:' + z.color + ';white-space:nowrap;';
+    lbl.style.left = ((tToX(z.from) + tToX(z.to)) / 2) + 'px';
+    lbl.style.transform = 'translateX(-50%)';
+    lbl.textContent = z.text;
+    track.appendChild(lbl);
+  });
+
+  // Tick marks every 10 seconds
+  for (let t = Math.ceil(tMin / 10) * 10; t <= tMax; t += 10) {
+    const x = tToX(t);
+    const tick = document.createElement('div');
+    tick.className = 'htl-tick';
+    tick.style.left = x + 'px';
+    track.appendChild(tick);
+    const label = document.createElement('div');
+    label.className = 'htl-tick-label';
+    label.style.left = x + 'px';
+    label.textContent = t === 0 ? 'T+0' : (t > 0 ? 'T+' + t + 's' : 'T' + t + 's');
+    track.appendChild(label);
+  }
+
+  // Events
+  events.forEach(ev => {
+    const x = tToX(ev.t);
+    const stemH = ev.stem || 100;
+    const el = document.createElement('div');
+    el.className = 'htl-ev ' + ev.type + ' ' + ev.side + (ev.collision ? ' collision' : '');
+    el.style.left = x + 'px';
+    el.style.width = '240px';
+
+    const stem = document.createElement('div');
+    stem.className = 'htl-stem';
+    stem.style.height = stemH + 'px';
+    if (ev.highlight || ev.collision) { stem.style.background = 'var(--red)'; stem.style.opacity = '0.7'; }
+
+    const dot = document.createElement('div');
+    dot.className = 'htl-dot';
+
+    const card = document.createElement('div');
+    card.className = 'htl-card';
+    if (ev.side === 'above') card.style.bottom = 'calc(50% + ' + (stemH + 6) + 'px)';
+    else card.style.top = 'calc(50% + ' + (stemH + 6) + 'px)';
+    if (ev.highlight) card.style.borderColor = 'var(--red)';
+    if (ev.collision) { card.style.borderColor = 'var(--red)'; card.style.background = 'rgba(239,68,68,0.08)'; }
+    card.innerHTML =
+      '<span class="htl-time">' + ev.time + '</span><span class="htl-off">' + ev.off + '</span>' +
+      '<div class="htl-quote">' + (ev.highlight || ev.collision ? '<strong>' + ev.quote + '</strong>' : ev.quote) + '</div>' +
+      '<div class="htl-desc">' + ev.note + '</div>';
+
+    el.appendChild(stem);
+    el.appendChild(dot);
+    el.appendChild(card);
+    track.appendChild(el);
+  });
+
+  // Drag to scroll
+  let dragging = false, startX, scrollL;
+  scroll.addEventListener('mousedown', (e) => {
+    if (e.target.closest('.htl-card')) return;
+    dragging = true; startX = e.pageX; scrollL = scroll.scrollLeft;
+    scroll.style.cursor = 'grabbing'; e.preventDefault();
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    scroll.scrollLeft = scrollL - (e.pageX - startX);
+  });
+  window.addEventListener('mouseup', () => { dragging = false; scroll.style.cursor = 'grab'; });
+
+  // Auto-scroll to T+0 on load
+  requestAnimationFrame(() => {
+    const zeroX = tToX(0);
+    scroll.scrollLeft = zeroX - scroll.clientWidth * 0.35;
+  });
+})();
+
 // ── APPROACH PROFILE CHART ──
 (function() {
   const data = [
@@ -839,6 +1003,10 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   const canvas = document.getElementById('approachCanvas');
   const ctx = canvas.getContext('2d');
   const dpr = window.devicePixelRatio || 1;
+  const hover = makeInteractive(canvas, {
+    onHover: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 280); },
+    onLeave: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 280); }
+  });
   function resize() {
     const w = canvas.parentElement.clientWidth;
     canvas.width = w * dpr; canvas.height = 280 * dpr;
@@ -900,6 +1068,26 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     ctx.fillStyle = '#f59e0b'; ctx.setLineDash([4,3]);
     ctx.beginPath(); ctx.moveTo(pad.l+100,pad.t+10); ctx.lineTo(pad.l+116,pad.t+10); ctx.stroke();
     ctx.setLineDash([]); ctx.fillText('Ground Speed', pad.l+122, pad.t+12);
+    if (hover.isHovering()) {
+      const hx = hover.getMouseX();
+      if (hx >= pad.l && hx <= pad.l + cw) {
+        const idx = Math.max(0, Math.min(n - 1, Math.round((hx - pad.l) / cw * (n - 1))));
+        const d = data[idx];
+        const px = pad.l + (idx/(n-1))*cw;
+        const yA = pad.t + ch - (d.alt/altMax)*ch;
+        const yG = pad.t + ch - ((d.gs-gsMin)/(gsMax-gsMin))*ch;
+        drawCrosshair(ctx, px, {t:pad.t}, ch);
+        ctx.beginPath(); ctx.arc(px, yA, 6, 0, Math.PI*2); ctx.fillStyle = '#ffffff'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, yA, 10, 0, Math.PI*2); ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = 1; ctx.stroke();
+        ctx.beginPath(); ctx.arc(px, yG, 6, 0, Math.PI*2); ctx.fillStyle = '#f59e0b'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, yG, 10, 0, Math.PI*2); ctx.strokeStyle = 'rgba(245,158,11,0.3)'; ctx.lineWidth = 1; ctx.stroke();
+        drawTooltip(ctx, px, Math.min(yA, yG) - 10, [
+          {text: d.ts, mono: true, color: '#94a3b8'},
+          {text: 'Altitude: ' + d.alt.toLocaleString() + ' ft', color: '#ffffff'},
+          {text: 'Ground Speed: ' + d.gs + ' kts', color: '#f59e0b'},
+        ], W);
+      }
+    }
   }
   window.addEventListener('resize', resize); resize();
 })();
@@ -910,6 +1098,10 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   const dpr = window.devicePixelRatio || 1;
+  const hover = makeInteractive(canvas, {
+    onHover: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 300); },
+    onLeave: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 300); }
+  });
 
   // Real data from workload_metrics.json (rolling 60s window, 5s step)
   const txData = [
@@ -1018,6 +1210,27 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     ctx.save(); ctx.translate(14, pad.t+ch/2); ctx.rotate(-Math.PI/2);
     ctx.fillText('Transmissions per minute', 0, 0);
     ctx.restore();
+    if (hover.isHovering()) {
+      const hx = hover.getMouseX();
+      if (hx >= pad.l && hx <= pad.l + cw) {
+        const ht = ((hx - pad.l) / cw) * tMax;
+        let best = txData[0], bestD = Infinity;
+        txData.forEach(d => { const dd = Math.abs(d.t - ht); if (dd < bestD) { bestD = dd; best = d; }});
+        const px = tx(best.t), py = ty(best.tx);
+        drawCrosshair(ctx, px, {t:pad.t}, ch);
+        ctx.beginPath(); ctx.arc(px, py, 6, 0, Math.PI*2); ctx.fillStyle = '#e2e8f0'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, py, 10, 0, Math.PI*2); ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = 1; ctx.stroke();
+        const min = Math.floor(best.t / 60), sec = best.t % 60;
+        const tStr = '23:' + String(30 + min).padStart(2,'0') + ':' + String(sec).padStart(2,'0');
+        const zone = best.tx >= 18 ? 'OVERLOAD' : best.tx >= 12 ? 'HIGH' : 'NORMAL';
+        const zc = best.tx >= 18 ? '#ef4444' : best.tx >= 12 ? '#f59e0b' : '#22c55e';
+        drawTooltip(ctx, px, py - 10, [
+          {text: tStr, mono: true, color: '#94a3b8'},
+          {text: best.tx + ' transmissions/min', color: '#e2e8f0'},
+          {text: 'Zone: ' + zone, color: zc},
+        ], W);
+      }
+    }
   }
   window.addEventListener('resize', resize); resize();
 })();
@@ -1028,6 +1241,10 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   const dpr = window.devicePixelRatio || 1;
+  const hover = makeInteractive(canvas, {
+    onHover: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 300); },
+    onLeave: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 300); }
+  });
 
   // Real data from workload_metrics.json (active entities, 2-min window, 5s step)
   // Sampled key points from the full dataset
@@ -1137,6 +1354,29 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     ctx.save(); ctx.translate(14, pad.t+ch/2); ctx.rotate(-Math.PI/2);
     ctx.fillText('Active entities on frequency', 0, 0);
     ctx.restore();
+    if (hover.isHovering()) {
+      const hx = hover.getMouseX();
+      if (hx >= pad.l && hx <= pad.l + cw) {
+        const ht = ((hx - pad.l) / cw) * tMax;
+        let bestIdx = 0, bestD = Infinity;
+        entityData.forEach((d, i) => { const dd = Math.abs(d.t - ht); if (dd < bestD) { bestD = dd; bestIdx = i; }});
+        const d = entityData[bestIdx], s = stacked[bestIdx];
+        const px = tx(d.t), py = ty(s.total);
+        drawCrosshair(ctx, px, {t:pad.t}, ch);
+        ctx.beginPath(); ctx.arc(px, py, 6, 0, Math.PI*2); ctx.fillStyle = '#ffffff'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, py, 10, 0, Math.PI*2); ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = 1; ctx.stroke();
+        const min = Math.floor(d.t / 60), sec = d.t % 60;
+        const tStr = '23:' + String(30 + min).padStart(2,'0') + ':' + String(sec).padStart(2,'0');
+        drawTooltip(ctx, px, py - 10, [
+          {text: tStr, mono: true, color: '#94a3b8'},
+          {text: 'Total: ' + s.total + ' entities', color: '#ffffff'},
+          {text: 'Arrivals: ' + d.arr, color: '#3b82f6'},
+          {text: 'Departures: ' + d.dep, color: '#a78bfa'},
+          {text: 'Ground: ' + d.gnd, color: '#94a3b8'},
+          {text: 'Vehicles: ' + d.veh, color: '#f59e0b'},
+        ], W);
+      }
+    }
   }
   window.addEventListener('resize', resize); resize();
 })();
@@ -1146,6 +1386,10 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   const canvas = document.getElementById('blindSpotCanvas');
   const ctx = canvas.getContext('2d');
   const dpr = window.devicePixelRatio || 1;
+  const hover = makeInteractive(canvas, {
+    onHover: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 360); },
+    onLeave: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 360); }
+  });
   function resize() {
     const w = canvas.parentElement.clientWidth;
     canvas.width = w * dpr; canvas.height = 360 * dpr;
@@ -1238,6 +1482,31 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     ctx.save(); ctx.translate(14, pad.t+ch/2); ctx.rotate(-Math.PI/2);
     ctx.fillText('Distance to collision point (m)', 0, 0);
     ctx.restore();
+    if (hover.isHovering()) {
+      const hx = hover.getMouseX();
+      if (hx >= pad.l && hx <= pad.l + cw) {
+        const ht = tMin + ((hx - pad.l) / cw) * (tMax - tMin);
+        let acD, tkD;
+        if (ht < 0) acD = 1097 + Math.abs(ht) * 40;
+        else if (ht <= 27) acD = 1097 - (ht/27)*1097;
+        else acD = 0;
+        if (ht < 3) tkD = 86;
+        else { tkD = 86 - (ht-3)*5.56; if (tkD < 0) tkD = 0; }
+        const px = tx(ht);
+        const yAc = ty(Math.max(0, acD)), yTk = ty(Math.max(0, tkD));
+        drawCrosshair(ctx, px, {t:pad.t}, ch);
+        ctx.beginPath(); ctx.arc(px, yAc, 6, 0, Math.PI*2); ctx.fillStyle = '#ffffff'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, yTk, 6, 0, Math.PI*2); ctx.fillStyle = '#f59e0b'; ctx.fill();
+        const tLabel = ht >= 0 ? 'T+' + ht.toFixed(1) + 's' : 'T' + ht.toFixed(1) + 's';
+        const sep = Math.round(Math.abs(acD - tkD));
+        drawTooltip(ctx, px, Math.min(yAc, yTk) - 10, [
+          {text: tLabel, mono: true, color: '#94a3b8'},
+          {text: 'Aircraft: ' + Math.round(acD) + 'm', color: '#ffffff'},
+          {text: 'Truck: ' + Math.round(tkD) + 'm', color: '#f59e0b'},
+          {text: 'Separation: ' + sep + 'm', color: sep < 100 ? '#ef4444' : '#22c55e'},
+        ], W);
+      }
+    }
   }
   window.addEventListener('resize', resize); resize();
 })();
@@ -1247,6 +1516,10 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   const canvas = document.getElementById('truckPosCanvas');
   const ctx = canvas.getContext('2d');
   const dpr = window.devicePixelRatio || 1;
+  const hover = makeInteractive(canvas, {
+    onHover: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 340); },
+    onLeave: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 340); }
+  });
   const RWY = 86, SPD = 5.56, REACT = 2.5, DECEL = 3.0;
   function truckActual(t) {
     if (t < 3) return 0;
@@ -1358,6 +1631,26 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     ctx.save(); ctx.translate(14, pad.t+ch/2); ctx.rotate(-Math.PI/2);
     ctx.fillText('Truck distance from hold point (m)', 0, 0);
     ctx.restore();
+    if (hover.isHovering()) {
+      const hx = hover.getMouseX();
+      if (hx >= pad.l && hx <= pad.l + cw) {
+        const ht = ((hx - pad.l) / cw) * tMax;
+        const dA = Math.min(truckActual(ht), 95);
+        const dC = truckIfCorrect8(ht);
+        const dAu = truckAuto(ht);
+        const px = tx(ht);
+        drawCrosshair(ctx, px, {t:pad.t}, ch);
+        ctx.beginPath(); ctx.arc(px, ty(dA), 6, 0, Math.PI*2); ctx.fillStyle = '#ef4444'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, ty(dC), 6, 0, Math.PI*2); ctx.fillStyle = '#f59e0b'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, ty(dAu), 6, 0, Math.PI*2); ctx.fillStyle = '#22c55e'; ctx.fill();
+        drawTooltip(ctx, px, ty(Math.max(dA, dC, dAu)) - 10, [
+          {text: 'T+' + ht.toFixed(1) + 's', mono: true, color: '#94a3b8'},
+          {text: 'Actual: ' + Math.round(dA) + 'm' + (dA >= RWY ? ' — ON RUNWAY' : ''), color: '#ef4444'},
+          {text: 'Correct @T+8: ' + Math.round(dC) + 'm', color: '#f59e0b'},
+          {text: 'Auto detect: ' + Math.round(dAu) + 'm', color: '#22c55e'},
+        ], W);
+      }
+    }
   }
   window.addEventListener('resize', resize); resize();
 })();
@@ -1768,6 +2061,10 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   const dpr = window.devicePixelRatio || 1;
+  const hover = makeInteractive(canvas, {
+    onHover: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 320); },
+    onLeave: () => { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw(canvas.parentElement.clientWidth, 320); }
+  });
 
   function riskInstant(t) {
     if (t < 3) return 0;
@@ -1888,6 +2185,22 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     // Axis label
     ctx.fillStyle = '#64748b'; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
     ctx.fillText('Time after crossing clearance', pad.l+cw/2, H-8);
+    if (hover.isHovering()) {
+      const hx = hover.getMouseX();
+      if (hx >= pad.l && hx <= pad.l + cw) {
+        const ht = ((hx - pad.l) / cw) * tMax;
+        const ri = riskInstant(ht), rc = riskCumulative(ht);
+        const px = tx(ht), pyI = ty(ri), pyC = ty(rc);
+        drawCrosshair(ctx, px, {t:pad.t}, ch);
+        ctx.beginPath(); ctx.arc(px, pyI, 6, 0, Math.PI*2); ctx.fillStyle = '#ef4444'; ctx.fill();
+        ctx.beginPath(); ctx.arc(px, pyC, 6, 0, Math.PI*2); ctx.fillStyle = '#a78bfa'; ctx.fill();
+        drawTooltip(ctx, px, Math.min(pyI, pyC) - 10, [
+          {text: 'T+' + ht.toFixed(1) + 's', mono: true, color: '#94a3b8'},
+          {text: 'Instant Risk: ' + (ri*100).toFixed(1) + '%', color: '#ef4444'},
+          {text: 'Cumulative: ' + (rc*100).toFixed(1) + '%', color: '#a78bfa'},
+        ], W);
+      }
+    }
   }
   window.addEventListener('resize', resize); resize();
 })();
