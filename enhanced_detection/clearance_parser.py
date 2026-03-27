@@ -153,7 +153,37 @@ def _apply_corrections(clearance: Clearance) -> Clearance:
     return clearance
 
 
-def parse_clearances(transcript_path: str) -> List[Clearance]:
+READBACK_WINDOW_S = 10.0
+
+
+def _dedup_readbacks(clearances: List[Clearance]) -> List[Clearance]:
+    """
+    Remove likely pilot readbacks.
+
+    Heuristic: if two consecutive clearances share (entity, clearance_type,
+    runway) and are within READBACK_WINDOW_S of each other, the second is
+    likely a readback of the first and is discarded.
+    """
+    if not clearances:
+        return clearances
+    deduped = [clearances[0]]
+    for c in clearances[1:]:
+        prev = deduped[-1]
+        is_dup = (
+            c.entity == prev.entity
+            and c.clearance_type == prev.clearance_type
+            and c.runway == prev.runway
+            and abs(c.timestamp_s - prev.timestamp_s) < READBACK_WINDOW_S
+        )
+        if not is_dup:
+            deduped.append(c)
+    return deduped
+
+
+def parse_clearances(
+    transcript_path: str,
+    dedup_readbacks: bool = True,
+) -> List[Clearance]:
     """Parse a transcript file and extract all structured clearances."""
     segments = parse_transcript(transcript_path)
     clearances = []
@@ -179,6 +209,9 @@ def parse_clearances(transcript_path: str) -> List[Clearance]:
             raw_text=text,
         )
         clearances.append(_apply_corrections(c))
+
+    if dedup_readbacks:
+        clearances = _dedup_readbacks(clearances)
 
     return clearances
 

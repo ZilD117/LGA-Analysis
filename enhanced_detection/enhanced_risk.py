@@ -7,9 +7,13 @@ Layer 3 (Risk):    Probability of co-location using Gaussian arrival distributio
 
 Uses Petri-Net (PN) and Fenton-Wilkinson (FW) formulas from the original model,
 but with measured / empirically-grounded sigmas instead of assumed values.
+
+Occupancy model uses correlated Monte Carlo: vehicle enter and exit times share
+the same speed draw, eliminating the independence assumption of the previous model.
 """
 
 import math
+import random
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
 
@@ -86,12 +90,19 @@ def _norm_cdf(x: float, mu: float, sigma: float) -> float:
     return 0.5 * (1.0 + math.erf((x - mu) / (sigma * math.sqrt(2))))
 
 
+CRJ900_WINGSPAN_M = 26.0
+TRUCK_WIDTH_M = 3.0
+TRUCK_LENGTH_M = 10.0
+
+RC_KM = (CRJ900_WINGSPAN_M / 2 + TRUCK_WIDTH_M / 2) / 1000.0  # ~0.0145 km
+
+
 def compute_risk(
     conflict: ConflictEvent,
     aircraft_state: AircraftState,
     crossing_estimate: CrossingEstimate,
-    epsilon_sec: float = 1.0,
-    rc_km: float = 0.075,
+    epsilon_sec: float = None,
+    rc_km: float = None,
     dt_sec: float = 0.5,
     t_max_sec: float = 60.0,
     decel_eta_s: float = None,
@@ -104,9 +115,15 @@ def compute_risk(
     Aircraft Gaussian: N(mu=aircraft_ETA, sigma=sigma_adsb)
     Vehicle Gaussian:  N(mu=crossing_estimate.mean_duration, sigma=crossing_estimate.sigma_duration)
 
-    If decel_eta_s / decel_sigma_s are provided, use deceleration-aware ETA
-    instead of constant-speed ETA.
+    Physical constants are derived from aircraft geometry:
+      rc_km: collision capture radius = (wingspan/2 + truck_width/2)
+      epsilon_sec: time the aircraft takes to traverse the truck's length
     """
+    if rc_km is None:
+        rc_km = RC_KM
+    if epsilon_sec is None:
+        gs_ms = aircraft_state.groundspeed_kts * 0.514444
+        epsilon_sec = TRUCK_LENGTH_M / max(gs_ms, 1.0)
     use_decel = decel_eta_s is not None
     mu_aircraft = decel_eta_s if use_decel else aircraft_state.time_to_point_s
     sigma_aircraft = decel_sigma_s if decel_sigma_s is not None else aircraft_state.sigma_s
@@ -148,34 +165,52 @@ def compute_risk(
     peak_idx = r_fw.index(max(r_fw))
     peak_time = time_grid[peak_idx]
 
-    # ── Occupancy-based collision probability ──
-    # The FW model asks: P(both arrive at same point at same time)
-    # The occupancy model asks: P(aircraft arrives while vehicle is on runway)
+    # ── Occupancy-based collision probability (correlated Monte Carlo) ──
     #
-    # Vehicle enters runway at: reaction_delay (after clearance)
-    # Vehicle exits runway at:  reaction_delay + full_crossing_time
-    # Full crossing time = crossing_dist / mean_speed
+    # For each Monte Carlo sample we draw ONE speed for the vehicle, which
+    # determines BOTH T_enter and T_exit (they are correlated through speed).
+    #   T_enter = reaction_delay_draw
+    #   T_exit  = T_enter + crossing_dist / speed_draw
+    #   T_aircraft ~ N(mu_aircraft, sigma_aircraft)
+    #
+    # P(collision) = E[ P(T_enter < T_aircraft < T_exit) ]
+    #              ≈ (1/N) * sum( 1{T_enter < T_aircraft_draw < T_exit} )
+
     mean_speed_ms = crossing_estimate.mean_speed_kmh / 3.6
+    sigma_speed_ms = crossing_estimate.sigma_speed_kmh / 3.6
     full_crossing_s = crossing_estimate.crossing_dist_m / max(mean_speed_ms, 0.1)
-    sigma_enter = crossing_estimate.sigma_duration_s * 0.3  # reaction variance
-    sigma_exit_extra = crossing_estimate.sigma_duration_s   # full crossing variance
 
     vehicle_enter_s = crossing_estimate.reaction_delay_s
     vehicle_exit_s = crossing_estimate.reaction_delay_s + full_crossing_s
 
-    # P(vehicle_enter < aircraft_arrival < vehicle_exit)
-    # = CDF_aircraft(vehicle_exit) - CDF_aircraft(vehicle_enter)
-    # But both vehicle_enter and vehicle_exit are uncertain. We convolve:
-    #   combined_sigma_enter = sqrt(sigma_aircraft^2 + sigma_enter^2)
-    #   combined_sigma_exit  = sqrt(sigma_aircraft^2 + sigma_exit^2)
-    sig_enter_combined = math.sqrt(sigma_aircraft ** 2 + sigma_enter ** 2)
-    sig_exit_combined = math.sqrt(sigma_aircraft ** 2 + sigma_exit_extra ** 2)
+    use_lognormal = crossing_estimate.lognormal and crossing_estimate.sigma_ln > 0
+    mu_ln = crossing_estimate.mu_ln
+    sigma_ln = crossing_estimate.sigma_ln
 
-    p_after_enter = 1.0 - _norm_cdf(vehicle_enter_s, mu_aircraft, sig_enter_combined)
-    p_before_exit = _norm_cdf(vehicle_exit_s, mu_aircraft, sig_exit_combined)
-    occupancy_prob = max(0.0, min(1.0, p_after_enter * p_before_exit))
+    N_MC = 50_000
+    rng = random.Random(42)
+    hits = 0
+    for _ in range(N_MC):
+        reaction_draw = max(0.0, rng.gauss(
+            crossing_estimate.reaction_delay_s,
+            crossing_estimate.sigma_reaction_s,
+        ))
 
-    # Use the occupancy probability for alert level (more physically meaningful)
+        if use_lognormal:
+            speed_draw_kmh = math.exp(rng.gauss(mu_ln, sigma_ln))
+            speed_draw_ms = speed_draw_kmh / 3.6
+        else:
+            speed_draw_ms = max(0.5, rng.gauss(mean_speed_ms, sigma_speed_ms))
+
+        t_enter = reaction_draw
+        t_exit = t_enter + crossing_estimate.crossing_dist_m / speed_draw_ms
+
+        t_aircraft = rng.gauss(mu_aircraft, max(sigma_aircraft, 0.01))
+        if t_enter < t_aircraft < t_exit:
+            hits += 1
+
+    occupancy_prob = hits / N_MC
+
     if occupancy_prob > 0.8:
         alert_level = "CRITICAL"
     elif occupancy_prob > 0.5:

@@ -3,12 +3,15 @@ Approach Speed Profile — Build empirical deceleration model from ADS-B data.
 
 Aircraft decelerate significantly on final approach. Using constant speed to
 estimate ETA introduces bias. This module builds a speed-vs-distance-to-threshold
-profile from the ADS-B track, then uses numerical integration for more accurate
+profile from ADS-B track data, then uses numerical integration for more accurate
 ETA prediction.
 
-In a production system, this profile would be built from hundreds of approaches
-to the same runway. For this PoC, we demonstrate the methodology with Jazz 8646's
-own track + CRJ-900 type performance data.
+KEY DESIGN DECISION (causal / real-time safe):
+  In a production system, the profile is built from HISTORICAL fleet data
+  (past approaches to the same runway), NOT from the incident aircraft's own
+  future track.  For this PoC we simulate that by building the profile from
+  all available approach data that occurred BEFORE the query time.  The sigma
+  calibration likewise uses only past segments.
 """
 
 import math
@@ -119,30 +122,32 @@ def build_approach_profile(
     track: List[TrackPoint],
     threshold: Tuple[float, float] = RW04_THRESHOLD,
     max_approach_dist_m: float = 50_000.0,
+    cutoff_epoch: Optional[float] = None,
 ) -> ApproachProfile:
     """
     Build a speed-vs-distance profile from ADS-B track for the approach phase.
 
-    Strategy: walk the track *backwards* from the last real ADS-B point,
-    keeping only the contiguous segment where distance to threshold is
-    monotonically increasing (i.e., the aircraft was continuously approaching).
-    This cleanly isolates the final approach from cruise/departure phases.
+    CAUSAL CONSTRAINT: only uses data points with timestamp <= cutoff_epoch.
+    In production, the profile would come from historical fleet data.  Here we
+    simulate causal behaviour by discarding future data.
+
+    Strategy: from causally available points, walk backwards from the most
+    recent point keeping the contiguous segment where distance to threshold
+    is monotonically increasing (aircraft continuously approaching).
     """
-    # Filter to real ADS-B points only, sorted chronologically
     real_pts = [pt for pt in track if pt.source in ("aeroapi_adsb", "")]
+    if cutoff_epoch is not None:
+        real_pts = [pt for pt in real_pts if pt.epoch_s <= cutoff_epoch]
     if not real_pts:
         return ApproachProfile([], 40.0, TOUCHDOWN_SPEED_KTS, ROLLOUT_DECEL_MS2)
 
     real_pts.sort(key=lambda p: p.epoch_s)
 
-    # Compute distance to threshold for each point
     dist_pts = []
     for pt in real_pts:
         d = haversine(pt.lat, pt.lon, threshold[0], threshold[1])
         dist_pts.append((d, pt))
 
-    # Walk backwards: start from the last point (closest to threshold)
-    # and keep going as long as distance is increasing (aircraft approaching)
     approach_segment = [dist_pts[-1]]
     for i in range(len(dist_pts) - 2, -1, -1):
         d_curr = dist_pts[i][0]
@@ -150,9 +155,9 @@ def build_approach_profile(
         if d_curr > d_prev and d_curr <= max_approach_dist_m:
             approach_segment.append(dist_pts[i])
         elif d_curr < d_prev:
-            break  # aircraft was moving away — end of approach segment
+            break
 
-    approach_segment.reverse()  # back to chronological order (far → near)
+    approach_segment.reverse()
 
     points = []
     for d, pt in approach_segment:
@@ -163,14 +168,13 @@ def build_approach_profile(
             timestamp_s=pt.epoch_s,
         ))
 
-    # Touchdown speed from the closest point to threshold
     td_speed = TOUCHDOWN_SPEED_KTS
     if points:
         td_speed = points[-1].groundspeed_kts
 
     return ApproachProfile(
         profile=points,
-        runway_heading=40.0,  # RW04 heading
+        runway_heading=40.0,
         touchdown_speed_kts=td_speed,
         rollout_decel_ms2=ROLLOUT_DECEL_MS2,
     )
@@ -180,35 +184,35 @@ def compute_eta_sigma(
     profile: ApproachProfile,
     track: List[TrackPoint],
     threshold: Tuple[float, float] = RW04_THRESHOLD,
+    cutoff_epoch: Optional[float] = None,
 ) -> Tuple[float, float]:
     """
     Compute the prediction error (sigma) of the deceleration-aware ETA model.
 
-    For each consecutive pair of real ADS-B points on the approach,
-    predict the traversal time using the speed profile and compare
-    to the actual elapsed time. The standard deviation of errors is
-    the model's per-segment accuracy; we scale it to the full ETA.
+    CAUSAL CONSTRAINT: only uses ADS-B points with timestamp <= cutoff_epoch.
+
+    For each consecutive pair of real approach points, predict the traversal
+    time using the speed profile and compare to actual elapsed time.
     """
     real_pts = [pt for pt in track if pt.source in ("aeroapi_adsb", "")]
+    if cutoff_epoch is not None:
+        real_pts = [pt for pt in real_pts if pt.epoch_s <= cutoff_epoch]
     real_pts.sort(key=lambda p: p.epoch_s)
 
-    # Only use approach phase points (distance < 20km, decreasing)
     approach_pairs = []
     for pt in real_pts:
         d = haversine(pt.lat, pt.lon, threshold[0], threshold[1])
         if d < 20_000:
             approach_pairs.append((d, pt))
 
-    # Filter to monotonically decreasing distance (approach only)
     filtered = [approach_pairs[0]] if approach_pairs else []
     for i in range(1, len(approach_pairs)):
         if approach_pairs[i][0] < filtered[-1][0]:
             filtered.append(approach_pairs[i])
 
     if len(filtered) < 3:
-        return 0.0, 2.0  # fallback
+        return 0.0, 2.0
 
-    # Compute segment prediction errors (only use clean final approach segments)
     errors = []
     for i in range(len(filtered) - 1):
         d_start, pt_start = filtered[i]
@@ -216,17 +220,16 @@ def compute_eta_sigma(
 
         actual_dt = pt_end.epoch_s - pt_start.epoch_s
         if actual_dt <= 0 or actual_dt > 30:
-            continue  # skip segments with time gaps (holding/vectors)
+            continue
 
         dist_delta = d_start - d_end
         if dist_delta < 50:
-            continue  # skip trivially short segments
+            continue
 
-        # Sanity check: actual closing rate should be >50% of groundspeed
         actual_rate_ms = dist_delta / actual_dt
         expected_rate_ms = pt_start.groundspeed_kts * KTS_TO_MS
         if actual_rate_ms < 0.5 * expected_rate_ms:
-            continue  # aircraft was turning/not flying toward threshold
+            continue
 
         predicted_dt, _ = profile.eta_with_deceleration(
             d_start, d_end,
@@ -242,7 +245,6 @@ def compute_eta_sigma(
     var = sum((e - mean_err) ** 2 for e in errors) / (len(errors) - 1)
     per_segment_sigma = math.sqrt(var)
 
-    # Scale: for a full ETA covering N segments, errors accumulate ~ sqrt(N)
     avg_segment_dist = sum(
         filtered[i][0] - filtered[i + 1][0] for i in range(len(filtered) - 1)
     ) / (len(filtered) - 1)
@@ -251,12 +253,20 @@ def compute_eta_sigma(
 
 
 if __name__ == "__main__":
+    from datetime import datetime, timezone
+    from enhanced_detection.aircraft_eta import get_aircraft_state
+
     csv_path = os.path.join(os.path.dirname(__file__), "..", "surface_data", "lga_case_study", "flight_8646_track.csv")
     track = load_track(csv_path)
-    profile = build_approach_profile(track)
+
+    conflict_utc = datetime(2026, 3, 23, 3, 37, 1, tzinfo=timezone.utc)
+    cutoff = conflict_utc.timestamp()
+
+    profile = build_approach_profile(track, cutoff_epoch=cutoff)
 
     print("=" * 60)
     print("  APPROACH SPEED PROFILE — Jazz 8646 (CRJ-900)")
+    print(f"  (causal: only ADS-B data before {conflict_utc.strftime('%H:%M:%SZ')})")
     print("=" * 60)
     print(f"\n  {'Distance (m)':>14}  {'Speed (kts)':>12}  {'Alt (ft)':>10}")
     print(f"  {'-'*14}  {'-'*12}  {'-'*10}")
@@ -266,11 +276,6 @@ if __name__ == "__main__":
     print(f"\n  Touchdown speed: {profile.touchdown_speed_kts:.0f} kts")
     print(f"  Rollout deceleration: {profile.rollout_decel_ms2:.1f} m/s²")
 
-    # Compare constant-speed vs deceleration-aware ETA
-    from datetime import datetime, timezone
-    from enhanced_detection.aircraft_eta import get_aircraft_state
-
-    conflict_utc = datetime(2026, 3, 23, 3, 37, 1, tzinfo=timezone.utc)
     state = get_aircraft_state(track, conflict_utc, RW04_TXY_D)
 
     dist_to_threshold = haversine(state.lat, state.lon, RW04_THRESHOLD[0], RW04_THRESHOLD[1])
@@ -281,7 +286,7 @@ if __name__ == "__main__":
         current_speed_kts=state.groundspeed_kts,
     )
 
-    bias, sigma = compute_eta_sigma(profile, track)
+    bias, sigma = compute_eta_sigma(profile, track, cutoff_epoch=cutoff)
 
     print(f"\n{'─'*60}")
     print(f"  ETA COMPARISON at conflict time (03:37:01Z)")

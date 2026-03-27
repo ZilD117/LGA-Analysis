@@ -92,30 +92,58 @@ def load_track(csv_path: str) -> List[TrackPoint]:
     return points
 
 
-def _interpolate(track: List[TrackPoint], query_epoch: float) -> TrackPoint:
-    """Linear interpolation between the two bracketing track points."""
+def _extrapolate_forward(track: List[TrackPoint], query_epoch: float) -> TrackPoint:
+    """
+    Forward extrapolation from the most recent ADS-B report BEFORE query_time.
+
+    A real-time system only has past data. We propagate position along the
+    current heading at the current speed — the same dead-reckoning ATC radar
+    systems use between sweeps.
+    """
     if query_epoch <= track[0].epoch_s:
         return track[0]
-    if query_epoch >= track[-1].epoch_s:
-        return track[-1]
-    for i in range(len(track) - 1):
-        t0, t1 = track[i].epoch_s, track[i + 1].epoch_s
-        if t0 <= query_epoch <= t1:
-            frac = (query_epoch - t0) / (t1 - t0) if (t1 - t0) > 0 else 0
-            return TrackPoint(
-                timestamp=datetime.fromtimestamp(query_epoch, tz=timezone.utc),
-                lat=track[i].lat + frac * (track[i + 1].lat - track[i].lat),
-                lon=track[i].lon + frac * (track[i + 1].lon - track[i].lon),
-                alt_ft100=track[i].alt_ft100 + frac * (track[i + 1].alt_ft100 - track[i].alt_ft100),
-                groundspeed_kts=track[i].groundspeed_kts + frac * (track[i + 1].groundspeed_kts - track[i].groundspeed_kts),
-                heading=track[i].heading,
-                source="interpolated",
-            )
-    return track[-1]
+
+    # Find the last point at or before query_epoch
+    last = track[0]
+    for pt in track:
+        if pt.epoch_s <= query_epoch:
+            last = pt
+        else:
+            break
+
+    dt = query_epoch - last.epoch_s
+    if dt < 0.1:
+        return last
+
+    gs_ms = last.groundspeed_kts * KTS_TO_MS
+    hdg_rad = math.radians(last.heading)
+    dlat = (gs_ms * dt * math.cos(hdg_rad)) / EARTH_RADIUS_M
+    dlon = (gs_ms * dt * math.sin(hdg_rad)) / (
+        EARTH_RADIUS_M * math.cos(math.radians(last.lat))
+    )
+
+    # Estimate altitude descent rate from the last two points
+    alt_rate = 0.0
+    idx = track.index(last) if last in track else -1
+    if idx > 0:
+        prev = track[idx - 1]
+        dt_prev = last.epoch_s - prev.epoch_s
+        if dt_prev > 0:
+            alt_rate = (last.alt_ft100 - prev.alt_ft100) / dt_prev
+
+    return TrackPoint(
+        timestamp=datetime.fromtimestamp(query_epoch, tz=timezone.utc),
+        lat=last.lat + math.degrees(dlat),
+        lon=last.lon + math.degrees(dlon),
+        alt_ft100=max(0, last.alt_ft100 + alt_rate * dt),
+        groundspeed_kts=last.groundspeed_kts,
+        heading=last.heading,
+        source="extrapolated_forward",
+    )
 
 
 def compute_speed_sigma(track: List[TrackPoint], window_start_epoch: float, window_end_epoch: float) -> float:
-    """Compute standard deviation of groundspeed (kts) within a time window."""
+    """Compute standard deviation of groundspeed (kts) within a past-only time window."""
     speeds = [
         p.groundspeed_kts for p in track
         if window_start_epoch <= p.epoch_s <= window_end_epoch
@@ -139,7 +167,7 @@ def get_aircraft_state(
     Sigma is derived from measured groundspeed variance.
     """
     q_epoch = query_time.timestamp()
-    pt = _interpolate(track, q_epoch)
+    pt = _extrapolate_forward(track, q_epoch)
 
     dist_m = haversine(pt.lat, pt.lon, target_point[0], target_point[1])
     gs_ms = pt.groundspeed_ms

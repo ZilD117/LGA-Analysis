@@ -19,6 +19,29 @@ INCOMPATIBLE_PAIRS = {
     frozenset({ClearanceType.LANDING, ClearanceType.CROSSING}),
     frozenset({ClearanceType.LANDING, ClearanceType.TAKEOFF}),
     frozenset({ClearanceType.TAKEOFF, ClearanceType.CROSSING}),
+    frozenset({ClearanceType.LINE_UP_WAIT, ClearanceType.LANDING}),
+    frozenset({ClearanceType.LINE_UP_WAIT, ClearanceType.CROSSING}),
+    frozenset({ClearanceType.LANDING, ClearanceType.TAXI}),
+    frozenset({ClearanceType.TAKEOFF, ClearanceType.TAXI}),
+}
+
+# Runways that are the same physical surface (opposite directions)
+RUNWAY_ALIASES = {
+    # KLGA
+    "04": "04", "22": "04",
+    "13": "13", "31": "13",
+    # HND (Tokyo Haneda)
+    "34R": "34R", "16L": "34R",
+    "34L": "34L", "16R": "34L",
+    "05": "05", "23": "05",
+    # GCXO (Tenerife North)
+    "12": "12", "30": "12",
+    # KATL
+    "8R": "8R", "26L": "8R",
+    "8L": "8L", "26R": "8L",
+    "9R": "9R", "27L": "9R",
+    "9L": "9L", "27R": "9L",
+    "10": "10", "28": "10",
 }
 
 DEFAULT_EXPIRY_S = 180.0
@@ -71,6 +94,11 @@ class RunwayStateTracker:
                     if a.clearance.entity != entity
                 ]
 
+    @staticmethod
+    def _canonical_runway(rwy: str) -> str:
+        """Normalize runway IDs so opposite-direction runways map to the same key."""
+        return RUNWAY_ALIASES.get(rwy, rwy)
+
     def feed(self, clearance: Clearance) -> Optional[ConflictEvent]:
         """Process a clearance. Returns a ConflictEvent if one is detected."""
         t = clearance.timestamp_s
@@ -86,7 +114,15 @@ class RunwayStateTracker:
         if rwy is None:
             return None
 
+        rwy = self._canonical_runway(rwy)
         self._prune(rwy, t)
+
+        # Same-entity re-clearance: update rather than duplicate
+        if rwy in self._active:
+            self._active[rwy] = [
+                a for a in self._active[rwy]
+                if a.clearance.entity != clearance.entity
+            ]
 
         conflict = None
         for ac in self._active.get(rwy, []):

@@ -20,6 +20,10 @@ from enhanced_detection.aircraft_eta import load_track, get_aircraft_state, RW04
 from enhanced_detection.ground_speed_prior import build_crossing_estimate
 from enhanced_detection.enhanced_risk import compute_risk, compute_old_model_risk
 from enhanced_detection.approach_profile import build_approach_profile, compute_eta_sigma
+from enhanced_detection.decision_engine import (
+    make_decision, evaluate_counterfactual, BayesianTracker,
+    C_FALSE_ALARM_S, C_MISSED_DETECTION, DECISION_THRESHOLD,
+)
 
 TRANSCRIPT_PATH = os.path.join(os.path.dirname(__file__), "..", "voice_data", "lga_case_study", "transcript.txt")
 ADSB_PATH = os.path.join(os.path.dirname(__file__), "..", "surface_data", "lga_case_study", "flight_8646_track.csv")
@@ -86,17 +90,18 @@ def run():
     conflict_utc = utc_from_offset(fatal.timestamp_s)
 
     aircraft = get_aircraft_state(track, conflict_utc, RW04_TXY_D)
-    crossing = build_crossing_estimate()
+    crossing = build_crossing_estimate(calibrate=True)
 
-    # Build approach speed profile and compute deceleration-aware ETA
-    profile = build_approach_profile(track)
+    # Build approach speed profile CAUSALLY: only data before conflict time
+    cutoff = conflict_utc.timestamp()
+    profile = build_approach_profile(track, cutoff_epoch=cutoff)
     dist_to_threshold = haversine(aircraft.lat, aircraft.lon, RW04_THRESHOLD[0], RW04_THRESHOLD[1])
     target_past_threshold = haversine(RW04_THRESHOLD[0], RW04_THRESHOLD[1], RW04_TXY_D[0], RW04_TXY_D[1])
     decel_eta, speed_at_crossing = profile.eta_with_deceleration(
         dist_to_threshold, -target_past_threshold,
         current_speed_kts=aircraft.groundspeed_kts,
     )
-    decel_bias, decel_sigma = compute_eta_sigma(profile, track)
+    decel_bias, decel_sigma = compute_eta_sigma(profile, track, cutoff_epoch=cutoff)
 
     print(f"\n  Aircraft (Jazz 8646) at conflict time:")
     print(f"    Position: ({aircraft.lat:.5f}, {aircraft.lon:.5f})")
@@ -163,6 +168,58 @@ def run():
     print(f"  vehicle is still ON the runway (occupancy window: T+{assessment_decel.vehicle_enter_s:.0f}s to T+{assessment_decel.vehicle_exit_s:.0f}s).")
     print(f"  The aircraft arrives at T+{decel_eta:.1f}s — well inside this window.")
     print(f"  Occupancy probability: {assessment_decel.occupancy_probability*100:.1f}% → {assessment_decel.alert_level}")
+
+    # ── Decision Framework (3A) ──
+    print(f"\n" + "─" * 70)
+    print(f"  DECISION FRAMEWORK (Cost-Optimal Threshold)")
+    print(f"─" * 70)
+    print(f"\n  C_false_alarm   = {C_FALSE_ALARM_S:.0f}s delay    (cost of unnecessary STOP)")
+    print(f"  C_missed_detect = {C_MISSED_DETECTION:.0e}    (cost of collision)")
+    print(f"  Optimal threshold = C_FA / (C_FA + C_MD) = {DECISION_THRESHOLD:.2e}")
+    print(f"  → Any non-negligible P(collision) triggers STOP")
+
+    decision = make_decision(assessment_decel.occupancy_probability)
+    print(f"\n  {decision}")
+
+    # ── Counterfactual (3C) ──
+    print(f"\n" + "─" * 70)
+    print(f"  COUNTERFACTUAL: 'What if we issue STOP right now?'")
+    print(f"─" * 70)
+
+    dist_to_threshold = haversine(aircraft.lat, aircraft.lon, RW04_THRESHOLD[0], RW04_THRESHOLD[1])
+    cf = evaluate_counterfactual(
+        elapsed_since_clearance_s=0.0,
+        crossing_estimate=crossing,
+        aircraft_eta_s=decel_eta,
+        aircraft_sigma_s=decel_sigma,
+        aircraft_alt_ft=aircraft.alt_ft,
+        aircraft_speed_kts=aircraft.groundspeed_kts,
+        aircraft_dist_to_threshold_m=dist_to_threshold,
+    )
+    print(f"\n  Vehicle on runway: {cf.vehicle_on_runway}")
+    print(f"  Can clear before aircraft: {cf.can_clear_in_time}")
+    print(f"  Truck stopping distance: {cf.stopping_distance_m:.1f} m")
+    print(f"  Time to stop (reaction + braking): {cf.time_to_stop_s:.1f} s")
+    print(f"  Go-around feasibility: {cf.go_around_feasible:.0%} at {cf.aircraft_alt_ft:.0f}ft")
+    print(f"  P(collision | no action): {assessment_decel.occupancy_probability*100:.1f}%")
+    print(f"  P(collision | STOP issued): {cf.residual_collision_prob*100:.1f}%")
+    print(f"  → {cf.recommendation}")
+
+    # ── Bayesian Updating (3B) ──
+    print(f"\n" + "─" * 70)
+    print(f"  SEQUENTIAL BAYESIAN UPDATING (every 5s ADS-B)")
+    print(f"─" * 70)
+
+    bt = BayesianTracker(target_point=RW04_TXY_D, crossing_estimate=crossing)
+    conflict_epoch = conflict_utc.timestamp()
+    update_times = [conflict_epoch + dt for dt in range(0, 26, 5)]
+    print(f"\n  {'T+Δ':>6}  {'Dist (m)':>10}  {'ETA (s)':>8}  {'σ (s)':>8}  {'P(occ)':>10}  {'Decision':>15}")
+    print(f"  {'-'*6}  {'-'*10}  {'-'*8}  {'-'*8}  {'-'*10}  {'-'*15}")
+    for t_epoch in update_times:
+        state = bt.update(track, t_epoch)
+        dt = t_epoch - conflict_epoch
+        act = "STOP" if state.decision and state.decision.should_stop else "monitor"
+        print(f"  {dt:>5.0f}s  {state.distance_m:>10.0f}  {state.mu_eta_s:>7.1f}s  {state.sigma_eta_s:>7.1f}s  {state.occupancy_prob*100:>9.1f}%  {act:>15}")
 
     # ── Prevention Timeline ──
     collision_offset = (COLLISION_UTC - AUDIO_START_UTC).total_seconds()
