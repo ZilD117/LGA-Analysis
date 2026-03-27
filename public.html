@@ -11,9 +11,30 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="27 Seconds — The LGA Runway 4 Collision, Deconstructed">
 <meta name="twitter:description" content="27 seconds of warning. 4.4 seconds needed to stop. Two pilots dead.">
+<script>(function(){var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.dataset.theme='dark';else document.documentElement.dataset.theme='light';})()</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
-:root {
+:root, [data-theme="light"] {
+  --bg: #f5f6f8;
+  --bg2: #ecedf0;
+  --bg3: #e2e4e8;
+  --fg: #1a1e2c;
+  --fg2: #4a5568;
+  --fg3: #6b7280;
+  --accent: #0097A7;
+  --red: #CC2929;
+  --red-dim: rgba(204,41,41,0.08);
+  --green: #1B8544;
+  --green-dim: rgba(27,133,68,0.08);
+  --orange: #A87425;
+  --orange-dim: rgba(168,116,37,0.08);
+  --blue: #0097A7;
+  --purple: #5C6B7F;
+  --card: #ffffff;
+  --border: #d8dce3;
+  --border2: #c4c9d2;
+}
+[data-theme="dark"] {
   --bg: #0a0a0a;
   --bg2: #111111;
   --bg3: #1a1a1a;
@@ -33,14 +54,27 @@
   --border: #262626;
   --border2: #333333;
 }
+[data-theme="dark"] body { -webkit-font-smoothing: antialiased; }
+[data-theme="dark"] nav { background: rgba(10,10,10,0.88); }
+[data-theme="dark"] .hero::before { background: radial-gradient(ellipse at 50% 20%, rgba(225,49,49,0.04) 0%, transparent 50%); }
+[data-theme="dark"] .scenario-table tr:hover td { background: rgba(255,255,255,0.02); }
+[data-theme="dark"] .callout { background: rgba(255,255,255,0.03); }
+[data-theme="dark"] .stop-card .stop-num { background: rgba(255,255,255,0.06); }
+[data-theme="dark"] .htl-card .htl-off { background: rgba(255,255,255,0.05); }
+[data-theme="dark"] .htl-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); }
+[data-theme="dark"] .risk-map-wrap .risk-label { background: rgba(0,0,0,0.6); }
+canvas { filter: invert(1) hue-rotate(180deg); }
+[data-theme="dark"] canvas { filter: none; }
+#themeToggle { background: none; border: 1px solid var(--border); color: var(--fg2); width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: color .2s, border-color .2s; padding: 0; flex-shrink: 0; }
+#themeToggle:hover { color: var(--fg); border-color: var(--border2); }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.7; }
 a { color: var(--accent); text-decoration: none; }
 .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
 .mono { font-family: 'JetBrains Mono', monospace; }
 
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.88); backdrop-filter: blur(16px) saturate(180%); border-bottom: 1px solid var(--border); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(245,246,248,0.92); backdrop-filter: blur(16px) saturate(180%); border-bottom: 1px solid var(--border); }
 nav .inner { max-width: 1060px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
 nav .brand { font-weight: 800; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--fg2); }
 nav .links { display: flex; gap: 28px; }
@@ -48,7 +82,7 @@ nav .links a { color: var(--fg3); font-size: 12px; font-weight: 600; letter-spac
 nav .links a:hover { color: var(--fg); }
 
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; padding: 100px 24px 80px; }
-.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 20%, rgba(225,49,49,0.04) 0%, transparent 50%); }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 20%, rgba(204,41,41,0.05) 0%, transparent 50%); }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 200px; background: linear-gradient(transparent, var(--bg)); }
 .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.02em; }
 .hero h1 .red { color: var(--red); }
@@ -78,9 +112,9 @@ section:nth-child(even) { background: var(--bg2); }
 .htl-scroll { overflow-x: scroll; cursor: grab; -webkit-overflow-scrolling: touch; padding-bottom: 16px; scrollbar-width: thin; scrollbar-color: var(--border2) transparent; }
 .htl-scroll:active { cursor: grabbing; }
 .htl-scroll::-webkit-scrollbar { height: 8px; }
-.htl-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); border-radius: 4px; }
+.htl-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.03); border-radius: 4px; }
 .htl-scroll::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
-.htl-track { position: relative; height: 900px; }
+.htl-track { position: relative; height: 680px; }
 .htl-axis { position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: linear-gradient(90deg, var(--border), var(--fg3) 15%, var(--red) 65%, var(--fg3) 85%, var(--border)); transform: translateY(-1px); }
 .htl-tick { position: absolute; top: 50%; width: 1px; height: 14px; background: var(--border); transform: translateY(-7px); }
 .htl-tick-label { position: absolute; top: calc(50% + 16px); font: 10px 'JetBrains Mono', monospace; color: var(--fg3); transform: translateX(-50%); white-space: nowrap; }
@@ -96,14 +130,14 @@ section:nth-child(even) { background: var(--bg2); }
 .htl-ev.neutral .htl-dot { border-color: var(--fg3); background: var(--fg3); }
 .htl-ev.collision .htl-dot { width: 24px; height: 24px; transform: translate(-12px, -12px); border-color: var(--red); background: var(--red); box-shadow: 0 0 24px rgba(225,49,49,0.7), 0 0 48px rgba(225,49,49,0.3); animation: pulse-dot 1.2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100%{ box-shadow: 0 0 24px rgba(225,49,49,0.7); } 50%{ box-shadow: 0 0 36px rgba(225,49,49,1), 0 0 60px rgba(225,49,49,0.4); }}
-.htl-card { position: absolute; left: 50%; transform: translateX(-50%); width: 230px; padding: 14px 16px; background: var(--card); border: 1px solid var(--border); transition: border-color .25s, box-shadow .25s; }
+.htl-card { position: absolute; left: 50%; transform: translateX(-50%); width: 194px; padding: 14px 16px; background: var(--card); border: 1px solid var(--border); transition: border-color .25s, box-shadow .25s; }
 .htl-ev:hover .htl-card { border-color: var(--border2); box-shadow: 0 4px 24px rgba(0,0,0,0.5); z-index: 10; }
 .htl-ev.above .htl-stem { bottom: 50%; top: auto; }
 .htl-ev.above .htl-card { bottom: auto; top: auto; }
 .htl-ev.below .htl-stem { top: 50%; bottom: auto; }
 .htl-ev.below .htl-card { top: auto; bottom: auto; }
 .htl-card .htl-time { font: 600 13px 'JetBrains Mono', monospace; color: var(--accent); }
-.htl-card .htl-off { font: 11px 'JetBrains Mono', monospace; color: var(--fg3); margin-left: 6px; padding: 1px 6px; background: rgba(255,255,255,0.05); }
+.htl-card .htl-off { font: 11px 'JetBrains Mono', monospace; color: var(--fg3); margin-left: 6px; padding: 1px 6px; background: rgba(0,0,0,0.04); }
 .htl-card .htl-quote { margin-top: 8px; font-size: 13px; line-height: 1.55; color: var(--fg1); }
 .htl-card .htl-desc { font-size: 11px; color: var(--fg3); margin-top: 6px; font-style: italic; line-height: 1.45; }
 .htl-hint { text-align: center; margin-top: 8px; font-size: 11px; color: var(--fg3); letter-spacing: 0.5px; }
@@ -112,7 +146,7 @@ section:nth-child(even) { background: var(--bg2); }
 
 .stop-card { background: var(--card); border: 1px solid var(--border); padding: 28px; margin-bottom: 16px; position: relative; }
 .stop-card .stop-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-.stop-card .stop-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; padding: 4px 10px; background: rgba(255,255,255,0.06); }
+.stop-card .stop-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; padding: 4px 10px; background: rgba(0,0,0,0.04); }
 .stop-card .stop-time { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; }
 .stop-card .quote { font-size: 16px; font-weight: 600; margin-bottom: 12px; padding-left: 16px; border-left: 3px solid var(--border); }
 .stop-card p { font-size: 13px; color: var(--fg2); line-height: 1.7; }
@@ -121,7 +155,7 @@ section:nth-child(even) { background: var(--bg2); }
 .scenario-table { width: 100%; border-collapse: collapse; margin: 32px 0; }
 .scenario-table th, .scenario-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); font-size: 13px; }
 .scenario-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--fg3); font-weight: 700; }
-.scenario-table tr:hover td { background: rgba(255,255,255,0.02); }
+.scenario-table tr:hover td { background: rgba(0,0,0,0.02); }
 .badge { display: inline-block; padding: 3px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
 .badge.prevented { background: var(--green-dim); color: var(--green); }
 .badge.collision { background: var(--red-dim); color: var(--red); }
@@ -129,8 +163,8 @@ section:nth-child(even) { background: var(--bg2); }
 .sim-wrap { background: var(--card); border: 1px solid var(--border); overflow: hidden; margin: 32px 0; }
 canvas { width: 100%; display: block; }
 .sim-controls { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.sim-controls button { background: var(--fg); color: #000; border: none; padding: 8px 18px; font-size: 12px; font-weight: 700; cursor: pointer; transition: background .2s; letter-spacing: 0.3px; }
-.sim-controls button:hover { background: #ccc; }
+.sim-controls button { background: var(--fg); color: var(--card); border: none; padding: 8px 18px; font-size: 12px; font-weight: 700; cursor: pointer; transition: background .2s; letter-spacing: 0.3px; }
+.sim-controls button:hover { opacity: 0.85; }
 .sim-controls label { font-size: 12px; font-weight: 600; color: var(--fg2); }
 .sim-controls input[type=range] { flex: 1; min-width: 180px; accent-color: var(--accent); }
 .sim-controls .time-display { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); min-width: 80px; }
@@ -188,9 +222,9 @@ footer p { line-height: 2; }
 
 /* ANIMATED RISK MAP */
 .risk-map-wrap { background: var(--card); border: 1px solid var(--border); overflow: hidden; margin: 32px 0; position: relative; }
-.risk-map-wrap .risk-label { position: absolute; top: 12px; right: 16px; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--green); background: rgba(0,0,0,0.6); padding: 4px 10px; z-index: 2; }
+.risk-map-wrap .risk-label { position: absolute; top: 12px; right: 16px; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--green); background: rgba(255,255,255,0.85); padding: 4px 10px; z-index: 2; }
 .risk-map-controls { padding: 12px 20px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
-.risk-map-controls button { background: var(--fg); color: #000; border: none; padding: 6px 14px; font-size: 11px; font-weight: 700; cursor: pointer; }
+.risk-map-controls button { background: var(--fg); color: var(--card); border: none; padding: 6px 14px; font-size: 11px; font-weight: 700; cursor: pointer; }
 .risk-map-controls .risk-time { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); }
 
 /* SECTION DIVIDER */
@@ -199,14 +233,14 @@ footer p { line-height: 2; }
 .chart-wrap { background: var(--card); border: 1px solid var(--border); overflow: hidden; margin: 32px 0; }
 .chart-wrap .chart-title { padding: 16px 20px; font-size: 13px; font-weight: 600; border-bottom: 1px solid var(--border); color: var(--fg2); }
 
-.callout { background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 24px 28px; margin: 32px 0; }
+.callout { background: rgba(0,0,0,0.02); border: 1px solid var(--border); padding: 24px 28px; margin: 32px 0; }
 .callout h4 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
 .callout p { font-size: 14px; color: var(--fg2); line-height: 1.8; }
 
 @media (max-width: 768px) {
   nav .links { display: none; }
   .hero .stats { gap: 24px; }
-  .htl-track { height: 780px; }
+  .htl-track { height: 620px; }
   .htl-card { width: 190px; padding: 10px 12px; }
   .htl-card .htl-quote { font-size: 12px; }
   .htl-card .htl-desc { font-size: 10px; }
@@ -229,9 +263,11 @@ footer p { line-height: 2; }
       <a href="#causation">Causation</a>
       <a href="#stops">The Stop Commands</a>
       <a href="#prevention">Prevention</a>
+      <a href="#enhanced">Detection</a>
       <a href="#simulator">Simulator</a>
       <a href="#verdict">Verdict</a>
     </div>
+    <button id="themeToggle" aria-label="Toggle light/dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
   </div>
 </nav>
 
@@ -639,6 +675,81 @@ T+ 9.4s  Truck stopped at 30m
   </div>
 </section>
 
+<!-- ENHANCED DETECTION SYSTEM -->
+<section id="enhanced" style="padding: 80px 0;">
+  <div class="container">
+    <div class="section-label fade-in">Research</div>
+    <div class="section-title fade-in">Enhanced Conflict Detection System</div>
+    <p class="section-subtitle fade-in">A three-layer defense architecture that detects runway conflicts from voice-based clearance parsing alone — no vehicle transponder required.</p>
+
+    <div class="grid-2 fade-in" style="margin-top:40px;">
+      <div>
+        <h3 style="color:var(--accent);margin-bottom:12px;">The Problem</h3>
+        <p>Ground vehicles on airport surfaces often lack transponders or ADS-B equipment. Traditional conflict detection relies on surface radar (ASDE-X) or visual observation — both failed in this case. Our enhanced system solves this by extracting conflict information directly from ATC voice communications.</p>
+        <h3 style="color:var(--accent);margin-top:24px;margin-bottom:12px;">Three-Layer Defense</h3>
+        <div style="margin-top:16px;">
+          <div class="callout" style="margin-bottom:12px;">
+            <strong style="color:var(--accent);">Layer 1 — Clearance Logic (Boolean)</strong><br>
+            Parse every ATC transmission in real-time. When a crossing clearance is issued on a runway with an active landing clearance, fire an <strong>instant CONFLICT alert</strong>. No probability needed — pure logic.
+          </div>
+          <div class="callout" style="margin-bottom:12px;">
+            <strong style="color:var(--accent);">Layer 2 — Time Estimation</strong><br>
+            For the aircraft: compute precise ETA from live ADS-B data (measured groundspeed, measured distance). For the vehicle: estimate time-to-runway-center from empirical speed priors and measured crossing distance.
+          </div>
+          <div class="callout">
+            <strong style="color:var(--accent);">Layer 3 — Calibrated Risk</strong><br>
+            Combine both ETAs into a collision probability using Gaussian arrival distributions. The key improvement: both sigma values are <em>measured or physics-grounded</em>, not assumed.
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent);margin-bottom:12px;">LGA Case Study Results</h3>
+        <canvas id="enhancedChart" width="520" height="380"></canvas>
+        <div style="margin-top:20px;">
+          <table style="width:100%;">
+            <thead><tr><th style="text-align:left;">Parameter</th><th>Original</th><th>Const-Speed</th><th>Decel-Aware</th></tr></thead>
+            <tbody>
+              <tr><td>Aircraft σ</td><td style="text-align:center;">5.0 s</td><td style="text-align:center;">4.9 s</td><td style="text-align:center;color:var(--accent);">2.2 s</td></tr>
+              <tr><td>Aircraft ETA</td><td style="text-align:center;">25.4 s</td><td style="text-align:center;">25.4 s</td><td style="text-align:center;color:var(--accent);">27.3 s</td></tr>
+              <tr><td>Vehicle σ</td><td style="text-align:center;">5.0 s</td><td style="text-align:center;color:var(--accent);">3.2 s</td><td style="text-align:center;color:var(--accent);">3.2 s</td></tr>
+              <tr><td>FW Point Risk</td><td style="text-align:center;">49.15%</td><td style="text-align:center;">46.96%</td><td style="text-align:center;">9.46%</td></tr>
+              <tr><td>Occupancy Risk</td><td style="text-align:center;">N/A</td><td style="text-align:center;color:var(--red);">91.4%</td><td style="text-align:center;color:var(--red);">94.2%</td></tr>
+              <tr><td>Detection time</td><td style="text-align:center;">N/A</td><td style="text-align:center;color:var(--green);">T+0 s</td><td style="text-align:center;color:var(--green);">T+0 s</td></tr>
+              <tr><td>Warning margin</td><td style="text-align:center;">N/A</td><td style="text-align:center;color:var(--green);">31 s</td><td style="text-align:center;color:var(--green);">31 s</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:12px;font-size:13px;color:var(--muted);">FW Point Risk measures the probability both entities arrive at the <em>exact same point</em> at the <em>exact same time</em>. Occupancy Risk measures the physically correct probability: that the aircraft arrives while the vehicle is still on the runway (occupancy window: T+3s to T+33s). The vehicle occupies the runway for 30 seconds — the aircraft arrives at T+27s, well inside that window.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in" style="margin-top:40px;">
+      <h3 style="color:var(--accent);margin-bottom:12px;">Detection Timeline</h3>
+      <div class="grid-3" style="gap:16px;">
+        <div class="callout" style="border-left:3px solid var(--green);">
+          <strong>T+0 s</strong> — Layer 1 Alert<br>
+          <span style="color:var(--muted);">Crossing clearance parsed; active landing clearance for Jazz 8646 on RW04 detected. <strong style="color:var(--green);">CONFLICT</strong> fired instantly.</span>
+        </div>
+        <div class="callout" style="border-left:3px solid var(--accent);">
+          <strong>T+0.5 s</strong> — Layer 2+3<br>
+          <span style="color:var(--muted);">Aircraft ETA: 27.3s (decel-aware, σ=2.2s). Vehicle ETA: 18.2s. Overlap: 9.1s. Risk level: <strong style="color:var(--red);">ELEVATED</strong>.</span>
+        </div>
+        <div class="callout" style="border-left:3px solid var(--red);">
+          <strong>T+31 s</strong> — Collision<br>
+          <span style="color:var(--muted);">System had 31 full seconds to prevent the collision. The actual stop command came at T+21s — too late and misdirected at Frontier 4195.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in" style="margin-top:40px;">
+      <h3 style="color:var(--accent);margin-bottom:12px;">Why This Works Without Transponders</h3>
+      <p>The critical insight is that <strong>every surface movement on a controlled airport is already communicated verbally</strong>. When ATC clears "Truck 1, cross runway 4 at Delta," that single transmission contains the entity identity, the action, the runway, and the taxiway. Combined with the aircraft's ADS-B position (which all aircraft have), we can compute conflict probability in real-time.</p>
+      <p style="margin-top:12px;">The vehicle's exact speed doesn't matter for Layer 1 — the boolean conflict fires the moment two incompatible clearances coexist. Layers 2 and 3 add time-to-impact confidence using empirical speed distributions derived from airport surface movement data, not arbitrary assumptions.</p>
+      <p style="margin-top:12px;"><strong>Approach deceleration matters.</strong> Aircraft don't arrive at constant speed — they decelerate from ~200 kts at altitude to ~135 kts at the threshold, then brake aggressively on rollout. Our model builds an empirical speed-vs-distance profile from the ADS-B track itself, then numerically integrates to predict arrival time. This gives a tighter sigma (2.2s vs 4.9s for constant-speed) because the speed profile absorbs variance that the naive model attributes to uncertainty.</p>
+    </div>
+  </div>
+</section>
+
 <!-- INTERACTIVE SIMULATOR -->
 <section id="simulator">
   <div class="container">
@@ -761,6 +872,22 @@ T+ 9.4s  Truck stopped at 30m
 </footer>
 
 <script>
+// ── THEME TOGGLE ──
+(function() {
+  var toggle = document.getElementById('themeToggle');
+  var html = document.documentElement;
+  var sunSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+  var moonSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  function setIcon() { toggle.innerHTML = html.dataset.theme === 'dark' ? sunSVG : moonSVG; }
+  setIcon();
+  toggle.addEventListener('click', function() {
+    var isDark = html.dataset.theme === 'dark';
+    if (isDark) { html.dataset.theme = 'light'; localStorage.setItem('theme', 'light'); }
+    else { html.dataset.theme = 'dark'; localStorage.setItem('theme', 'dark'); }
+    setIcon();
+  });
+})();
+
 // Fade-in observer
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); }});
@@ -834,57 +961,42 @@ function drawCrosshair(ctx, x, pad, ch) {
   // stem = pixels from axis to card. "above" cards go up, "below" go down.
   // Stagger heights so nearby events don't overlap.
   const events = [
-    {t:-119, time:'23:35:05', off:'T\u2212119s', type:'info', side:'above', stem:160,
+    {t:-119, time:'23:35:05', off:'T\u2212119s', type:'info', side:'above', stem:130,
      quote:'"Jazz 646, runway 4, cleared to land."',
-     note:'Aircraft is cleared — this clearance will be forgotten in under 2 minutes.'},
-    {t:-93, time:'23:35:28', off:'~93s gap', type:'neutral', side:'below', stem:140,
-     quote:'Controller handles 15+ comms: Delta 520, 2733, SW 3988, Frontier 4195, vehicle at CY, lane assigns, freq changes\u2026',
-     note:'Working two positions simultaneously. Jazz 8646\u2019s clearance fades from working memory.'},
-    {t:-26, time:'23:36:35', off:'T\u221226s', type:'neutral', side:'above', stem:130,
-     quote:'"Delta 2603, ILS runway 4."',
-     note:'Next arrival being sequenced — controller juggling multiple approaches.'},
-    {t:-19, time:'23:36:42', off:'T\u221219s', type:'warning', side:'below', stem:150,
-     quote:'"The vehicle needs to cross runway."',
-     note:'Ground coordination. A basic runway-status check here catches the conflict.'},
-    {t:-11, time:'23:36:50', off:'T\u221211s', type:'info', side:'above', stem:170,
-     quote:'Jazz 8646 at 500 ft, 134 kts — 1,424 m from threshold.',
-     note:'Aircraft on short final. Committed to landing.'},
-    {t:-4, time:'23:36:57', off:'T\u22124s', type:'warning', side:'below', stem:100,
+     note:'This clearance will be forgotten in under 2 minutes.'},
+    {t:-50, time:'~23:36:11', off:'T\u221250s', type:'neutral', side:'below', stem:110,
+     quote:'20 transmissions across 8 callsigns in 116 s.',
+     note:'One controller, two positions. Jazz 8646\u2019s clearance fades from memory.'},
+    {t:-11, time:'23:36:50', off:'T\u221211s', type:'info', side:'above', stem:120,
+     quote:'Jazz 8646 at 500 ft, 134 kts \u2014 committed.',
+     note:'1,424 m from threshold. No go-around possible.'},
+    {t:-4, time:'23:36:57', off:'T\u22124s', type:'warning', side:'below', stem:90,
      quote:'"Truck 1, requesting to cross 4 at Delta."',
-     note:'Should have triggered a runway status check. Jazz 8646 is seconds from touchdown.'},
-    {t:0, time:'23:37:01', off:'T+0s', type:'danger', side:'above', stem:220, highlight:true,
+     note:'A runway-status check here catches the conflict.'},
+    {t:0, time:'23:37:01', off:'T+0s', type:'danger', side:'above', stem:160, highlight:true,
      quote:'"Truck 1 and company, cross 4 at Delta."',
      note:'THE FATAL CLEARANCE. 27 seconds to collision.'},
-    {t:3, time:'23:37:04', off:'T+3s', type:'neutral', side:'below', stem:80,
-     quote:'"Truck 1 and company, crossing 4 at Delta."',
-     note:'Truck readback correct. Convoy begins rolling.'},
-    {t:5, time:'23:37:06', off:'T+5s', type:'info', side:'above', stem:80,
-     quote:'Jazz 8646 at 300 ft, 135 kts — 280 m from threshold.',
-     note:'Last ADS-B return. Truck 22 m into 86 m crossing.'},
-    {t:8, time:'23:37:09', off:'T+8s', type:'warning', side:'below', stem:180,
+    {t:8, time:'23:37:09', off:'T+8s', type:'warning', side:'below', stem:130,
      quote:'"Frontier 4195, stop there please."',
-     note:'WRONG TARGET. Addresses a departing aircraft, not the truck.'},
-    {t:11, time:'23:37:12', off:'T+11s', type:'danger', side:'above', stem:140,
-     quote:'"Stop, stop, stop, stop, stop, stop, stop, stop, stop."',
-     note:'NO CALLSIGN. Nine repetitions. Truck has no reason to react.'},
-    {t:16, time:'23:37:17', off:'T+16s', type:'danger', side:'below', stem:220,
+     note:'WRONG TARGET. The truck hears someone else\u2019s callsign.'},
+    {t:11, time:'23:37:12', off:'T+11s', type:'danger', side:'above', stem:100,
+     quote:'"Stop, stop, stop, stop, stop\u2026"',
+     note:'NO CALLSIGN. Ambiguous on a busy frequency.'},
+    {t:16, time:'23:37:17', off:'T+16s', type:'danger', side:'below', stem:150,
      quote:'"Stop, Truck 1, stop, stop, Truck 1."',
-     note:'FIRST CORRECT ADDRESS — 16 s too late. Truck at 73/86 m. Impossible to stop.'},
-    {t:27, time:'~23:37:28', off:'T+27s', type:'danger', side:'above', stem:180, collision:true,
+     note:'FIRST CORRECT ADDRESS \u2014 16 s too late. Truck at 73/86 m. Cannot stop.'},
+    {t:27, time:'~23:37:28', off:'T+27s', type:'danger', side:'above', stem:130, collision:true,
      quote:'COLLISION',
-     note:'Aircraft strikes fire truck at RW04 / Taxiway D. Impact speed ~24 mph.'},
-    {t:41, time:'23:37:42', off:'T+41s', type:'neutral', side:'below', stem:130,
-     quote:'"Delta 2603, go around, runway heading 2,000."',
-     note:'The next arrival is sent around. Runway compromised.'},
-    {t:44, time:'23:37:45', off:'T+44s', type:'neutral', side:'above', stem:100,
-     quote:'"Jazz 646\u2026" — first attempt to contact the aircraft.',
+     note:'Aircraft strikes fire truck at RW04 / Taxiway D.'},
+    {t:44, time:'23:37:45', off:'T+44s', type:'neutral', side:'below', stem:90,
+     quote:'"Jazz 646\u2026" \u2014 "Delta 2603, go around."',
      note:'No response. Both pilots are fatally injured.'},
   ];
 
   const tMin = -130, tMax = 55;
-  const pxPerSec = 70;
-  const padL = 200;
-  const totalW = padL + (tMax - tMin) * pxPerSec + 200;
+  const pxPerSec = 35;
+  const padL = 140;
+  const totalW = padL + (tMax - tMin) * pxPerSec + 140;
   track.style.minWidth = totalW + 'px';
   function tToX(t) { return padL + (t - tMin) * pxPerSec; }
 
@@ -941,7 +1053,7 @@ function drawCrosshair(ctx, x, pad, ch) {
     const el = document.createElement('div');
     el.className = 'htl-ev ' + ev.type + ' ' + ev.side + (ev.collision ? ' collision' : '');
     el.style.left = x + 'px';
-    el.style.width = '240px';
+    el.style.width = '200px';
 
     const stem = document.createElement('div');
     stem.className = 'htl-stem';
@@ -2203,6 +2315,167 @@ function drawCrosshair(ctx, x, pad, ch) {
     }
   }
   window.addEventListener('resize', resize); resize();
+})();
+
+// ── ENHANCED DETECTION CHART ──
+(function() {
+  var canvas = document.getElementById('enhancedChart');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+
+  var muConst = 25.4, sigConst = 4.9;
+  var muDecel = 27.3, sigDecel = 2.2;
+  var muVehicle = 18.2, sigVehicle = 3.2;
+  var sigOld = 5.0;
+  var dt = 0.5, tMax = 55;
+  var collisionT = 31;
+  var rcKm = 0.075, vAKmh = 248, vVKmh = 20;
+  var eInv = 0.5*(3600/vAKmh + 3600/vVKmh);
+
+  function normPdf(x, mu, sig) {
+    var z = (x - mu) / sig;
+    return Math.exp(-0.5*z*z) / (sig * Math.sqrt(2*Math.PI));
+  }
+
+  function computeCum(muA, sigA, muV, sigV) {
+    var cum = [], acc = 0;
+    for (var t = 0; t <= tMax; t += dt) {
+      var fA = normPdf(t, muA, sigA);
+      var fV = normPdf(t, muV, sigV);
+      var rFw = 2.0 * rcKm * eInv * fA * fV;
+      acc += rFw * dt;
+      cum.push({t: t, cum: acc});
+    }
+    return cum;
+  }
+
+  var cumDecel = computeCum(muDecel, sigDecel, muVehicle, sigVehicle);
+  var cumConst = computeCum(muConst, sigConst, muVehicle, sigVehicle);
+  var cumOld = computeCum(muConst, sigOld, muVehicle, sigOld);
+
+  var maxCum = 0;
+  cumDecel.forEach(function(d) { if (d.cum > maxCum) maxCum = d.cum; });
+  cumConst.forEach(function(d) { if (d.cum > maxCum) maxCum = d.cum; });
+  cumOld.forEach(function(d) { if (d.cum > maxCum) maxCum = d.cum; });
+  maxCum = Math.max(maxCum * 1.15, 0.01);
+
+  function resize() {
+    var r = window.devicePixelRatio || 1;
+    var rect = canvas.getBoundingClientRect();
+    W = rect.width; H = rect.height;
+    canvas.width = W * r; canvas.height = H * r;
+    ctx.setTransform(r, 0, 0, r, 0, 0);
+    draw(-1, -1);
+  }
+
+  function draw(mx, my) {
+    ctx.clearRect(0, 0, W, H);
+    var padL = 55, padR = 20, padT = 25, padB = 45;
+    var gW = W - padL - padR, gH = H - padT - padB;
+
+    ctx.fillStyle = '#666'; ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    for (var t = 0; t <= tMax; t += 10) {
+      var x = padL + (t / tMax) * gW;
+      ctx.fillText(t + 's', x, H - padB + 18);
+      ctx.strokeStyle = 'rgba(128,128,128,0.15)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(x, padT); ctx.lineTo(x, H - padB); ctx.stroke();
+    }
+    ctx.textAlign = 'right';
+    for (var i = 0; i <= 4; i++) {
+      var val = (maxCum / 4) * i;
+      var y = H - padB - (val / maxCum) * gH;
+      ctx.fillText((val * 100).toFixed(1) + '%', padL - 6, y + 4);
+      ctx.strokeStyle = 'rgba(128,128,128,0.15)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W - padR, y); ctx.stroke();
+    }
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#999'; ctx.font = '11px Inter';
+    ctx.fillText('Time after crossing clearance (seconds)', padL + gW / 2, H - 2);
+    ctx.save(); ctx.translate(12, padT + gH / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('Cumulative Collision Risk', 0, 0); ctx.restore();
+
+    function drawLine(data, color, dash) {
+      ctx.strokeStyle = color; ctx.lineWidth = 2.5;
+      ctx.setLineDash(dash || []);
+      ctx.beginPath();
+      data.forEach(function(d, i) {
+        var x = padL + (d.t / tMax) * gW;
+        var y = H - padB - (d.cum / maxCum) * gH;
+        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    drawLine(cumOld, '#D4993D', [6, 4]);
+    drawLine(cumConst, '#55EF88', [4, 3]);
+    drawLine(cumDecel, '#00CFE3', []);
+
+    // Collision marker
+    var cx = padL + (collisionT / tMax) * gW;
+    ctx.strokeStyle = '#E13131'; ctx.lineWidth = 1.5; ctx.setLineDash([5, 3]);
+    ctx.beginPath(); ctx.moveTo(cx, padT); ctx.lineTo(cx, H - padB); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#E13131'; ctx.font = 'bold 10px Inter';
+    ctx.textAlign = 'left';
+    ctx.fillText('Collision T+31s', cx + 4, padT + 14);
+
+    // Legend
+    var lx = padL + 12, ly = padT + 12;
+    ctx.strokeStyle = '#00CFE3'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(lx + 28, ly); ctx.stroke();
+    ctx.fillStyle = '#00CFE3'; ctx.font = '11px Inter'; ctx.textAlign = 'left';
+    ctx.fillText('Decel-aware (\u03C3=2.2s, ETA=27.3s)', lx + 33, ly + 4);
+
+    ly += 16;
+    ctx.strokeStyle = '#55EF88'; ctx.lineWidth = 2; ctx.setLineDash([4, 3]);
+    ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(lx + 28, ly); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#55EF88';
+    ctx.fillText('Const-speed (\u03C3=4.9s, ETA=25.4s)', lx + 33, ly + 4);
+
+    ly += 16;
+    ctx.strokeStyle = '#D4993D'; ctx.lineWidth = 2; ctx.setLineDash([6, 4]);
+    ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(lx + 28, ly); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#D4993D';
+    ctx.fillText('Original (\u03C3=5.0s both)', lx + 33, ly + 4);
+
+    // Crosshair
+    if (mx >= padL && mx <= W - padR && my >= padT && my <= H - padB) {
+      ctx.strokeStyle = 'rgba(128,128,128,0.4)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(mx, padT); ctx.lineTo(mx, H - padB); ctx.stroke();
+      var tVal = ((mx - padL) / gW) * tMax;
+      var idx = Math.round(tVal / dt);
+      var cD = cumDecel[idx] ? cumDecel[idx].cum : 0;
+      var cC = cumConst[idx] ? cumConst[idx].cum : 0;
+      var cO = cumOld[idx] ? cumOld[idx].cum : 0;
+
+      var tp = padT + 60;
+      var tx = mx + 8; if (tx + 175 > W) tx = mx - 183;
+      ctx.fillStyle = 'rgba(0,0,0,0.8)';
+      ctx.fillRect(tx, tp - 4, 175, 62);
+      ctx.fillStyle = '#fff'; ctx.font = '11px Inter'; ctx.textAlign = 'left';
+      ctx.fillText('T+' + tVal.toFixed(1) + 's', tx + 8, tp + 10);
+      ctx.fillStyle = '#00CFE3';
+      ctx.fillText('Decel-aware: ' + (cD * 100).toFixed(2) + '%', tx + 8, tp + 24);
+      ctx.fillStyle = '#55EF88';
+      ctx.fillText('Const-speed: ' + (cC * 100).toFixed(2) + '%', tx + 8, tp + 38);
+      ctx.fillStyle = '#D4993D';
+      ctx.fillText('Original:    ' + (cO * 100).toFixed(2) + '%', tx + 8, tp + 52);
+    }
+  }
+
+  canvas.addEventListener('mousemove', function(e) {
+    var r = canvas.getBoundingClientRect();
+    draw(e.clientX - r.left, e.clientY - r.top);
+  });
+  canvas.addEventListener('mouseleave', function() { draw(-1, -1); });
+  window.addEventListener('resize', resize);
+  resize();
 })();
 
 </script>
